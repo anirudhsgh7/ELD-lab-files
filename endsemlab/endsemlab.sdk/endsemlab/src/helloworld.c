@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <complex.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+
+#define N 16
+
+const int rev16[N] = {
+    0, 8, 4, 12, 2, 10, 6, 14,
+    1, 9, 5, 13, 3, 11, 7, 15
+};
+
+const float complex W[N / 2] = {
+    1 - 0 * I,
+    0.9238795325112867 - 0.3826834323650898 * I,
+    0.7071067811865476 - 0.7071067811865475 * I,
+    0.38268343236508984 - 0.9238795325112867 * I,
+    0.0 - 1.0 * I,
+    -0.3826834323650897 - 0.9238795325112867 * I,
+    -0.7071067811865475 - 0.7071067811865476 * I,
+    -0.9238795325112867 - 0.3826834323650899 * I
+};
+
+void bitreverse(float complex dataIn[N], float complex dataOut[N]){
+    for(int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev16[i]];
+    }
+}
+
+void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+    float complex temp1[N], temp2[N];
+    bitreverse(dataIn, temp1);
+
+    for (int stage = 1; stage <= 4; stage++) {
+        int step = 1 << stage;
+        int half_step = step / 2;
+
+        for (int i = 0; i < N; i += step) {
+            for (int j = 0; j < half_step; j++) {
+                float complex t = W[N / step * j] * temp1[i + j + half_step];
+                temp2[i + j] = temp1[i + j] + t;
+                temp2[i + j + half_step] = temp1[i + j] - t;
+            }
+        }
+        for (int i = 0; i < N; i++) temp1[i] = temp2[i];
+    }
+    for (int i = 0; i < N; i++) dataOut[i] = temp1[i];
+}
+
+int main() {
+    init_platform();
+    XTime PL_start_time, PL_end_time;
+    XTime PS_start_time, PS_end_time;
+
+    const float complex FFT_input[N] = {
+        1 + 2 * I, 3 + 4 * I, 5 + 6 * I, 7 + 8 * I,
+        9 + 10 * I, 11 + 12 * I, 13 + 14 * I, 15 + 16 * I,
+        17 + 18 * I, 19 + 20 * I, 21 + 22 * I, 23 + 24 * I,
+        25 + 26 * I, 27 + 28 * I, 29 + 30 * I, 31 + 32 * I
+    };
+
+    float complex FFT_output_sw[N], FFT_output_hw[N];
+
+    XTime_SetTime(0);
+    XTime_GetTime(&PS_start_time);
+    FFT_stages(FFT_input, FFT_output_sw); // Perform FFT in PS
+    XTime_GetTime(&PS_end_time);
+
+    // Multiply PS FFT outputs by 2
+    for (int i = 0; i < N; i++) {
+        FFT_output_sw[i] = 2 * FFT_output_sw[i]; // Scale both real and imaginary parts by 2
+    }
+
+    int status;
+    XAxiDma AxiDMA;
+    status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+
+    XTime_SetTime(0);
+    XTime_GetTime(&PL_start_time);
+
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR) FFT_input, (sizeof(float complex) * N), XAXIDMA_DMA_TO_DEVICE);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR) FFT_output_hw, (sizeof(float complex) * N), XAXIDMA_DEVICE_TO_DMA);
+
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+
+    XTime_GetTime(&PL_end_time);
+
+    for (int i = 0; i < N; i++) {
+        float diff1 = fabsf(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+        float diff2 = fabsf(cimagf(FFT_output_sw[i]) - cimagf(FFT_output_hw[i]));
+
+        printf("\nPS Output: %f+%fI, PL Output: %f+%fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]),
+               crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+
+        if (diff1 > 0.0001 || diff2 > 0.0001) {
+            printf("\nData Mismatch at index %d!", i);
+        } else {
+            printf("\nDMA Transfer Successful!");
+        }
+    }
+
+    printf("\n\r------- Execution Time Comparison --------");
+    float time = (float)1.0 * (PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("\n\rExecution time for PS in Micro-seconds: %f", time);
+
+    time = (float)1.0 * (PL_end_time - PL_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("\n\rExecution time for PL in Micro-seconds: %f", time);
+
+    return 0;
+}

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep 11 13:24:06 2024
+# Process ID: 8368
+# Current directory: C:/Users/aniru/Desktop/ELD/Lab3 hw/Lab3 hw.runs/synth_3
+# Command line: vivado.exe -log Top_Count.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Count.tcl
+# Log file: C:/Users/aniru/Desktop/ELD/Lab3 hw/Lab3 hw.runs/synth_3/Top_Count.vds
+# Journal file: C:/Users/aniru/Desktop/ELD/Lab3 hw/Lab3 hw.runs/synth_3\vivado.jou
+#-----------------------------------------------------------
+source Top_Count.tcl -notrace

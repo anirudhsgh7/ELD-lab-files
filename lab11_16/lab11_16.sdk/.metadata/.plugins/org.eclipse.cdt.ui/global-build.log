@@ -1,0 +1,915 @@
+20:51:49 **** Build of project lab11_16_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+20:52:24 **** Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19064	   1144	  22568	  42776	   a718	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+20:55:24 **** Auto Build of project lab11_16_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+20:55:55 **** Clean-only build of configuration Debug for project lab11_16 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab11_16.elf.size  lab11_16.elf
+' '
+20:55:56 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18996	   1144	  22568	  42708	   a6d4	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+20:56:17 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:56:56 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:57:49 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:7:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:99:23: warning: implicit declaration of function 'fabsf' [-Wimplicit-function-declaration]
+         float diff1 = fabsf(crealf(FFT_output_sw_reciprocal[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:99:23: warning: incompatible implicit declaration of built-in function 'fabsf'
+../src/helloworld.c:99:23: note: include '<math.h>' or provide a declaration of 'fabsf'
+../src/helloworld.c:11:1:
++#include <math.h>
+ 
+../src/helloworld.c:99:23:
+         float diff1 = fabsf(crealf(FFT_output_sw_reciprocal[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:83:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70288	   2648	  23328	  96264	  17808	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+21:01:49 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:08:26 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:52:56 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:7:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:81:13: warning: implicit declaration of function 'isinf' [-Wimplicit-function-declaration]
+         if (isinf(real_part)) {
+             ^~~~~
+../src/helloworld.c:98:23: warning: implicit declaration of function 'fabsf' [-Wimplicit-function-declaration]
+         float diff1 = fabsf(real_part - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:98:23: warning: incompatible implicit declaration of built-in function 'fabsf'
+../src/helloworld.c:98:23: note: include '<math.h>' or provide a declaration of 'fabsf'
+../src/helloworld.c:11:1:
++#include <math.h>
+ 
+../src/helloworld.c:98:23:
+         float diff1 = fabsf(real_part - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:127:23: warning: incompatible implicit declaration of built-in function 'fabsf'
+         float diff1 = fabsf(crealf(FFT_output_sw_reciprocal[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:127:23: note: include '<math.h>' or provide a declaration of 'fabsf'
+../src/helloworld.c:111:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70672	   2648	  23328	  96648	  17988	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+22:32:52 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:38:58 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:35:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:90:23: warning: implicit declaration of function 'fabsf' [-Wimplicit-function-declaration]
+         float diff1 = fabsf(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:90:23: warning: incompatible implicit declaration of built-in function 'fabsf'
+../src/helloworld.c:90:23: note: include '<math.h>' or provide a declaration of 'fabsf'
+../src/helloworld.c:10:1:
++#include <math.h>
+ 
+../src/helloworld.c:90:23:
+         float diff1 = fabsf(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~~
+../src/helloworld.c:74:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70080	   2648	  23328	  96056	  17738	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+22:40:43 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'recp':
+../src/helloworld.c:67:29: error: 'INFINITY' undeclared (first use in this function); did you mean 'NFDBITS'?
+             FFT_output[i] = INFINITY + I * INFINITY; // Undefined case
+                             ^~~~~~~~
+                             NFDBITS
+../src/helloworld.c:67:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:35:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:112:23: warning: implicit declaration of function 'fabsf' [-Wimplicit-function-declaration]
+         float diff1 = fabsf(crealf(FFT_recip_sw[i]) - crealf(FFT_recip_hw[i]));
+                       ^~~~~
+../src/helloworld.c:112:23: warning: incompatible implicit declaration of built-in function 'fabsf'
+../src/helloworld.c:112:23: note: include '<math.h>' or provide a declaration of 'fabsf'
+../src/helloworld.c:10:1:
++#include <math.h>
+ 
+../src/helloworld.c:112:23:
+         float diff1 = fabsf(crealf(FFT_recip_sw[i]) - crealf(FFT_recip_hw[i]));
+                       ^~~~~
+../src/helloworld.c:94:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+22:41:01 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:95:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+22:41:13 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/helloworld.c:10:
+../src/dma_init.h:1:5: error: redefinition of 'DMA_Init'
+ int DMA_Init(XAxiDma * AxiDMA, u32 device_ID){
+     ^~~~~~~~
+In file included from ../src/helloworld.c:9:
+../src/dma_init.h:1:5: note: previous definition of 'DMA_Init' was here
+ int DMA_Init(XAxiDma * AxiDMA, u32 device_ID){
+     ^~~~~~~~
+../src/helloworld.c: In function 'recp':
+../src/helloworld.c:68:29: error: 'INFINITY' undeclared (first use in this function); did you mean 'NFDBITS'?
+             FFT_output[i] = INFINITY + I * INFINITY; // Undefined case
+                             ^~~~~~~~
+                             NFDBITS
+../src/helloworld.c:68:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:113:23: warning: implicit declaration of function 'fabsf' [-Wimplicit-function-declaration]
+         float diff1 = fabsf(crealf(FFT_recip_sw[i]) - crealf(FFT_recip_hw[i]));
+                       ^~~~~
+../src/helloworld.c:113:23: warning: incompatible implicit declaration of built-in function 'fabsf'
+../src/helloworld.c:113:23: note: include '<math.h>' or provide a declaration of 'fabsf'
+../src/helloworld.c:11:1:
++#include <math.h>
+ 
+../src/helloworld.c:113:23:
+         float diff1 = fabsf(crealf(FFT_recip_sw[i]) - crealf(FFT_recip_hw[i]));
+                       ^~~~~
+../src/helloworld.c:95:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+22:41:32 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:95:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+22:41:48 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:11:32 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:95:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70600	   2648	  23328	  96576	  17940	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+23:16:06 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:18:59 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'recp':
+../src/helloworld.c:66:51: error: invalid operands to binary * (have 'complex float' and 'char *')
+             FFT_output[i] = (1.0 / real_part) + I * "inf";
+                                                   ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:95:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+23:33:40 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:95:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70600	   2648	  23328	  96576	  17940	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+23:39:40 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:95:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:100:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+23:51:19 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:03:41 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:101:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+00:05:00 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:07:35 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:03:28 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:101:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+01:04:55 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:07:10 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'recp':
+../src/helloworld.c:69:33: error: expected ')' before 'f'
+             FFT_output[i] = (1.0 f / real_part) + I * INFINITY;
+                             ~   ^~
+                                 )
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:101:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+01:07:14 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:101:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+01:09:07 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:12:54 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:101:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70664	   2648	  23328	  96640	  17980	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+01:13:05 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:21:27 **** Auto Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab11_16_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab11_16_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:88:16: warning: passing argument 1 of 'FFT_stages' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     FFT_stages(FFT_input, FFT_output_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:31: note: expected '_Complex float *' but argument is of type 'const _Complex float *'
+ void FFT_stages(float complex dataIn[N], float complex dataOut[N]) {
+                 ~~~~~~~~~~~~~~^~~~~~~~~
+../src/helloworld.c:93:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab11_16.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab11_16_bsp/ps7_cortexa9_0/lib -o "lab11_16.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab11_16.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab11_16.elf  |tee "lab11_16.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70464	   2648	  23328	  96440	  178b8	lab11_16.elf
+'Finished building: lab11_16.elf.size'
+' '
+01:22:18 **** Incremental Build of configuration Debug for project lab11_16 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

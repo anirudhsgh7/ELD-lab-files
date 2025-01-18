@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Tue Nov 19 00:47:50 2024
+# Process ID: 4968
+# Current directory: C:/Users/aniru/Desktop/ELD/lab9_16/lab9_16.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/aniru/Desktop/ELD/lab9_16/lab9_16.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/aniru/Desktop/ELD/lab9_16/lab9_16.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

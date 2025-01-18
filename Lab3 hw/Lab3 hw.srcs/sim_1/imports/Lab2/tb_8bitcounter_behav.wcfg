@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_8bitcounter_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_8bitcounter" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1429633334fs"></ZoomStartTime>
+      <ZoomEndTime time="1588833335fs"></ZoomEndTime>
+      <Cursor1Time time="1820033000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="101"></NameColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/tb_8bitcounter/Clk_1Hz" type="logic">
+      <obj_property name="ElementShortName">Clk_1Hz</obj_property>
+      <obj_property name="ObjectShortName">Clk_1Hz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_8bitcounter/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_8bitcounter/Count" type="array">
+      <obj_property name="ElementShortName">Count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Count[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_8bitcounter/up" type="logic">
+      <obj_property name="ElementShortName">up</obj_property>
+      <obj_property name="ObjectShortName">up</obj_property>
+   </wvobject>
+</wave_config>

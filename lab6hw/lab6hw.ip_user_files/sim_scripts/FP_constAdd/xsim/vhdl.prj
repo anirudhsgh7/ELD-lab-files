@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../lab6hw.srcs/sources_1/ip/FP_constAdd/sim/FP_constAdd.vhd" \
+
+nosort

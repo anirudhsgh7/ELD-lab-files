@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <complex.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+
+#define SIZE 32  // FFT Size
+
+// Predefined bit-reversal indices and twiddle factors
+const int bit_rev_indices[SIZE] = {0, 16, 8, 24, 4, 20, 12, 28, 2, 18, 10, 26, 6, 22, 14, 30,
+                                   1, 17, 9, 25, 5, 21, 13, 29, 3, 19, 11, 27, 7, 23, 15, 31};
+const float complex twiddles[SIZE / 2] = {
+    1 + 0 * I, 0.9807852804032304 - 0.19509032201612825 * I, 0.9238795325112867 - 0.3826834323650898 * I,
+    0.8314696123025452 - 0.5555702330196022 * I, 0.7071067811865476 - 0.7071067811865475 * I,
+    0.5555702330196023 - 0.8314696123025452 * I, 0.38268343236508984 - 0.9238795325112867 * I,
+    0.19509032201612833 - 0.9807852804032304 * I, 0.0 - 1.0 * I, -0.1950903220161282 - 0.9807852804032304 * I,
+    -0.3826834323650897 - 0.9238795325112867 * I, -0.555570233019602 - 0.8314696123025455 * I,
+    -0.7071067811865475 - 0.7071067811865476 * I, -0.8314696123025453 - 0.5555702330196022 * I,
+    -0.9238795325112867 - 0.3826834323650899 * I, -0.9807852804032304 - 0.1950903220161286 * I};
+
+// Function to perform bit-reversal
+void perform_bit_reverse(const float complex input[SIZE], float complex output[SIZE]) {
+    for (int idx = 0; idx < SIZE; idx++) {
+        output[idx] = input[bit_rev_indices[idx]];
+    }
+}
+
+// Function to compute FFT using Cooley-Tukey algorithm
+void compute_FFT(const float complex input[SIZE], float complex output[SIZE]) {
+    float complex tempA[SIZE], tempB[SIZE];
+    perform_bit_reverse(input, tempA);
+
+    for (int stage = 1; stage <= 5; stage++) {  // log2(SIZE) = 5 stages for SIZE=32
+        int blockSize = 1 << stage;            // 2^stage
+        int halfBlock = blockSize / 2;
+
+        for (int base = 0; base < SIZE; base += blockSize) {
+            for (int offset = 0; offset < halfBlock; offset++) {
+                float complex factor = twiddles[SIZE / blockSize * offset] * tempA[base + offset + halfBlock];
+                tempB[base + offset] = tempA[base + offset] + factor;
+                tempB[base + offset + halfBlock] = tempA[base + offset] - factor;
+            }
+        }
+        for (int idx = 0; idx < SIZE; idx++) tempA[idx] = tempB[idx];
+    }
+    for (int idx = 0; idx < SIZE; idx++) output[idx] = tempA[idx];
+}
+
+// Main function
+int main() {
+    init_platform();
+    // Timer variables
+    XTime psStartTime, psEndTime, plStartTime, plEndTime;
+
+    // FFT buffers
+    const float complex fftInput[SIZE] = {3 + 14 * I, 19 + 8 * I, 84 + 72 * I, 23 + 45 * I,
+                                          37 + 53 * I, 12 + 5 * I, 60 + 21 * I, 22 + 39 * I,
+                                          7 + 19 * I, 10 + 24 * I, 40 + 68 * I, 29 + 17 * I,
+                                          15 + 6 * I, 21 + 30 * I, 78 + 55 * I, 32 + 8 * I,
+                                          63 + 73 * I, 35 + 14 * I, 27 + 12 * I, 75 + 29 * I,
+                                          51 + 62 * I, 14 + 20 * I, 33 + 17 * I, 16 + 28 * I,
+                                          36 + 31 * I, 18 + 35 * I, 49 + 21 * I, 11 + 16 * I,
+                                          39 + 43 * I, 21 + 28 * I, 59 + 69 * I, 31 + 41 * I};
+    float complex fftOutputPS[SIZE], fftOutputPL[SIZE];
+
+    // PS FFT Calculation
+    XTime_GetTime(&psStartTime);
+    compute_FFT(fftInput, fftOutputPS);
+    XTime_GetTime(&psEndTime);
+
+    // Hardware FFT Calculation
+    XAxiDma dmaInstance;
+    int dmaStatus = DMA_Init(&dmaInstance, XPAR_AXI_DMA_0_DEVICE_ID);
+    if (dmaStatus != XST_SUCCESS) {
+        printf("\nDMA Initialization Failed!");
+        return XST_FAILURE;
+    }
+
+    XTime_GetTime(&plStartTime);
+
+    // Transfer input data to FPGA
+    dmaStatus = XAxiDma_SimpleTransfer(&dmaInstance, (UINTPTR)fftInput, sizeof(float complex) * SIZE, XAXIDMA_DMA_TO_DEVICE);
+    if (dmaStatus != XST_SUCCESS) return XST_FAILURE;
+
+    // Retrieve output data from FPGA
+    dmaStatus = XAxiDma_SimpleTransfer(&dmaInstance, (UINTPTR)fftOutputPL, sizeof(float complex) * SIZE, XAXIDMA_DEVICE_TO_DMA);
+    if (dmaStatus != XST_SUCCESS) return XST_FAILURE;
+
+    // Wait for transfers to complete
+    while (XAxiDma_Busy(&dmaInstance, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&dmaInstance, XAXIDMA_DEVICE_TO_DMA));
+
+    XTime_GetTime(&plEndTime);
+
+    // Compare outputs
+    for (int idx = 0; idx < SIZE; idx++) {
+        float realDiff = fabsf(crealf(fftOutputPS[idx]) - crealf(fftOutputPL[idx]));
+        float imagDiff = fabsf(cimagf(fftOutputPS[idx]) - cimagf(fftOutputPL[idx]));
+
+        printf("\nPS Output: %f+%fI, PL Output: %f+%fI", crealf(fftOutputPS[idx]), cimagf(fftOutputPS[idx]),
+               crealf(fftOutputPL[idx]), cimagf(fftOutputPL[idx]));
+
+        if (realDiff > 0.0001 || imagDiff > 0.0001) {
+            printf("\nMismatch at index %d!", idx);
+        } else {
+            printf("\nMatched at index %d!", idx);
+        }
+    }
+
+    // Execution Time Comparison
+    printf("\n\n------- Execution Time Comparison --------");
+    printf("\nPS Time: %f microseconds", (float)(psEndTime - psStartTime) / (COUNTS_PER_SECOND / 1e6));
+    printf("\nPL Time: %f microseconds", (float)(plEndTime - plStartTime) / (COUNTS_PER_SECOND / 1e6));
+
+    return 0;
+}

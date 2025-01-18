@@ -1,0 +1,407 @@
+// N - point FFT on PS, ACP and HP
+
+#include <stdio.h>
+#include <stdbool.h>
+#include "platform.h"
+#include <stdlib.h>
+#include <complex.h>
+#include <xtime_l.h>
+#include "xaxidma.h"
+#include "twiddle.h"
+
+#define iterations 10
+
+
+//for 1024-point FFT
+//#define reverse(n) ((n & 0x1) << 9) | ((n & 0x2) << 7) | ((n & 0x4) << 5) | ((n & 0x8) << 3) | (n & 0x10) << 1 | ((n & 0x20) >> 1) | ((n & 0x40) >> 3) | ((n & 0x80) >> 5) | ((n & 0x100) >> 7) | ((n & 0x200) >> 9)
+
+//for 512-point FFT
+//#define reverse(n) ((n & 0x1) << 8) | ((n & 0x2) << 6) | ((n & 0x4) << 4) | ((n & 0x8) << 2) | (n & 0x10) | ((n & 0x20) >> 2) | ((n & 0x40) >> 4) | ((n & 0x80) >> 6) | ((n & 0x100) >> 8)
+
+//for 256-point FFT
+//#define reverse(n) ((n & 0x1) << 7) | ((n & 0x2) << 5) | ((n & 0x4) << 3) | ((n & 0x8) << 1) | (n & 0x10) >> 1 | ((n & 0x20) >> 3) | ((n & 0x40) >> 5) | ((n & 0x80) >> 7)
+
+//for 128-point FFT
+//#define reverse(n) ((n & 0x1) << 6) | ((n & 0x2) << 4) | ((n & 0x4) << 2) | (n & 0x8) | (n & 0x10) >> 2 | ((n & 0x20) >> 4) | ((n & 0x40) >> 6)
+
+//for 64-point FFT
+//#define reverse(n) ((n & 0x1) << 5) | ((n & 0x2) << 3) | ((n & 0x4) << 1) | ((n & 0x8) >> 1) | (n & 0x10) >> 3 | ((n & 0x20) >> 5)
+
+//for 32-point FFT
+//#define reverse(n) ((n & 0x1) << 4) | ((n & 0x2) << 2) | (n & 0x4) | ((n & 0x8) >> 2) | ((n & 0x10) >> 4)
+
+//for 16-point FFT
+//#define reverse(n) ((n & 0x1) << 3) | ((n & 0x2) << 1) | ((n & 0x4) >> 1) | ((n & 0x8) >> 3)
+
+//for 8-point FFT
+//#define reverse(n) ((n & 0x1) << 2) | (n & 0x2) | ((n & 0x4) >> 2)
+
+//-------------------------------------------------------------------------------------
+//----------------- Function for FFT calculation on PS --------------------------------
+
+void FFT_PS(float FFTIn_I[FFTSIZE], float FFTIn_R[FFTSIZE], float FFTOut_I[FFTSIZE], float FFTOut_R[FFTSIZE])
+{
+
+  DTYPE temp_R;   /*temporary storage complex variable*/
+  DTYPE temp_I;   /*temporary storage complex variable*/
+
+  int i,j;      /* loop indexes */
+  int i_lower;    /* Index of lower point in butterfly */
+
+  int stage;
+  int subFFTSIZE; //Size of FFT in each stage of FFT
+  int BFWidth;      /*Butterfly Width*/
+
+  /*=====================BEGIN BIT REBERSAL===========================*/
+  for (i = 0; i < FFTSIZE; ++i) {
+    FFTOut_R[reverse(i)] = FFTIn_R[i];
+    FFTOut_I[reverse(i)] = FFTIn_I[i];
+  }
+  /*++++++++++++++++++++++END OF BIT REVERSAL++++++++++++++++++++++++++*/
+
+  /*=======================BEGIN: FFT=========================*/
+  // Do FFTSTAGES of butterflies
+  DTYPE BFWeight_R, BFWeight_I;
+ // For N-point FFT, there are log2(N) stages
+  //stages:
+  for(stage=1; stage<= FFTSTAGES; stage++)
+  {
+    subFFTSIZE = 1 << stage;    // DFT = 2^stage = points in sub DFT
+    BFWidth = subFFTSIZE >> 1;       // Butterfly WIDTHS in sub-FFT (FFTSIZE of sub-FFT/2) no of weights
+
+    // Perform butterflies for j-th stage
+    // This loop runs for the iteration equal to BF width
+    // In 4-point FFT, BF width is 1 in stage 1 and 2 in stage 2
+    // In 8-point FFT, BF width is 1 in stage 1, 2 in stage 2 and 4 in stage 3
+    //
+    //butterfly:
+	for(j=0; j<BFWidth; j++)
+    {
+    	//Note that weights of all butterfly units are same in a given stage
+    	// We can reduce the number of memory read by using this for loop
+    	BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+    	BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+
+		// This loop is for all butterflies in a stage that use same W**k
+		// In 4-point FFT, we have two BFs in stage 1
+		// In 8-point FFT, we have four BFs in stage 1 and two BFs in stage 2
+    	// Each butter fly weight affects two outputs and hence we have two outputs for each iteration
+		//subDFTSize:
+		for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+		  {
+			i_lower = i + BFWidth;      //index of lower point in butterfly
+			temp_R = FFTOut_R[i_lower] * BFWeight_R - FFTOut_I[i_lower] * BFWeight_I;
+			temp_I = FFTOut_I[i_lower] * BFWeight_R + FFTOut_R[i_lower] * BFWeight_I;
+
+			FFTOut_R[i_lower] = FFTOut_R[i] - temp_R;
+			FFTOut_I[i_lower] = FFTOut_I[i] - temp_I;
+			FFTOut_R[i] = FFTOut_R[i] + temp_R;
+			FFTOut_I[i] = FFTOut_I[i] + temp_I;
+		  }
+	}
+  }
+}
+
+
+//-------------------------------------------------------------------------------------
+//----------------- Function for FFT calculation on ACP -------------------------------
+
+int FFT_ACP(float complex FFT_input[FFTSIZE], float complex FFT_output_ACP[FFTSIZE]) {
+
+	// ----------- Configuration of DMA --------------
+		XAxiDma_Config *DMAACP_confptr;
+		DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+
+		// ----------- Initialization of DMA --------------
+		int status_ACP;
+		XAxiDma  DMAACP_instance;
+		status_ACP = XAxiDma_CfgInitialize(&DMAACP_instance, DMAACP_confptr);
+		//returns the status_ACP whether DMA is initialized or not
+		if(status_ACP != XST_SUCCESS) {
+			printf("\nACP DMA Initialization Failed\n");
+			return 1;
+		}
+
+
+		//---------------- DMA Transfer ------------------
+		// Starting the transfer only
+		// DMA first get ready to accept the data from FFT
+		// Device to DMA
+		status_ACP = XAxiDma_SimpleTransfer(&DMAACP_instance,(UINTPTR)FFT_output_ACP, FFTSIZE*2*sizeof(float), XAXIDMA_DEVICE_TO_DMA);
+		if(status_ACP != XST_SUCCESS) {
+			printf("\nACP DMA Device to DMA Configuration Failed\n");
+			return 1;
+		}
+
+		// then from DMA to FFT
+		status_ACP = XAxiDma_SimpleTransfer(&DMAACP_instance,(UINTPTR)FFT_input, FFTSIZE*2*sizeof(float), XAXIDMA_DMA_TO_DEVICE);
+		if(status_ACP != XST_SUCCESS) {
+			printf("\nACP DMA DMA to Device Configuration Failed\n");
+			return 1;
+		}
+
+		// reading the register
+		status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+		status_ACP = status_ACP & 0x00000002;
+		while (status_ACP != 0x00000002) {
+			status_ACP =  XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+			status_ACP = status_ACP & 0x00000002;
+		}
+
+		//
+		status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x34);
+		status_ACP = status_ACP & 0x00000002;
+		while (status_ACP != 0x00000002) {
+			status_ACP =  XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x34);
+			status_ACP = status_ACP & 0x00000002;
+		}
+
+		return 0;
+
+}
+
+
+//-------------------------------------------------------------------------------------
+//----------------- Function for FFT calculation on HP -------------------------------
+
+int FFT_HP(float complex FFT_input[FFTSIZE], float complex FFT_output_HP[FFTSIZE]) {
+
+	// ----------- Configuration of DMA --------------
+	XAxiDma_Config *DMAHP_confptr;
+	DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+
+	// ----------- Initialization of DMA --------------
+	int status_HP;
+	XAxiDma  DMAHP_instance;
+	status_HP = XAxiDma_CfgInitialize(&DMAHP_instance, DMAHP_confptr);
+	//returns the status_HP whether DMA is initialized or not
+	if(status_HP != XST_SUCCESS) {
+		printf("\nACP DMA Initialization Failed\n");
+		return 1;
+	}
+
+	// ------------------- Function to Flush the cache -----------------------
+	Xil_DCacheFlushRange((UINTPTR)FFT_input, (sizeof(float complex)*FFTSIZE));
+
+	//---------------- DMA Transfer ------------------
+	// Starting the transfer only
+	// DMA first get ready to accept the data from FFT and when input comes FFT transfer gets complete
+	// Device(FFT) to DMA
+	status_HP = XAxiDma_SimpleTransfer(&DMAHP_instance,(UINTPTR)FFT_output_HP, FFTSIZE*2*sizeof(float), XAXIDMA_DEVICE_TO_DMA);
+	if(status_HP != XST_SUCCESS) {
+		printf("\nACP DMA Device to DMA Configuration Failed\n");
+		return 1;
+	}
+
+	// then from DMA to FFT
+	status_HP = XAxiDma_SimpleTransfer(&DMAHP_instance,(UINTPTR)FFT_input, FFTSIZE*2*sizeof(float), XAXIDMA_DMA_TO_DEVICE);
+	if(status_HP != XST_SUCCESS) {
+		printf("\nACP DMA DMA to Device Configuration Failed\n");
+		return 1;
+	}
+
+	// input is sent from DDR to FFT using DMA
+	// checking whether data transfer is complete or not, by checking its status
+	status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+	status_HP = status_HP & 0x00000002;
+	while (status_HP != 0x00000002) {
+		status_HP =  XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+		status_HP = status_HP & 0x00000002;
+	}
+
+	//  output is sent from FFT to DDR using DMA
+	status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x34);
+	status_HP = status_HP & 0x00000002;
+	while (status_HP != 0x00000002) {
+		status_HP =  XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x34);
+		status_HP = status_HP & 0x00000002;
+	}
+
+	Xil_DCacheInvalidateRange((UINTPTR)FFT_output_HP, (sizeof(float complex)*FFTSIZE));
+
+	return 0;
+
+}
+
+
+
+//----------------- Main Function --------------------------------
+
+int main() {
+
+	init_platform();
+
+	//--------------------Declaring the variables----------------------
+	// You may modify the code to take the input from user via UART
+    float complex FFT_input[FFTSIZE];
+
+    // FFT processor output will be stored in this variable
+    //float complex FFT_output_PS[FFTSIZE];
+    float FFT_Output_PS_r[FFTSIZE];
+    float FFT_Output_PS_i[FFTSIZE];
+
+    // FFT ACP output will be stored in this variable
+    float complex FFT_output_ACP[FFTSIZE];
+
+    // FFT HP output will be stored in this variable
+    float complex FFT_output_HP[FFTSIZE];
+
+
+    float time_processor_sum = 0, time_processor_avg = 0;
+    float time_processor_ACP_sum = 0, time_processor_ACP_avg = 0;
+    float time_processor_HP_sum = 0, time_processor_HP_avg = 0;
+
+    //defining time-variables
+    XTime time_PS_start , time_PS_end;
+	XTime time_ACP_start , time_ACP_end;
+	XTime time_HP_start , time_HP_end;
+
+
+	// loop for iterations of FFT calculation
+	for (int k = 0; k < iterations; k++) {
+
+		//------------------Random Input Code using random() function -----------
+		float temp_r[FFTSIZE], temp_i[FFTSIZE]; // variable to store inputs real and imaginary part
+		XTime seed_value; // data type of this variable is global time
+		XTime_GetTime(&seed_value); //return the global time at address of seed_value
+		srand(seed_value); //returns the
+		// Generate Random real and imaginary inputs
+		for(int j = 0; j < FFTSIZE; j++) {
+			temp_r[j] = rand()%2000;
+			temp_i[j] = rand()%2000;
+			FFT_input[j] = temp_r[j] + I*temp_i[j];
+			//printf("%f + i%f = %f + I*%f\n", crealf(FFT_input[j]), cimagf(FFT_input[j]), temp_r[j], temp_i[j]);
+		}
+
+		//----------------- Calling all the fucntion as per the requriment -----------------
+
+		//------------------ 1. FFT on Processor ---------------------
+
+		XTime_SetTime(0); // Reset the global timer
+		XTime_GetTime(&time_PS_start); // Capture the timer value at the start
+
+		FFT_PS(temp_i, temp_r, FFT_Output_PS_i,FFT_Output_PS_r); //////////////-----function call-----//////////////
+
+		XTime_GetTime(&time_PS_end); // Capture the timer value at the start
+
+		float time_processor = 0;
+		time_processor = (float)1.0 * (time_PS_end - time_PS_start) / (COUNTS_PER_SECOND/1000000);
+		time_processor_sum += time_processor;
+
+
+		//----------------------------------------------------
+		//------------------ 2. FFT on ACP -------------------
+
+		XTime_SetTime(0);
+		XTime_GetTime(&time_ACP_start); // Capture the timer value at the start
+
+		FFT_ACP(FFT_input,FFT_output_ACP); //////////////-----function call-----//////////////
+
+		XTime_GetTime(&time_ACP_end); // Capture the timer value at the end
+
+		// calculating the execution time
+		float time_processor_ACP = 0;
+		time_processor_ACP = (float)1.0 * (time_ACP_end - time_ACP_start) / (COUNTS_PER_SECOND/1000000);
+		time_processor_ACP_sum += time_processor_ACP;
+
+		//----------------------------------------------------
+		//------------------ 3. FFT on HP -------------------
+
+		XTime_SetTime(0);
+		XTime_GetTime(&time_HP_start); // Capture the timer value at the start
+
+		FFT_HP(FFT_input, FFT_output_HP); //////////////-----function call-----//////////////
+
+		XTime_GetTime(&time_HP_end); // Capture the timer value at the end
+
+		// calculating the execution time
+		float time_processor_HP = 0;
+		time_processor_HP = (float)1.0 * (time_HP_end - time_HP_start) / (COUNTS_PER_SECOND/1000000);
+		time_processor_HP_sum += time_processor_HP;
+
+
+		//--------------------------------------------------------------------------------------------
+		// ------------------- Checking for the difference between the FFT Outputs -------------------
+
+		// We can't just print the outputs we have to compare the outputs of PS and PL
+		// Compare line-by-line and then check the output
+
+		int j;
+		int err_flag_1 = 0;  // error flag to check mismatch between transmitted and received data
+		int err_flag_2 = 0;
+		int err_flag_3 = 0;
+		printf("\nFor iteration %d\n: ", k);
+		for(j = 0; j < FFTSIZE; j++) {
+
+			// displaying the FFT_outputs
+			printf("PS: %f, %f\n", FFT_Output_PS_r[j], FFT_Output_PS_i[j]);
+			printf("ACP: %f, %f\n", crealf(FFT_output_ACP[j]), cimagf(FFT_output_ACP[j]));
+			printf("HP: %f, %f\n\n", crealf(FFT_output_HP[j]), cimagf(FFT_output_HP[j]));
+
+			// checking outputs between PS and ACP
+			float diff1 = abs(FFT_Output_PS_r[j] - crealf(FFT_output_ACP[j]));
+			float diff2 = abs(FFT_Output_PS_i[j] - cimagf(FFT_output_ACP[j]));
+
+			if(diff1 >= 0.0001 && diff2 >= 0.0001) {
+
+				err_flag_1 = 1; //error flag is asserted when mismatch is any output
+				break; // and for that output it will come out of the loop
+			}
+
+			// checking outputs between PS and HP
+			float diff3 = abs(FFT_Output_PS_r[j] - crealf(FFT_output_HP[j]));
+			float diff4 = abs(FFT_Output_PS_i[j] - cimagf(FFT_output_HP[j]));
+
+			if(diff3 >= 0.0001 && diff4 >= 0.0001) {
+
+				err_flag_2 = 1; //error flag is asserted when mismatch is any output
+				break; // and for that output it will come out of the loop
+			}
+
+			// checking outputs between ACP and HP
+			float diff5 = abs(crealf(FFT_output_ACP[j]) - crealf(FFT_output_HP[j]));
+			float diff6 = abs(cimagf(FFT_output_ACP[j]) - cimagf(FFT_output_HP[j]));
+
+			if(diff5 >= 0.0001 && diff6 >= 0.0001) {
+
+				err_flag_3 = 1; //error flag is asserted when mismatch is any output
+				break; // and for that output it will come out of the loop
+			}
+
+
+		}
+
+		if(err_flag_1 == 1) { // for PS and ACP
+			printf("Output mismatch between PS and ACP at index = %d \r\n", j);
+		}
+		else if(err_flag_2 == 1) { // for PS and HP
+			printf("Output mismatch between PS and HP at index = %d \r\n", j);
+		}
+		else if(err_flag_3 == 1) { // for ACP and HP
+			printf("Output mismatch between ACP and HP at index = %d \r\n", j);
+		}
+		else
+			printf("Functionality is verified \r\n\n");
+
+
+	} // for the iteraions
+
+	time_processor_avg = time_processor_sum / iterations;
+    printf("\n-----------EXECUTION TIME of Processor--------------------\n");
+   	printf("Execution Time for PS in Micro-Seconds : %f\n" , time_processor_avg);
+
+   	time_processor_ACP_avg = time_processor_ACP_sum / iterations;
+	printf("\n-----------EXECUTION TIME on ACP --------------------\n");
+	printf("Execution Time for PL in Micro-Seconds : %f\n" , time_processor_ACP_avg);
+
+	time_processor_HP_avg = time_processor_HP_sum / iterations;
+	printf("\n-----------EXECUTION TIME on HP --------------------\n");
+	printf("Execution Time for PL in Micro-Seconds : %f\n" , time_processor_HP_avg);
+
+	cleanup_platform();
+
+	return 0;
+
+}
+
+

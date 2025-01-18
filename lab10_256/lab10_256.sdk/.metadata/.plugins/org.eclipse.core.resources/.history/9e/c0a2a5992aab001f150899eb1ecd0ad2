@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <math.h>
+
+#define N 256 // 256-point FFT
+#define PI 3.14159265358979323846
+
+typedef struct {
+    double real;
+    double imag;
+} Complex;
+
+void fft(Complex *x) {
+    unsigned int i, j, k, m;
+    unsigned int n = N;
+    unsigned int a, b;
+    Complex temp, W, U;
+    int logN = log2(N);
+
+    // Bit reversal (reordering the input array)
+    for (i = 1, j = 0; i < n; i++) {
+        unsigned int bit = n >> 1;
+        while (j >= bit) {
+            j -= bit;
+            bit >>= 1;
+        }
+        j += bit;
+
+        if (i < j) {
+            // Swap the values
+            temp = x[i];
+            x[i] = x[j];
+            x[j] = temp;
+        }
+    }
+
+    // FFT computation
+    for (i = 1; i <= logN; i++) {
+        m = 1 << i;  // m = 2, 4, 8, ..., N
+        for (k = 0; k < n; k += m) {
+            for (j = 0; j < m / 2; j++) {
+                W.real = cos(-2 * PI * j / m);
+                W.imag = sin(-2 * PI * j / m);
+
+                a = k + j;
+                b = k + j + m / 2;
+
+                // Multiply W with x[b]
+                temp.real = W.real * x[b].real - W.imag * x[b].imag;
+                temp.imag = W.real * x[b].imag + W.imag * x[b].real;
+
+                // Butterfly operation
+                x[b].real = x[a].real - temp.real;
+                x[b].imag = x[a].imag - temp.imag;
+
+                x[a].real += temp.real;
+                x[a].imag += temp.imag;
+            }
+        }
+    }
+}
+
+void printFFT(Complex *x) {
+    for (int i = 0; i < N; i++) {
+        printf("X[%d]: %.5f + %.5fi\n", i, x[i].real, x[i].imag);
+    }
+}
+
+int main() {
+    Complex x[N];
+
+    // Initialize the input array using a loop
+    for (int i = 0; i < N; i++) {
+        x[i].real = i;  // Set real part to i (0 to 255)
+        x[i].imag = 0;  // Imaginary part is 0
+    }
+
+    printf("Input:\n");
+    for (int i = 0; i < N; i++) {
+        printf("x[%d]: %.5f + %.5fi\n", i, x[i].real, x[i].imag);
+    }
+
+    fft(x);
+
+    printf("\nFFT Output:\n");
+    printFFT(x);
+
+    return 0;
+}

@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <xtime_l.h>
+#include <math.h>
+
+#define N 16
+#define PI 3.14159265358979323846
+
+// Custom Complex Number Struct
+typedef struct {
+    float real;
+    float imag;
+} Complex;
+
+// Helper Functions for Complex Arithmetic
+Complex add(Complex a, Complex b) {
+    return (Complex){a.real + b.real, a.imag + b.imag};
+}
+
+Complex subtract(Complex a, Complex b) {
+    return (Complex){a.real - b.real, a.imag - b.imag};
+}
+
+Complex multiply(Complex a, Complex b) {
+    return (Complex){
+        a.real * b.real - a.imag * b.imag,
+        a.real * b.imag + a.imag * b.real
+    };
+}
+
+// Precomputed Bit-reversal Array for N = 16
+const int rev16[N] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+
+// Precomputed Twiddle Factors for N = 16
+const Complex W[N / 2] = {
+    {1.0, 0.0},
+    {0.92387953, -0.38268343},
+    {0.70710678, -0.70710678},
+    {0.38268343, -0.92387953},
+    {0.0, -1.0},
+    {-0.38268343, -0.92387953},
+    {-0.70710678, -0.70710678},
+    {-0.92387953, -0.38268343}
+};
+
+// Function to perform bit-reversal
+void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev16[i]];
+    }
+}
+
+// Function to perform FFT stages
+void FFT_stages(Complex FFT_input[N], Complex FFT_output[N]) {
+    Complex temp1[N], temp2[N];
+
+    // Stage 1
+    for (int i = 0; i < N; i += 2) {
+        temp1[i] = add(FFT_input[i], FFT_input[i + 1]);
+        temp1[i + 1] = subtract(FFT_input[i], FFT_input[i + 1]);
+    }
+
+    // Stage 2
+    for (int i = 0; i < N; i += 4) {
+        temp2[i] = add(temp1[i], multiply(W[0], temp1[i + 2]));
+        temp2[i + 2] = subtract(temp1[i], multiply(W[0], temp1[i + 2]));
+        temp2[i + 1] = add(temp1[i + 1], multiply(W[2], temp1[i + 3]));
+        temp2[i + 3] = subtract(temp1[i + 1], multiply(W[2], temp1[i + 3]));
+    }
+
+    // Stage 3
+    for (int i = 0; i < N; i += 8) {
+        FFT_output[i] = add(temp2[i], multiply(W[0], temp2[i + 4]));
+        FFT_output[i + 4] = subtract(temp2[i], multiply(W[0], temp2[i + 4]));
+        FFT_output[i + 1] = add(temp2[i + 1], multiply(W[1], temp2[i + 5]));
+        FFT_output[i + 5] = subtract(temp2[i + 1], multiply(W[1], temp2[i + 5]));
+        FFT_output[i + 2] = add(temp2[i + 2], multiply(W[2], temp2[i + 6]));
+        FFT_output[i + 6] = subtract(temp2[i + 2], multiply(W[2], temp2[i + 6]));
+        FFT_output[i + 3] = add(temp2[i + 3], multiply(W[3], temp2[i + 7]));
+        FFT_output[i + 7] = subtract(temp2[i + 3], multiply(W[3], temp2[i + 7]));
+    }
+
+    // Stage 4
+    for (int i = 0; i < N / 2; i++) {
+        Complex even = FFT_output[i];
+        Complex odd = multiply(W[i], FFT_output[i + N / 2]);
+        FFT_output[i] = add(even, odd);
+        FFT_output[i + N / 2] = subtract(even, odd);
+    }
+}
+
+int main() {
+    // Input data
+    const Complex FFT_input[N] = {
+        {11, 23}, {32, 10}, {91, 94}, {15, 69},
+        {41, 29}, {21, 84}, {52, 33}, {12, 90},
+        {17, 55}, {34, 76}, {54, 18}, {28, 38},
+        {13, 99}, {19, 72}, {39, 24}, {8, 47}
+    };
+    Complex FFT_output[N];
+    Complex FFT_rev[N];
+
+    // Perform bit-reversal and FFT
+    bitreverse(FFT_input, FFT_rev);
+    FFT_stages(FFT_rev, FFT_output);
+
+    // Print FFT input
+    printf("\nPrinted FFT input:\n");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: Real: %f Imag: %f\n", i, FFT_input[i].real, FFT_input[i].imag);
+    }
+
+    // Print FFT output
+    printf("\nPrinted FFT output:\n");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: Real: %f Imag: %f\n", i, FFT_output[i].real, FFT_output[i].imag);
+    }
+
+    return 0;
+}

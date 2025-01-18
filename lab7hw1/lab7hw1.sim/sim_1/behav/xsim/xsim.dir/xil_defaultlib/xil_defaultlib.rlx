@@ -1,0 +1,8 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/aniru/Desktop/ELD/lab7hw1/lab7hw1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/aniru/Desktop/ELD/lab7hw1/lab7hw1.srcs/sim_1/new/tb_FFT.v,1729266912,verilog,,,,tb_fft,,,,,,,,
+C:/Users/aniru/Desktop/ELD/lab7hw1/lab7hw1.srcs/sources_1/ip/FFT/sim/FFT.vhd,1729266938,vhdl,,,,fft,,,,,,,,
+C:/Users/aniru/Desktop/ELD/lab7hw1/lab7hw1.srcs/sources_1/new/top_wrapper.v,1729266849,verilog,,C:/Users/aniru/Desktop/ELD/lab7hw1/lab7hw1.srcs/sim_1/new/tb_FFT.v,,top_wrapper,,,,,,,,

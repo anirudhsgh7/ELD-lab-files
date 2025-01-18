@@ -1,0 +1,167 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 25 12:34:59 2024
+# Process ID: 5932
+# Current directory: C:/Users/aniru/Desktop/ELD/lab10_16
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2928 C:\Users\aniru\Desktop\ELD\lab10_16\lab10_16.xpr
+# Log file: C:/Users/aniru/Desktop/ELD/lab10_16/vivado.log
+# Journal file: C:/Users/aniru/Desktop/ELD/lab10_16\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aniru/Desktop/ELD/lab10_16/lab10_16.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/aniru/Desktop/ELD/lab10_16/lab10_16.sdk -hwspec C:/Users/aniru/Desktop/ELD/lab10_16/lab10_16.sdk/design_1_wrapper.hdf
+close_project
+create_project lab10_128 C:/Users/aniru/Desktop/ELD/lab10_128 -part xc7z020clg484-1
+set_property board_part digilentinc.com:zedboard:part0:1.1 [current_project]
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_ACP {1} CONFIG.PCW_USE_DEFAULT_ACP_USER_VAL {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0
+endgroup
+set_property -dict [list CONFIG.data_format.VALUE_SRC USER] [get_bd_cells xfft_0]
+set_property -dict [list CONFIG.transform_length {128} CONFIG.data_format {floating_point} CONFIG.aresetn {true} CONFIG.output_ordering {natural_order} CONFIG.implementation_options {automatically_select} CONFIG.phase_factor_width {24} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC USER] [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_length_width {23} CONFIG.c_sg_include_stscntrl_strm {0} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_include_mm2s_dre {1} CONFIG.c_mm2s_burst_size {32} CONFIG.c_m_axi_s2mm_data_width {64} CONFIG.c_include_s2mm_dre {1} CONFIG.c_s2mm_burst_size {32}] [get_bd_cells axi_dma_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_ACP} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_ACP]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_ACP} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
+regenerate_bd_layout
+set_property location {5 1607 477} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/S_AXIS_DATA] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+connect_bd_net [get_bd_pins xfft_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins xfft_0/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {2 495 364} [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {2 539 566} [get_bd_cells xlconstant_1]
+set_property location {2 536 482} [get_bd_cells xlconstant_0]
+set_property -dict [list CONFIG.CONST_WIDTH {16}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xfft_0/s_axis_config_tdata]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins xfft_0/s_axis_config_tvalid]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {xfft_0_M_AXIS_DATA}]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_dma_0_M_AXIS_MM2S}]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets xfft_0_M_AXIS_DATA] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+endgroup
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files  C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xfft_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_dma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 2 {design_1_processing_system7_0_0_synth_1 design_1_xfft_0_0_synth_1 design_1_axi_dma_0_0_synth_1 design_1_axi_smc_0_synth_1 design_1_rst_ps7_0_100M_0_synth_1 design_1_auto_pc_0_synth_1 design_1_system_ila_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.ip_user_files -ipstatic_source_dir C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/modelsim} {questa=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/questa} {riviera=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/riviera} {activehdl=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_addr_segs axi_dma_0/Data_MM2S/SEG_processing_system7_0_ACP_QSPI_LINEAR]
+delete_bd_objs [get_bd_addr_segs axi_dma_0/Data_S2MM/SEG_processing_system7_0_ACP_QSPI_LINEAR]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd
+export_ip_user_files -of_objects  [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+file delete -force C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+create_bd_design "design_1"
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_ACP {1} CONFIG.PCW_USE_DEFAULT_ACP_USER_VAL {1} CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {0} CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0
+endgroup
+set_property -dict [list CONFIG.data_format.VALUE_SRC USER] [get_bd_cells xfft_0]
+set_property -dict [list CONFIG.transform_length {128} CONFIG.data_format {floating_point} CONFIG.aresetn {true} CONFIG.output_ordering {natural_order} CONFIG.implementation_options {automatically_select} CONFIG.phase_factor_width {24} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC USER] [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_length_width {23} CONFIG.c_sg_include_stscntrl_strm {0} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_include_mm2s_dre {1} CONFIG.c_mm2s_burst_size {32} CONFIG.c_m_axi_s2mm_data_width {64} CONFIG.c_include_s2mm_dre {1} CONFIG.c_s2mm_burst_size {32}] [get_bd_cells axi_dma_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_ACP} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_ACP]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+endgroup
+regenerate_bd_layout
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_ACP} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
+regenerate_bd_layout
+set_property location {5 1575 482} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/S_AXIS_DATA] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+connect_bd_net [get_bd_pins xfft_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins xfft_0/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {2 546 404} [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {2 515 504} [get_bd_cells xlconstant_1]
+set_property -dict [list CONFIG.CONST_WIDTH {16}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xfft_0/s_axis_config_tdata]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins xfft_0/s_axis_config_tvalid]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {xfft_0_M_AXIS_DATA}]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_dma_0_M_AXIS_MM2S}]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets xfft_0_M_AXIS_DATA] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+endgroup
+delete_bd_objs [get_bd_addr_segs axi_dma_0/Data_MM2S/SEG_processing_system7_0_ACP_QSPI_LINEAR]
+delete_bd_objs [get_bd_addr_segs axi_dma_0/Data_S2MM/SEG_processing_system7_0_ACP_QSPI_LINEAR]
+make_wrapper -files [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files  C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xfft_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_dma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 2 {design_1_processing_system7_0_0_synth_1 design_1_xfft_0_0_synth_1 design_1_axi_dma_0_0_synth_1 design_1_axi_smc_0_synth_1 design_1_rst_ps7_0_100M_0_synth_1 design_1_auto_pc_0_synth_1 design_1_system_ila_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.ip_user_files -ipstatic_source_dir C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/modelsim} {questa=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/questa} {riviera=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/riviera} {activehdl=C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1
+file mkdir C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.sdk
+file copy -force C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.runs/impl_1/design_1_wrapper.sysdef C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.sdk -hwspec C:/Users/aniru/Desktop/ELD/lab10_128/lab10_128.sdk/design_1_wrapper.hdf

@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+// Define FFT parameters
+#define N 16  // FFT size (must be a power of 2)
+#define PI 3.14159265358979323846
+
+// Define data type for computation (integer)
+int real[N]; // Real part of the input signal
+int imag[N]; // Imaginary part of the input signal
+
+// Function to initialize the input with fixed integer values
+void initialize_input() {
+    // Define fixed integer values for the input signal
+    int real_values[N] = {25, -31, 7, -12, 43, -8, 36, -29,
+                          11, -5, -37, 28, -41, 19, -3, 32};
+    int imag_values[N] = {12, -24, 35, -9, 27, -11, 3, -36,
+                          42, -21, -4, 16, -28, 9, -15, 23};
+
+    // Copy predefined integer values into the FFT input arrays
+    for (int i = 0; i < N; i++) {
+        real[i] = real_values[i];
+        imag[i] = imag_values[i];
+    }
+
+    // Display the initialized input for verification
+    printf("\nInitialized FFT Input (Integer values):\n");
+    for (int i = 0; i < N; i++) {
+        printf("Input[%d]: Real = %d, Imag = %d\n", i, real[i], imag[i]);
+    }
+}
+
+// Bit-Reversal Function
+void bit_reversal() {
+    unsigned int i, j, k;
+    for (i = 0; i < N; i++) {
+        j = 0;
+        for (k = 0; k < log2(N); k++) {
+            j = (j << 1) | ((i >> k) & 1);
+        }
+        if (i < j) {
+            // Swap real and imaginary parts
+            int temp_real = real[i];
+            int temp_imag = imag[i];
+            real[i] = real[j];
+            imag[i] = imag[j];
+            real[j] = temp_real;
+            imag[j] = temp_imag;
+        }
+    }
+}
+
+// FFT Calculation
+void fft() {
+    unsigned int stage, size, half_size, step, i, j, k;
+    int temp_real, temp_imag, w_real, w_imag;
+
+    bit_reversal(); // Reorder the input data by bit-reversal
+
+    for (stage = 1; stage <= log2(N); stage++) {
+        size = 1 << stage;         // Current FFT size
+        half_size = size >> 1;     // Half of the current FFT size
+        step = N / size;           // Twiddle factor step
+
+        for (j = 0; j < half_size; j++) {
+            w_real = real[j * step];
+            w_imag = imag[j * step];
+
+            for (i = j; i < N; i += size) {
+                k = i + half_size;
+
+                // Perform Butterfly
+                temp_real = real[k] * w_real - imag[k] * w_imag;
+                temp_imag = imag[k] * w_real + real[k] * w_imag;
+
+                real[k] = real[i] - temp_real;
+                imag[k] = imag[i] - temp_imag;
+
+                real[i] += temp_real;
+                imag[i] += temp_imag;
+            }
+        }
+    }
+}
+
+// Print the output of the FFT
+void print_output() {
+    printf("\nFFT Output (Integer values):\n");
+    for (int i = 0; i < N; i++) {
+        printf("Output[%d]: Real = %d, Imag = %d\n", i, real[i], imag[i]);
+    }
+}
+
+// Main Function
+int main() {
+    initialize_input();  // Initialize input signal
+    fft();               // Perform FFT on the input signal
+    print_output();      // Print the FFT output
+    return 0;
+}

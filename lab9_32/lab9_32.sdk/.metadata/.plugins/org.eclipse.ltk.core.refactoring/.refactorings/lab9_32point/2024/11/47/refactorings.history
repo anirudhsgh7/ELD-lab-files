@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;lab9_32point/src/dma_init.h&apos; to &apos;DMA_Init.h&apos;" description="Rename resource &apos;dma_init.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/dma_init.h" name="DMA_Init.h" stamp="1732206546589" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;lab9_32point/src/DMA_Init.h&apos; to &apos;dma_init.h&apos;" description="Rename resource &apos;DMA_Init.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/DMA_Init.h" name="dma_init.h" stamp="1732207414988" updateReferences="true"/>
+</session>

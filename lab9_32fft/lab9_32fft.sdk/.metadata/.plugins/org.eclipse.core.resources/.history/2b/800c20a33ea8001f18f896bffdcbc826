@@ -1,0 +1,12 @@
+#include <unistd.h>
+#include "xil_types.h"
+#include "xil_printf.h"
+
+/* _exit - Simple implementation with debugging output. Does not return.
+*/
+__attribute__((weak)) void _exit(sint32 status) {
+    xil_printf("Program exited with status: %d\n", status);  // Log the exit status
+    while (1) {
+        // Infinite loop to halt the program
+    }
+}

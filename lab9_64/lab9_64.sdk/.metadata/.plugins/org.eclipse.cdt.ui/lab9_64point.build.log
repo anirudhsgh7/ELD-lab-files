@@ -1,0 +1,25 @@
+14:38:59 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:5:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/reverse_function.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: multiple definition of `W_real'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: multiple definition of `W_imag'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:48: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:52: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1
+
+14:39:00 Build Finished (took 1s.45ms)
+

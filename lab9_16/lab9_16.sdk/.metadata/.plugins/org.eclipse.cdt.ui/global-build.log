@@ -1,0 +1,1057 @@
+00:40:08 **** Build of project lab9_16point_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+00:40:56 **** Auto Build of project lab9_16point_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+00:41:28 **** Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18996	   1144	  22568	  42708	   a6d4	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:00:09 **** Clean-only build of configuration Debug for project lab9_16point ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab9_16point.elf.size  lab9_16point.elf
+' '
+01:00:10 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:36:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+../src/helloworld.c:96:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+../src/helloworld.c:102:37: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int' [-Wformat=]
+     printf("\nCOUNTS_PER_SECOND: %llu\n", COUNTS_PER_SECOND);
+                                  ~~~^
+                                  %u
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58976	   2584	  23328	  84888	  14b98	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:00:38 **** Clean-only build of configuration Debug for project lab9_16point ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab9_16point.elf.size  lab9_16point.elf
+' '
+01:00:39 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:36:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+../src/helloworld.c:96:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+../src/helloworld.c:102:37: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int' [-Wformat=]
+     printf("\nCOUNTS_PER_SECOND: %llu\n", COUNTS_PER_SECOND);
+                                  ~~~^
+                                  %u
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58976	   2584	  23328	  84888	  14b98	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:47:21 **** Clean-only build of configuration Debug for project lab9_16point ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab9_16point.elf.size  lab9_16point.elf
+' '
+01:47:22 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:104:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:47:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60384	   2584	  23328	  86296	  15118	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:47:36 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:104:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:47:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60384	   2584	  23328	  86296	  15118	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:49:11 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:52:18 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:109:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:47:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61160	   2584	  23328	  87072	  15420	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:52:26 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:54:00 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:44:00 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103768	   2584	  23328	 129680	  1fa90	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+14:47:02 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:54:19 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62520	   2584	  23328	  88432	  15970	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+14:54:30 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:58:58 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62052	   2584	  23456	  88092	  1581c	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+14:59:05 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:01:03 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:10:31 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58092	   2584	  23456	  84132	  148a4	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+15:10:57 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:14:13 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:56:10: fatal error: dma_init.h: No such file or directory
+ #include "dma_init.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+15:14:33 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:149:11: warning: implicit declaration of function 'DMA_Init' [-Wimplicit-function-declaration]
+  status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+           ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/helloworld.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_16\lab9_16.sdk\lab9_16point\Debug/../src/helloworld.c:149: undefined reference to `DMA_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_16point.elf] Error 1
+15:14:44 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114256	   2648	  23328	 140232	  223c8	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+15:15:08 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:7:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114256	   2648	  23328	 140232	  223c8	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+15:15:11 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:7:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114256	   2648	  23328	 140232	  223c8	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+15:16:27 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:19:53 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:00:44 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:7:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73000	   2648	  23328	  98976	  182a0	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+16:02:44 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:06:24 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:3:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:5:5: error: unknown type name 'XTime'
+     XTime PS_start_time, PS_end_time;
+     ^~~~~
+../src/helloworld.c:6:5: error: unknown type name 'XTime'
+     XTime PL_start_time, PL_end_time;
+     ^~~~~
+../src/helloworld.c:9:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FFT_input'
+     float complex FFT_input[N] = {
+                   ^~~~~~~~~
+../src/helloworld.c:9:19: error: 'FFT_input' undeclared (first use in this function)
+../src/helloworld.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:9:29: error: 'N' undeclared (first use in this function)
+     float complex FFT_input[N] = {
+                             ^
+../src/helloworld.c:9:34: error: expected expression before '{' token
+     float complex FFT_input[N] = {
+                                  ^
+../src/helloworld.c:16:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FFT_output_sw'
+     float complex FFT_output_sw[N], FFT_output_hw[N];
+                   ^~~~~~~~~~~~~
+../src/helloworld.c:16:19: error: 'FFT_output_sw' undeclared (first use in this function)
+../src/helloworld.c:16:37: error: 'FFT_output_hw' undeclared (first use in this function)
+     float complex FFT_output_sw[N], FFT_output_hw[N];
+                                     ^~~~~~~~~~~~~
+../src/helloworld.c:16:35: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     float complex FFT_output_sw[N], FFT_output_hw[N];
+                                   ^
+../src/helloworld.c:17:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FFT_rev_sw'
+     float complex FFT_rev_sw[N];
+                   ^~~~~~~~~~
+../src/helloworld.c:17:19: error: 'FFT_rev_sw' undeclared (first use in this function)
+../src/helloworld.c:22:5: error: unknown type name 'XAxiDma'
+     XAxiDma AxiDMA;
+     ^~~~~~~
+../src/helloworld.c:23:14: warning: implicit declaration of function 'DMA_Init' [-Wimplicit-function-declaration]
+     status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+              ^~~~~~~~
+../src/helloworld.c:23:32: error: 'XPAR_AXI_DMA_0_DEVICE_ID' undeclared (first use in this function)
+     status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:28:5: warning: implicit declaration of function 'XTime_SetTime' [-Wimplicit-function-declaration]
+     XTime_SetTime(0);
+     ^~~~~~~~~~~~~
+../src/helloworld.c:29:5: warning: implicit declaration of function 'XTime_GetTime' [-Wimplicit-function-declaration]
+     XTime_GetTime(&PL_start_time);
+     ^~~~~~~~~~~~~
+../src/helloworld.c:32:14: warning: implicit declaration of function 'XAxiDma_SimpleTransfer' [-Wimplicit-function-declaration]
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, ((sizeof(float complex)) * N), XAXIDMA_DEVICE_TO_DMA);
+              ^~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:32:47: error: 'UINTPTR' undeclared (first use in this function)
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, ((sizeof(float complex)) * N), XAXIDMA_DEVICE_TO_DMA);
+                                               ^~~~~~~
+../src/helloworld.c:32:55: error: expected ')' before 'FFT_output_hw'
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, ((sizeof(float complex)) * N), XAXIDMA_DEVICE_TO_DMA);
+                                                       ^~~~~~~~~~~~~
+                                                       )
+../src/helloworld.c:33:55: error: expected ')' before 'FFT_input'
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, ((sizeof(float complex)) * N), XAXIDMA_DMA_TO_DEVICE);
+                                                       ^~~~~~~~~
+                                                       )
+../src/helloworld.c:36:12: warning: implicit declaration of function 'XAxiDma_Busy' [-Wimplicit-function-declaration]
+     while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+            ^~~~~~~~~~~~
+../src/helloworld.c:36:34: error: 'XAXIDMA_DMA_TO_DEVICE' undeclared (first use in this function)
+     while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+                                  ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:37:34: error: 'XAXIDMA_DEVICE_TO_DMA' undeclared (first use in this function)
+     while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+                                  ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:42:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("16 point FFT\n\r");
+     ^~~~~~
+../src/helloworld.c:42:5: warning: incompatible implicit declaration of built-in function 'printf'
+../src/helloworld.c:42:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/helloworld.c:1:1:
++#include <stdio.h>
+ int main()
+../src/helloworld.c:42:5:
+     printf("16 point FFT\n\r");
+     ^~~~~~
+../src/helloworld.c:47:5: warning: implicit declaration of function 'bitreverse' [-Wimplicit-function-declaration]
+     bitreverse(FFT_input, FFT_rev_sw);
+     ^~~~~~~~~~
+../src/helloworld.c:48:5: warning: implicit declaration of function 'FFT_stages' [-Wimplicit-function-declaration]
+     FFT_stages(FFT_rev_sw, FFT_output_sw);
+     ^~~~~~~~~~
+../src/helloworld.c:55:64: warning: implicit declaration of function 'crealf' [-Wimplicit-function-declaration]
+         printf("\n\rPS Output: %f + %fI, PL Output: %f + %fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]), crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+                                                                ^~~~~~
+../src/helloworld.c:55:64: warning: incompatible implicit declaration of built-in function 'crealf'
+../src/helloworld.c:55:64: note: include '<complex.h>' or provide a declaration of 'crealf'
+../src/helloworld.c:1:1:
++#include <complex.h>
+ int main()
+../src/helloworld.c:55:64:
+         printf("\n\rPS Output: %f + %fI, PL Output: %f + %fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]), crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+                                                                ^~~~~~
+../src/helloworld.c:55:90: warning: implicit declaration of function 'cimagf' [-Wimplicit-function-declaration]
+         printf("\n\rPS Output: %f + %fI, PL Output: %f + %fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]), crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+                                                                                          ^~~~~~
+../src/helloworld.c:55:90: warning: incompatible implicit declaration of built-in function 'cimagf'
+../src/helloworld.c:55:90: note: include '<complex.h>' or provide a declaration of 'cimagf'
+../src/helloworld.c:56:23: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+         float diff1 = fabs(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~
+../src/helloworld.c:56:23: warning: incompatible implicit declaration of built-in function 'fabs'
+../src/helloworld.c:56:23: note: include '<math.h>' or provide a declaration of 'fabs'
+../src/helloworld.c:1:1:
++#include <math.h>
+ int main()
+../src/helloworld.c:56:23:
+         float diff1 = fabs(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~
+../src/helloworld.c:71:58: error: 'COUNTS_PER_SECOND' undeclared (first use in this function)
+     time = (float)1.0 * (PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+                                                          ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:78:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+16:06:37 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:3:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:5:5: error: unknown type name 'XTime'
+     XTime PS_start_time, PS_end_time;
+     ^~~~~
+../src/helloworld.c:6:5: error: unknown type name 'XTime'
+     XTime PL_start_time, PL_end_time;
+     ^~~~~
+../src/helloworld.c:9:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FFT_input'
+     float complex FFT_input[N] = {
+                   ^~~~~~~~~
+../src/helloworld.c:9:19: error: 'FFT_input' undeclared (first use in this function)
+../src/helloworld.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:9:29: error: 'N' undeclared (first use in this function)
+     float complex FFT_input[N] = {
+                             ^
+../src/helloworld.c:9:34: error: expected expression before '{' token
+     float complex FFT_input[N] = {
+                                  ^
+../src/helloworld.c:16:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FFT_output_sw'
+     float complex FFT_output_sw[N], FFT_output_hw[N];
+                   ^~~~~~~~~~~~~
+../src/helloworld.c:16:19: error: 'FFT_output_sw' undeclared (first use in this function)
+../src/helloworld.c:16:37: error: 'FFT_output_hw' undeclared (first use in this function)
+     float complex FFT_output_sw[N], FFT_output_hw[N];
+                                     ^~~~~~~~~~~~~
+../src/helloworld.c:16:35: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     float complex FFT_output_sw[N], FFT_output_hw[N];
+                                   ^
+../src/helloworld.c:17:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FFT_rev_sw'
+     float complex FFT_rev_sw[N];
+                   ^~~~~~~~~~
+../src/helloworld.c:17:19: error: 'FFT_rev_sw' undeclared (first use in this function)
+../src/helloworld.c:22:5: error: unknown type name 'XAxiDma'
+     XAxiDma AxiDMA;
+     ^~~~~~~
+../src/helloworld.c:23:14: warning: implicit declaration of function 'DMA_Init' [-Wimplicit-function-declaration]
+     status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+              ^~~~~~~~
+../src/helloworld.c:23:32: error: 'XPAR_AXI_DMA_0_DEVICE_ID' undeclared (first use in this function)
+     status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:28:5: warning: implicit declaration of function 'XTime_SetTime' [-Wimplicit-function-declaration]
+     XTime_SetTime(0);
+     ^~~~~~~~~~~~~
+../src/helloworld.c:29:5: warning: implicit declaration of function 'XTime_GetTime' [-Wimplicit-function-declaration]
+     XTime_GetTime(&PL_start_time);
+     ^~~~~~~~~~~~~
+../src/helloworld.c:32:14: warning: implicit declaration of function 'XAxiDma_SimpleTransfer' [-Wimplicit-function-declaration]
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, ((sizeof(float complex)) * N), XAXIDMA_DEVICE_TO_DMA);
+              ^~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:32:47: error: 'UINTPTR' undeclared (first use in this function)
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, ((sizeof(float complex)) * N), XAXIDMA_DEVICE_TO_DMA);
+                                               ^~~~~~~
+../src/helloworld.c:32:55: error: expected ')' before 'FFT_output_hw'
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, ((sizeof(float complex)) * N), XAXIDMA_DEVICE_TO_DMA);
+                                                       ^~~~~~~~~~~~~
+                                                       )
+../src/helloworld.c:33:55: error: expected ')' before 'FFT_input'
+     status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, ((sizeof(float complex)) * N), XAXIDMA_DMA_TO_DEVICE);
+                                                       ^~~~~~~~~
+                                                       )
+../src/helloworld.c:36:12: warning: implicit declaration of function 'XAxiDma_Busy' [-Wimplicit-function-declaration]
+     while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+            ^~~~~~~~~~~~
+../src/helloworld.c:36:34: error: 'XAXIDMA_DMA_TO_DEVICE' undeclared (first use in this function)
+     while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+                                  ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:37:34: error: 'XAXIDMA_DEVICE_TO_DMA' undeclared (first use in this function)
+     while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+                                  ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:42:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("16 point FFT\n\r");
+     ^~~~~~
+../src/helloworld.c:42:5: warning: incompatible implicit declaration of built-in function 'printf'
+../src/helloworld.c:42:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/helloworld.c:1:1:
++#include <stdio.h>
+ int main()
+../src/helloworld.c:42:5:
+     printf("16 point FFT\n\r");
+     ^~~~~~
+../src/helloworld.c:47:5: warning: implicit declaration of function 'bitreverse' [-Wimplicit-function-declaration]
+     bitreverse(FFT_input, FFT_rev_sw);
+     ^~~~~~~~~~
+../src/helloworld.c:48:5: warning: implicit declaration of function 'FFT_stages' [-Wimplicit-function-declaration]
+     FFT_stages(FFT_rev_sw, FFT_output_sw);
+     ^~~~~~~~~~
+../src/helloworld.c:55:64: warning: implicit declaration of function 'crealf' [-Wimplicit-function-declaration]
+         printf("\n\rPS Output: %f + %fI, PL Output: %f + %fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]), crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+                                                                ^~~~~~
+../src/helloworld.c:55:64: warning: incompatible implicit declaration of built-in function 'crealf'
+../src/helloworld.c:55:64: note: include '<complex.h>' or provide a declaration of 'crealf'
+../src/helloworld.c:1:1:
++#include <complex.h>
+ int main()
+../src/helloworld.c:55:64:
+         printf("\n\rPS Output: %f + %fI, PL Output: %f + %fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]), crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+                                                                ^~~~~~
+../src/helloworld.c:55:90: warning: implicit declaration of function 'cimagf' [-Wimplicit-function-declaration]
+         printf("\n\rPS Output: %f + %fI, PL Output: %f + %fI", crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]), crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+                                                                                          ^~~~~~
+../src/helloworld.c:55:90: warning: incompatible implicit declaration of built-in function 'cimagf'
+../src/helloworld.c:55:90: note: include '<complex.h>' or provide a declaration of 'cimagf'
+../src/helloworld.c:56:23: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+         float diff1 = fabs(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~
+../src/helloworld.c:56:23: warning: incompatible implicit declaration of built-in function 'fabs'
+../src/helloworld.c:56:23: note: include '<math.h>' or provide a declaration of 'fabs'
+../src/helloworld.c:1:1:
++#include <math.h>
+ int main()
+../src/helloworld.c:56:23:
+         float diff1 = fabs(crealf(FFT_output_sw[i]) - crealf(FFT_output_hw[i]));
+                       ^~~~
+../src/helloworld.c:71:58: error: 'COUNTS_PER_SECOND' undeclared (first use in this function)
+     time = (float)1.0 * (PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+                                                          ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:78:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+16:08:52 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:12: warning: "COUNTS_PER_SECOND" redefined
+ #define COUNTS_PER_SECOND 333000000 // Adjust based on your clock
+ 
+In file included from ../src/helloworld.c:6:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:82: note: this is the location of the previous definition
+ #define COUNTS_PER_SECOND          (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ /2)
+ 
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72208	   2648	  23328	  98184	  17f88	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+16:09:07 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:11:59 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114256	   2648	  23328	 140232	  223c8	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+16:12:12 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:37:18 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:40:55 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:43:28 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:49:40 **** Auto Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_16point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:6:
+../../lab9_16point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_16point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_16point_bsp/ps7_cortexa9_0/lib -o "lab9_16point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_16point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_16point.elf  |tee "lab9_16point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72984	   2648	  23328	  98960	  18290	lab9_16point.elf
+'Finished building: lab9_16point.elf.size'
+' '
+01:50:11 **** Incremental Build of configuration Debug for project lab9_16point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

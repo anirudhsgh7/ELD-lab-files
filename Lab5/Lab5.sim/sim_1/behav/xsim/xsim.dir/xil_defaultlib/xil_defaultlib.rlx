@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/aniru/Desktop/ELD/Lab5/Lab5.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/aniru/Desktop/ELD/Lab5/Lab5.srcs/sim_1/new/fsm_tb.v,1726555741,verilog,,,,fsm_tb,,,../../../../Lab5.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/aniru/Desktop/ELD/Lab5/Lab5.srcs/sim_1/new/pulse_tb.v,1726548851,verilog,,,,pulse_tb,,,../../../../Lab5.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/aniru/Desktop/ELD/Lab5/Lab5.srcs/sources_1/new/fsm_11011.v,1726550150,verilog,,C:/Users/aniru/Desktop/ELD/Lab5/Lab5.srcs/sim_1/new/fsm_tb.v,,fsm_11011,,,../../../../Lab5.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/aniru/Desktop/ELD/Lab5/Lab5.srcs/sources_1/new/input_pulse.v,1726548851,verilog,,C:/Users/aniru/Desktop/ELD/Lab5/Lab5.srcs/sim_1/new/pulse_tb.v,,input_pulse,,,../../../../Lab5.srcs/sources_1/ip/clk_wiz_0,,,,,

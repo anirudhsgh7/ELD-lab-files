@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <math.h>
+
+// Define FFT parameters
+#define N 16 // Size of FFT (must be a power of 2)
+#define PI 3.14159265358979323846
+
+// Define data type for computation
+typedef float DTYPE;
+
+// Input and Output Arrays
+DTYPE real[N];
+DTYPE imag[N];
+
+// Twiddle Factors
+const DTYPE W_real[] = { 1.000000,  0.923880,  0.707107,  0.382683,  0.000000, -0.382683, -0.707107, -0.923880 };
+const DTYPE W_imag[] = { -0.000000, -0.382683, -0.707107, -0.923880, -1.000000, -0.923880, -0.707107, -0.382683 };
+
+// Function to initialize input arrays
+void initialize_input() {
+    // Example: Generate a simple sinusoidal input
+    for (int i = 0; i < N; i++) {
+        real[i] = cos(2 * PI * i / N); // Real part: Cosine wave
+        imag[i] = 0;                  // Imaginary part: Zero
+    }
+}
+
+// Bit-Reversal Function
+void bit_reversal() {
+    unsigned int i, j, k;
+    for (i = 0; i < N; i++) {
+        j = 0;
+        for (k = 0; k < log2(N); k++) {
+            j = (j << 1) | ((i >> k) & 1);
+        }
+        if (i < j) {
+            // Swap real and imaginary parts
+            DTYPE temp_real = real[i];
+            DTYPE temp_imag = imag[i];
+            real[i] = real[j];
+            imag[i] = imag[j];
+            real[j] = temp_real;
+            imag[j] = temp_imag;
+        }
+    }
+}
+
+// FFT Calculation
+void fft() {
+    unsigned int stage, size, half_size, step, i, j, k;
+    DTYPE temp_real, temp_imag, w_real, w_imag;
+
+    bit_reversal(); // Reorder the input data by bit-reversal
+
+    for (stage = 1; stage <= log2(N); stage++) {
+        size = 1 << stage;         // Current FFT size
+        half_size = size >> 1;     // Half of the current FFT size
+        step = N / size;           // Twiddle factor step
+
+        for (j = 0; j < half_size; j++) {
+            w_real = W_real[j * step];
+            w_imag = W_imag[j * step];
+
+            for (i = j; i < N; i += size) {
+                k = i + half_size;
+
+                // Perform Butterfly
+                temp_real = real[k] * w_real - imag[k] * w_imag;
+                temp_imag = real[k] * w_imag + imag[k] * w_real;
+
+                real[k] = real[i] - temp_real;
+                imag[k] = imag[i] - temp_imag;
+
+                real[i] += temp_real;
+                imag[i] += temp_imag;
+            }
+        }
+    }
+}
+
+// Print the output
+void print_output() {
+    printf("FFT Output:\n");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: Real = %.6f, Imag = %.6f\n", i, real[i], imag[i]);
+    }
+}
+
+// Main Function
+int main() {
+    initialize_input();  // Initialize input signal
+    fft();               // Perform FFT
+    print_output();      // Print the output
+    return 0;
+}

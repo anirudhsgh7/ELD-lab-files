@@ -1,0 +1,160 @@
+#include <stdio.h>
+#include <math.h>
+#include <xparameters.h>
+#include <xaxidma.h>
+#include <xtime_l.h>
+
+#define N 32 // FFT size
+#define PI 3.14159265358979323846
+#define TOLERANCE 1e-5 // Comparison tolerance for floating-point numbers
+
+typedef struct {
+    float real;
+    float imag;
+} Complex;
+
+// PS FFT Implementation
+void fft_ps(Complex *x) {
+    unsigned int i, j, k, m;
+    unsigned int n = N;
+    Complex temp, W;
+    int logN = log2(N);
+
+    // Bit reversal
+    for (i = 1, j = 0; i < n; i++) {
+        unsigned int bit = n >> 1;
+        while (j >= bit) {
+            j -= bit;
+            bit >>= 1;
+        }
+        j += bit;
+
+        if (i < j) {
+            temp = x[i];
+            x[i] = x[j];
+            x[j] = temp;
+        }
+    }
+
+    // FFT computation
+    for (i = 1; i <= logN; i++) {
+        m = 1 << i;
+        for (k = 0; k < n; k += m) {
+            for (j = 0; j < m / 2; j++) {
+                W.real = cos(-2 * PI * j / m);
+                W.imag = sin(-2 * PI * j / m);
+
+                Complex t = x[k + j + m / 2];
+                temp.real = W.real * t.real - W.imag * t.imag;
+                temp.imag = W.real * t.imag + W.imag * t.real;
+
+                x[k + j + m / 2].real = x[k + j].real - temp.real;
+                x[k + j + m / 2].imag = x[k + j].imag - temp.imag;
+
+                x[k + j].real += temp.real;
+                x[k + j].imag += temp.imag;
+            }
+        }
+    }
+}
+
+// DMA Initialization
+int DMA_Init(XAxiDma *AxiDMA, u16 DeviceId) {
+    XAxiDma_Config *Config = XAxiDma_LookupConfig(DeviceId);
+    if (!Config) {
+        printf("No configuration found for device %d\n", DeviceId);
+        return XST_FAILURE;
+    }
+
+    int status = XAxiDma_CfgInitialize(AxiDMA, Config);
+    if (status != XST_SUCCESS) {
+        printf("DMA initialization failed %d\n", status);
+        return XST_FAILURE;
+    }
+
+    if (!XAxiDma_HasSg(AxiDMA)) {
+        return XST_SUCCESS;
+    } else {
+        printf("Device is in scatter-gather mode\n");
+        return XST_FAILURE;
+    }
+}
+
+int main() {
+    // Input array
+    Complex FFT_input[N] = {
+        {11, 23}, {32, 10}, {91, 94}, {15, 69}, {47, 96}, {44, 12}, {96, 17}, {49, 58},
+        {8, 16}, {20, 13}, {72, 67}, {34, 18}, {99, 44}, {37, 56}, {80, 24}, {60, 70},
+        {10, 30}, {23, 45}, {65, 33}, {19, 74}, {50, 26}, {71, 55}, {89, 41}, {28, 63},
+        {7, 22}, {41, 36}, {93, 62}, {48, 12}, {55, 77}, {37, 11}, {22, 84}, {39, 47}
+    };
+
+    Complex FFT_output_ps[N];
+    Complex FFT_output_pl[N];
+
+    XAxiDma AxiDMA;
+    int status;
+
+    // Perform PS FFT
+    for (int i = 0; i < N; i++) {
+        FFT_output_ps[i] = FFT_input[i];
+    }
+
+    XTime PS_start_time, PS_end_time;
+    XTime_SetTime(0);
+    XTime_GetTime(&PS_start_time);
+
+    fft_ps(FFT_output_ps);
+
+    XTime_GetTime(&PS_end_time);
+
+    // Perform PL FFT
+    status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        printf("DMA initialization failed\n");
+        return 1;
+    }
+
+    XTime PL_start_time, PL_end_time;
+    XTime_SetTime(0);
+    XTime_GetTime(&PL_start_time);
+
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_pl, sizeof(Complex) * N, XAXIDMA_DEVICE_TO_DMA);
+    if (status != XST_SUCCESS) {
+        printf("DMA transfer to device failed\n");
+        return 1;
+    }
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, sizeof(Complex) * N, XAXIDMA_DMA_TO_DEVICE);
+    if (status != XST_SUCCESS) {
+        printf("DMA transfer from device failed\n");
+        return 1;
+    }
+
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+
+    XTime_GetTime(&PL_end_time);
+
+    // Compare Outputs
+    printf("\nComparison of PS and PL Outputs:\n");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: PS Output = %.5f + %.5fi, PL Output = %.5f + %.5fi\n",
+               i, FFT_output_ps[i].real, FFT_output_ps[i].imag,
+               FFT_output_pl[i].real, FFT_output_pl[i].imag);
+        if (fabs(FFT_output_ps[i].real - FFT_output_pl[i].real) < TOLERANCE &&
+            fabs(FFT_output_ps[i].imag - FFT_output_pl[i].imag) < TOLERANCE) {
+            printf("Transfer Successful!\n");
+        } else {
+            printf("Mismatch at index %d\n", i);
+        }
+    }
+
+    // Print Execution Times
+    printf("\nExecution Times:\n");
+    float PS_time = (float)(PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+    float PL_time = (float)(PL_end_time - PL_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("PS Execution Time: %.5f microseconds\n", PS_time);
+    printf("PL Execution Time: %.5f microseconds\n", PL_time);
+
+    return 0;
+}

@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <complex.h>
+#include <xtime_l.h>
+
+#define N 16
+
+const int rev16[N] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+const float complex W[N/2] = {1+0*I, 0.924-0.382*I, 0.707-0.707*I, 0.382-0.924*I, 0-1*I, -0.382-0.924*I, -0.707-0.707*I, -0.924-0.382*I};
+
+void bitreverse(float complex dataIn[N], float complex dataOut[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev16[i]];
+    }
+}
+
+void FFT_stages(float complex FFT_input[N], float complex FFT_output[N]) {
+    float complex temp1[N], temp2[N], temp3[N];
+
+    // Stage 1
+    for (int i = 0; i < N; i += 2) {
+        temp1[i] = FFT_input[i] + W[0] * FFT_input[i + 1];
+        temp1[i + 1] = FFT_input[i] - W[0] * FFT_input[i + 1];
+    }
+
+    // Stage 2
+    for (int i = 0; i < N; i += 4) {
+        temp2[i] = temp1[i] + W[0] * temp1[i + 2];
+        temp2[i + 1] = temp1[i + 1] + W[4] * temp1[i + 3];
+        temp2[i + 2] = temp1[i] - W[0] * temp1[i + 2];
+        temp2[i + 3] = temp1[i + 1] - W[4] * temp1[i + 3];
+    }
+
+    // Stage 3
+    for (int i = 0; i < N; i += 8) {
+        temp3[i] = temp2[i] + W[0] * temp2[i + 4];
+        temp3[i + 1] = temp2[i + 1] + W[2] * temp2[i + 5];
+        temp3[i + 2] = temp2[i + 2] + W[4] * temp2[i + 6];
+        temp3[i + 3] = temp2[i + 3] + W[6] * temp2[i + 7];
+        temp3[i + 4] = temp2[i] - W[0] * temp2[i + 4];
+        temp3[i + 5] = temp2[i + 1] - W[2] * temp2[i + 5];
+        temp3[i + 6] = temp2[i + 2] - W[4] * temp2[i + 6];
+        temp3[i + 7] = temp2[i + 3] - W[6] * temp2[i + 7];
+    }
+
+    // Stage 4
+    FFT_output[0] = temp3[0] + W[0] * temp3[8];
+    FFT_output[1] = temp3[1] + W[1] * temp3[9];
+    FFT_output[2] = temp3[2] + W[2] * temp3[10];
+    FFT_output[3] = temp3[3] + W[3] * temp3[11];
+    FFT_output[4] = temp3[4] + W[4] * temp3[12];
+    FFT_output[5] = temp3[5] + W[5] * temp3[13];
+    FFT_output[6] = temp3[6] + W[6] * temp3[14];
+    FFT_output[7] = temp3[7] + W[7] * temp3[15];
+    FFT_output[8] = temp3[0] - W[0] * temp3[8];
+    FFT_output[9] = temp3[1] - W[1] * temp3[9];
+    FFT_output[10] = temp3[2] - W[2] * temp3[10];
+    FFT_output[11] = temp3[3] - W[3] * temp3[11];
+    FFT_output[12] = temp3[4] - W[4] * temp3[12];
+    FFT_output[13] = temp3[5] - W[5] * temp3[13];
+    FFT_output[14] = temp3[6] - W[6] * temp3[14];
+    FFT_output[15] = temp3[7] - W[7] * temp3[15];
+}
+
+int main() {
+    init_platform();
+
+    printf("16-point FFT\n\r");
+
+    // Hardcoded input (real and imaginary parts)
+    float complex FFT_input[N] = {
+        1 + 0*I, 1 + 0*I, 1 + 0*I, 1 + 0*I,
+        0 + 0*I, 0 + 0*I, 0 + 0*I, 0 + 0*I,
+        0 + 0*I, 0 + 0*I, 0 + 0*I, 0 + 0*I,
+        0 + 0*I, 0 + 0*I, 0 + 0*I, 0 + 0*I
+    };
+
+    float complex FFT_output[N];
+    float complex FFT_rev[N];
+
+    XTime PS_start_time, PS_end_time;
+    XTime_SetTime(0);
+    XTime_GetTime(&PS_start_time);
+
+    // Perform FFT
+    bitreverse(FFT_input, FFT_rev);
+    FFT_stages(FFT_rev, FFT_output);
+
+    XTime_GetTime(&PS_end_time);
+
+    printf("\nFFT Input:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%f + i%f\n", creal(FFT_input[i]), cimagf(FFT_input[i]));
+    }
+
+    printf("\nFFT Output:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%f + i%f\n", creal(FFT_output[i]), cimagf(FFT_output[i]));
+    }
+
+    float time = (float)(PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("\nExecution time for PS in microseconds: %f\n", time);
+
+    cleanup_platform();
+    return 0;
+}

@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <math.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+#include <xtime_l.h>
+
+#define N 256 // 256-point FFT
+#define PI 3.14159265358979323846
+
+typedef struct {
+    double real;
+    double imag;
+} Complex;
+
+void fft(Complex *x) {
+    unsigned int i, j, k, m;
+    unsigned int n = N;
+    unsigned int a, b;
+    Complex temp, W, U;
+    int logN = log2(N);
+
+    // Bit reversal (reordering the input array)
+    for (i = 1, j = 0; i < n; i++) {
+        unsigned int bit = n >> 1;
+        while (j >= bit) {
+            j -= bit;
+            bit >>= 1;
+        }
+        j += bit;
+
+        if (i < j) {
+            // Swap the values
+            temp = x[i];
+            x[i] = x[j];
+            x[j] = temp;
+        }
+    }
+
+    // FFT computation
+    for (i = 1; i <= logN; i++) {
+        m = 1 << i;  // m = 2, 4, 8, ..., N
+        for (k = 0; k < n; k += m) {
+            for (j = 0; j < m / 2; j++) {
+                W.real = cos(-2 * PI * j / m);
+                W.imag = sin(-2 * PI * j / m);
+
+                a = k + j;
+                b = k + j + m / 2;
+
+                // Multiply W with x[b]
+                temp.real = W.real * x[b].real - W.imag * x[b].imag;
+                temp.imag = W.real * x[b].imag + W.imag * x[b].real;
+
+                // Butterfly operation
+                x[b].real = x[a].real - temp.real;
+                x[b].imag = x[a].imag - temp.imag;
+
+                x[a].real += temp.real;
+                x[a].imag += temp.imag;
+            }
+        }
+    }
+}
+
+void printFFT(Complex *x) {
+    for (int i = 0; i < N; i++) {
+        printf("X[%d]: %.5f + %.5fi\n", i, x[i].real, x[i].imag);
+    }
+}
+
+int main() {
+    init_platform();
+    XTime PS_start_time, PS_end_time, PL_start_time, PL_end_time;
+
+    Complex FFT_input[N], FFT_output_ps[N], FFT_output_pl[N];
+    XAxiDma AxiDMA;
+    int status;
+
+    // Initialize the input array
+    for (int i = 0; i < N; i++) {
+        FFT_input[i].real = i;  // Real part
+        FFT_input[i].imag = 0;  // Imaginary part
+    }
+
+    // Initialize DMA
+    status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA initialization failed!\n");
+        return -1;
+    }
+
+    // Software (PS) FFT Execution
+    XTime_GetTime(&PS_start_time);
+    for (int i = 0; i < N; i++) FFT_output_ps[i] = FFT_input[i]; // Copy input to PS output
+    fft(FFT_output_ps); // Perform FFT in PS
+    XTime_GetTime(&PS_end_time);
+
+    // Hardware (PL) FFT Execution
+    XTime_GetTime(&PL_start_time);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, sizeof(Complex) * N, XAXIDMA_DMA_TO_DEVICE);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA to PL transfer failed!\n");
+        return -1;
+    }
+
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_pl, sizeof(Complex) * N, XAXIDMA_DEVICE_TO_DMA);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA from PL transfer failed!\n");
+        return -1;
+    }
+
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+    XTime_GetTime(&PL_end_time);
+
+    // Display and Compare Outputs
+    xil_printf("Comparison of PS and PL outputs:\n");
+    for (int i = 0; i < N; i++) {
+        double diff_real = fabs(FFT_output_ps[i].real - FFT_output_pl[i].real);
+        double diff_imag = fabs(FFT_output_ps[i].imag - FFT_output_pl[i].imag);
+
+        printf("Index %d: PS=%.5f+%.5fi, PL=%.5f+%.5fi\n",
+               i,
+               FFT_output_ps[i].real, FFT_output_ps[i].imag,
+               FFT_output_pl[i].real, FFT_output_pl[i].imag);
+
+        if (diff_real > 0.0001 || diff_imag > 0.0001) {
+            printf("Mismatch at index %d!\n", i);
+        }
+    }
+
+    // Execution Time Analysis
+    xil_printf("\nExecution Times:\n");
+    float ps_time = 1.0 * (PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+    float pl_time = 1.0 * (PL_end_time - PL_start_time) / (COUNTS_PER_SECOND / 1000000);
+
+    printf("PS Execution Time: %.2f microseconds\n", ps_time);
+    printf("PL Execution Time: %.2f microseconds\n", pl_time);
+
+    cleanup_platform();
+    return 0;
+}

@@ -1,0 +1,119 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <complex.h>
+#include <math.h>
+#include "xparameters.h" // For hardware definitions
+#include "xaxidma.h"     // For DMA usage
+#include "platform.h"
+#include "xtime_l.h"     // For timing
+#include "fftsw.h"
+
+// Define FFT size (N = 6 for 64-point FFT)
+#define N 6
+#define FFTSIZE (1 << N)
+#define FFTSTAGES N
+
+// Twiddle factor arrays
+float W_real_N[FFTSIZE / 2];
+float W_imag_N[FFTSIZE / 2];
+
+// Function to initialize twiddle factors
+void init_twiddle_factors() {
+    for (int i = 0; i < FFTSIZE / 2; i++) {
+        W_real_N[i] = cos(-2.0 * M_PI * i / FFTSIZE);
+        W_imag_N[i] = sin(-2.0 * M_PI * i / FFTSIZE);
+    }
+}
+
+void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE]) {
+    float OUTPUT_R[FFTSIZE];
+    float OUTPUT_I[FFTSIZE];
+    DTYPE temp_R, temp_I; // Temporary complex variables
+    int stage;
+    int subFFTSize; // Size of FFT in each stage
+    int BFWidth;    // Butterfly Width or number of weights in each stage
+
+    // Bit reversal
+    for (int i = 0; i < FFTSIZE; ++i) {
+        int rev = ((i & 0x01) << 5) | ((i & 0x02) << 3) | ((i & 0x04) << 1) | ((i & 0x08) >> 1) | ((i & 0x10) >> 3) | ((i & 0x20) >> 5);
+        OUTPUT_R[rev] = INPUT_R[i];
+        OUTPUT_I[rev] = INPUT_I[i];
+    }
+
+    DTYPE Weight_R, Weight_I;
+
+    // For N-point FFT, there are log2(N) stages
+    for (stage = 1; stage <= FFTSTAGES; stage++) {
+        subFFTSize = 1 << stage;    // FFT = 2^stage
+        BFWidth = subFFTSize >> 1; // Butterfly Width in sub-FFT
+
+        for (int j = 0; j < BFWidth; j++) {
+            Weight_R = W_real_N[j * (FFTSIZE >> stage)];
+            Weight_I = W_imag_N[j * (FFTSIZE >> stage)];
+
+            for (int i = j; i < FFTSIZE; i += subFFTSize) {
+                int i_lower = i + BFWidth; // Index of lower point in butterfly
+                temp_R = OUTPUT_R[i_lower] * Weight_R - OUTPUT_I[i_lower] * Weight_I;
+                temp_I = OUTPUT_I[i_lower] * Weight_R + OUTPUT_R[i_lower] * Weight_I;
+
+                OUTPUT_R[i_lower] = OUTPUT_R[i] - temp_R;
+                OUTPUT_I[i_lower] = OUTPUT_I[i] - temp_I;
+                OUTPUT_R[i] = OUTPUT_R[i] + temp_R;
+                OUTPUT_I[i] = OUTPUT_I[i] + temp_I;
+            }
+        }
+    }
+
+    for (int i = 0; i < FFTSIZE; i++) {
+        FFT_inv_output_r[i] = 1 / OUTPUT_R[i];
+        FFT_inv_output_i[i] = 1 / OUTPUT_I[i];
+    }
+}
+
+int PSvsACP() {
+    float INPUT_R[FFTSIZE];
+    float INPUT_I[FFTSIZE];
+    float complex INPUT_C[FFTSIZE];
+    float FFT_ps_output_r[FFTSIZE];
+    float FFT_ps_output_i[FFTSIZE];
+    float complex FFT_PL_Output[FFTSIZE];
+
+    float time_PS = 0;
+    float time_ACP_PL = 0;
+
+    XAxiDma_Config *DMA_Config;
+    XAxiDma DMA_instance;
+
+    DMA_Config = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
+    if (XAxiDma_CfgInitialize(&DMA_instance, DMA_Config) != XST_SUCCESS) {
+        printf("ACP DMA Configuration failed.\n");
+        return XST_FAILURE;
+    }
+
+    // Generate input data
+    for (int k = 0; k < FFTSIZE; k++) {
+        INPUT_C[k] = (k / 4) + (k / 2) * I;
+        INPUT_R[k] = creal(INPUT_C[k]);
+        INPUT_I[k] = cimag(INPUT_C[k]);
+    }
+
+    XTime PS_Start, PS_End;
+    XTime_SetTime(0);
+
+    XTime_GetTime(&PS_Start);
+    FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+    XTime_GetTime(&PS_End);
+
+    time_PS = ((float)1.0 * (PS_End - PS_Start) / (COUNTS_PER_SECOND / 1000000));
+
+    printf("Execution Time for PS(us): %f\n", time_PS);
+    return 0;
+}
+
+int main() {
+    init_platform();
+    init_twiddle_factors();
+    PSvsACP();
+    cleanup_platform();
+    return 0;
+}

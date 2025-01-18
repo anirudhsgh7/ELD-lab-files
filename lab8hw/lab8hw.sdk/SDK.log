@@ -1,0 +1,110 @@
+09:19:27 INFO  : Registering command handlers for SDK TCF services
+09:19:28 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\aniru\Downloads\ELD_Labs-master\ELD_Labs-master\lab8\lab8.sdk\temp_xsdb_launch_script.tcl
+09:19:34 INFO  : XSCT server has started successfully.
+09:19:34 INFO  : Successfully done setting XSCT server connection channel  
+09:19:40 INFO  : Successfully done setting SDK workspace  
+09:19:40 INFO  : Processing command line option -hwspec C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/design_1_wrapper.hdf.
+09:36:46 INFO  : Refreshed build settings on project lab8a
+10:02:12 INFO  : Connected through redirection to target on host '192.168.226.142' and port '61136'.
+10:02:29 ERROR : (XSDB Server)Invalid target. Use "targets" command to select a target
+
+10:02:33 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:61136]
+----------------End of Script----------------
+
+10:03:18 INFO  : Connected through redirection to target on host '192.168.226.142' and port '61136'.
+10:03:27 ERROR : (XSDB Server)Invalid target. Use "targets" command to select a target
+
+10:03:36 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:61136]
+----------------End of Script----------------
+
+10:04:47 INFO  : Connected through redirection to target on host '192.168.226.142' and port '61136'.
+10:05:05 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:61136]
+----------------End of Script----------------
+
+10:05:38 INFO  : Connected through redirection to target on host '192.168.226.142' and port '61136'.
+10:05:56 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:61136]
+----------------End of Script----------------
+
+10:07:25 INFO  : Connected through redirection to target on host '192.168.226.142' and port '61136'.
+10:07:43 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:61136]
+----------------End of Script----------------
+
+10:08:57 WARN  : Couldn't find target with name: remotebd
+10:09:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351A78183A' is selected.
+10:09:04 INFO  : 'jtag frequency' command is executed.
+10:09:04 INFO  : Sourcing of 'C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:09:04 INFO  : Context for 'APU' is selected.
+10:09:04 INFO  : System reset is completed.
+10:09:07 INFO  : 'after 3000' command is executed.
+10:09:07 INFO  : Context for 'APU' is selected.
+10:09:07 INFO  : Hardware design information is loaded from 'C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:09:07 INFO  : 'configparams force-mem-access 1' command is executed.
+10:09:07 INFO  : Context for 'APU' is selected.
+10:09:08 INFO  : 'ps7_init' command is executed.
+10:09:08 INFO  : 'ps7_post_config' command is executed.
+10:09:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:08 INFO  : The application 'C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/lab8a/Debug/lab8a.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:09:08 INFO  : 'configparams force-mem-access 0' command is executed.
+10:09:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78183A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78183A"} -index 0
+loadhw -hw C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78183A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78183A"} -index 0
+dow C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab8/lab8.sdk/lab8a/Debug/lab8a.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:09 INFO  : 'con' command is executed.
+10:09:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78183A"} -index 0
+con
+----------------End of Script----------------
+
+10:09:09 INFO  : Launch script is exported to file 'C:\Users\aniru\Downloads\ELD_Labs-master\ELD_Labs-master\lab8\lab8.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab8a.elf_on_local.tcl'
+10:11:50 INFO  : Disconnected from the channel tcfchan#2.
+20:00:42 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\aniru\Desktop\ELD\lab8hw\lab8hw.sdk\temp_xsdb_launch_script.tcl
+20:00:42 INFO  : Registering command handlers for SDK TCF services
+20:00:51 INFO  : XSCT server has started successfully.
+20:00:58 INFO  : Successfully done setting XSCT server connection channel  
+20:00:58 INFO  : Successfully done setting SDK workspace  
+20:00:58 INFO  : Processing command line option -hwspec C:/Users/aniru/Desktop/ELD/lab8hw/lab8hw.sdk/design_1_wrapper.hdf.
+20:09:45 INFO  : Connected through redirection to target on host '192.168.226.142' and port '56689'.
+20:10:04 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:56689]
+----------------End of Script----------------
+
+22:32:24 INFO  : Registering command handlers for SDK TCF services
+22:32:26 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\aniru\Desktop\ELD\lab8hw\lab8hw.sdk\temp_xsdb_launch_script.tcl
+22:32:30 INFO  : XSCT server has started successfully.
+22:32:36 INFO  : Successfully done setting XSCT server connection channel  
+22:32:36 INFO  : Successfully done setting SDK workspace  
+22:32:36 INFO  : Processing command line option -hwspec C:/Users/aniru/Desktop/ELD/lab8hw/lab8hw.sdk/design_1_wrapper.hdf.
+22:32:36 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+22:33:05 ERROR : (XSDB Server)Invalid target. Use "connect" command to connect to hw_server/TCF agent
+
+22:35:45 ERROR : Failed to redirect connection to hardware server on host '192.168.226.142' and port '52113'.
+Reason: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+22:35:45 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:52113]
+----------------End of Script----------------
+
+22:37:44 INFO  : Connected through redirection to target on host '192.168.226.142' and port '52113'.
+22:38:03 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.226.142:52113]
+----------------End of Script----------------
+

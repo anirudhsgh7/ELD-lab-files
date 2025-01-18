@@ -1,0 +1,1888 @@
+01:10:50 **** Build of project lab9_64point_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+01:11:47 **** Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19064	   1144	  22568	  42776	   a718	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+01:12:27 **** Clean-only build of configuration Debug for project lab9_64point ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab9_64point.elf.size  lab9_64point.elf
+' '
+01:12:28 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19064	   1144	  22568	  42776	   a718	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+01:12:53 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:36:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+../src/helloworld.c:96:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev_sw);
+                ^~~~~~~~~
+../src/helloworld.c:36:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+../src/helloworld.c:102:37: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int' [-Wformat=]
+     printf("\nCOUNTS_PER_SECOND: %llu\n", COUNTS_PER_SECOND);
+                                  ~~~^
+                                  %u
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59048	   2584	  23328	  84960	  14be0	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+02:09:34 **** Clean-only build of configuration Debug for project lab9_64point ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab9_64point.elf.size  lab9_64point.elf
+' '
+02:09:36 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:117:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:49:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65428	   2584	  23584	  91596	  165cc	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+02:10:13 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:11:56 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:31:46 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:34:57 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:35:58 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:37:20 **** Auto Build of project lab9_64point_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+02:38:06 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:117:16: warning: passing argument 1 of 'bitreverse' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     bitreverse(FFT_input, FFT_rev);
+                ^~~~~~~~~
+../src/helloworld.c:49:25: note: expected 'Complex *' {aka 'struct <anonymous> *'} but argument is of type 'const Complex *' {aka 'const struct <anonymous> *'}
+ void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+                 ~~~~~~~~^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65428	   2584	  23584	  91596	  165cc	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+02:38:11 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64244	   2584	  23584	  90412	  1612c	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+02:38:23 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:40:23 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab9_64point.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab9_64point.elf  |tee "lab9_64point.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63604	   2584	  23584	  89772	  15eac	lab9_64point.elf
+'Finished building: lab9_64point.elf.size'
+' '
+02:40:36 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+02:44:43 **** Incremental Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:58:24 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:58:45 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+22:27:11 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+22:27:30 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+22:34:34 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:19:24: error: 'FFTSIZE' undeclared here (not in a function)
+ void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+                        ^~~~~~~
+../src/helloworld.c: In function 'FFT':
+../src/helloworld.c:22:16: error: 'FFTSIZE' undeclared (first use in this function)
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/helloworld.c:22:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:24:1: error: unknown type name 'DTYPE'
+ DTYPE temp_R, temp_I; //temporary complex variable
+ ^~~~~
+../src/helloworld.c:35:1: error: unknown type name 'DTYPE'
+ DTYPE Weight_R, Weight_I;
+ ^~~~~
+../src/helloworld.c:38:22: error: 'FFTSTAGES' undeclared (first use in this function)
+ for(stage=1; stage<= FFTSTAGES; stage++)
+                      ^~~~~~~~~
+../src/helloworld.c:48:19: error: 'W_real' undeclared (first use in this function); did you mean 'creal'?
+        Weight_R = W_real[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   creal
+../src/helloworld.c:49:19: error: 'W_imag' undeclared (first use in this function); did you mean 'cimag'?
+        Weight_I = W_imag[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   cimag
+../src/helloworld.c:57:17: warning: variable 'i_lower' set but not used [-Wunused-but-set-variable]
+             int i_lower = i + BFWidth;      //index of lower point in butterfly
+                 ^~~~~~~
+../src/helloworld.c:23:7: warning: unused variable 'OUTPUT_I' [-Wunused-variable]
+ float OUTPUT_I[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c:22:7: warning: unused variable 'OUTPUT_R' [-Wunused-variable]
+ float OUTPUT_R[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c: In function 'PSvsACP':
+../src/helloworld.c:80:17: error: 'FFTSIZE' undeclared (first use in this function)
+   float INPUT_R[FFTSIZE]; // Real part of the input
+                 ^~~~~~~
+../src/helloworld.c:135:13: error: type of formal parameter 1 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+             ^~~~~~~
+../src/helloworld.c:135:22: error: type of formal parameter 2 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                      ^~~~~~~
+../src/helloworld.c:135:31: error: type of formal parameter 3 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                               ^~~~~~~~~~~~~~~
+../src/helloworld.c:135:48: error: type of formal parameter 4 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                                                ^~~~~~~~~~~~~~~
+../src/helloworld.c:95:17: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+   float complex FFT_PL_Output[FFTSIZE];
+                 ^~~~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'FFT_ps_output_i' [-Wunused-variable]
+   float FFT_ps_output_i[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:84:9: warning: unused variable 'FFT_ps_output_r' [-Wunused-variable]
+   float FFT_ps_output_r[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:83:17: warning: unused variable 'INPUT_C' [-Wunused-variable]
+   float complex INPUT_C[FFTSIZE];// input to the FFT
+                 ^~~~~~~
+../src/helloworld.c:81:9: warning: unused variable 'INPUT_I' [-Wunused-variable]
+   float INPUT_I[FFTSIZE]; // Imaginary part of the input
+         ^~~~~~~
+../src/helloworld.c:80:9: warning: unused variable 'INPUT_R' [-Wunused-variable]
+   float INPUT_R[FFTSIZE]; // Real part of the input
+         ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+13:54:07 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:19:24: error: 'FFTSIZE' undeclared here (not in a function)
+ void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+                        ^~~~~~~
+../src/helloworld.c: In function 'FFT':
+../src/helloworld.c:22:16: error: 'FFTSIZE' undeclared (first use in this function)
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/helloworld.c:22:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:24:1: error: unknown type name 'DTYPE'
+ DTYPE temp_R, temp_I; //temporary complex variable
+ ^~~~~
+../src/helloworld.c:33:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+13:55:08 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+13:55:34 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:18:24: error: 'FFTSIZE' undeclared here (not in a function)
+ void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+                        ^~~~~~~
+../src/helloworld.c: In function 'FFT':
+../src/helloworld.c:21:16: error: 'FFTSIZE' undeclared (first use in this function)
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/helloworld.c:21:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:23:1: error: unknown type name 'DTYPE'
+ DTYPE temp_R, temp_I; //temporary complex variable
+ ^~~~~
+../src/helloworld.c:34:1: error: unknown type name 'DTYPE'
+ DTYPE Weight_R, Weight_I;
+ ^~~~~
+../src/helloworld.c:37:22: error: 'FFTSTAGES' undeclared (first use in this function)
+ for(stage=1; stage<= FFTSTAGES; stage++)
+                      ^~~~~~~~~
+../src/helloworld.c:47:19: error: 'W_real' undeclared (first use in this function); did you mean 'creal'?
+        Weight_R = W_real[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   creal
+../src/helloworld.c:48:19: error: 'W_imag' undeclared (first use in this function); did you mean 'cimag'?
+        Weight_I = W_imag[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   cimag
+../src/helloworld.c:56:17: warning: variable 'i_lower' set but not used [-Wunused-but-set-variable]
+             int i_lower = i + BFWidth;      //index of lower point in butterfly
+                 ^~~~~~~
+../src/helloworld.c:22:7: warning: unused variable 'OUTPUT_I' [-Wunused-variable]
+ float OUTPUT_I[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c:21:7: warning: unused variable 'OUTPUT_R' [-Wunused-variable]
+ float OUTPUT_R[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c: In function 'PSvsACP':
+../src/helloworld.c:79:17: error: 'FFTSIZE' undeclared (first use in this function)
+   float INPUT_R[FFTSIZE]; // Real part of the input
+                 ^~~~~~~
+../src/helloworld.c:134:13: error: type of formal parameter 1 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+             ^~~~~~~
+../src/helloworld.c:134:22: error: type of formal parameter 2 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                      ^~~~~~~
+../src/helloworld.c:134:31: error: type of formal parameter 3 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                               ^~~~~~~~~~~~~~~
+../src/helloworld.c:134:48: error: type of formal parameter 4 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                                                ^~~~~~~~~~~~~~~
+../src/helloworld.c:94:17: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+   float complex FFT_PL_Output[FFTSIZE];
+                 ^~~~~~~~~~~~~
+../src/helloworld.c:84:9: warning: unused variable 'FFT_ps_output_i' [-Wunused-variable]
+   float FFT_ps_output_i[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:83:9: warning: unused variable 'FFT_ps_output_r' [-Wunused-variable]
+   float FFT_ps_output_r[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:82:17: warning: unused variable 'INPUT_C' [-Wunused-variable]
+   float complex INPUT_C[FFTSIZE];// input to the FFT
+                 ^~~~~~~
+../src/helloworld.c:80:9: warning: unused variable 'INPUT_I' [-Wunused-variable]
+   float INPUT_I[FFTSIZE]; // Imaginary part of the input
+         ^~~~~~~
+../src/helloworld.c:79:9: warning: unused variable 'INPUT_R' [-Wunused-variable]
+   float INPUT_R[FFTSIZE]; // Real part of the input
+         ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+13:55:56 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:06:59 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:07:03 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:07:52 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/helloworld.o] Error 1
+14:07:57 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/helloworld.o] Error 1
+14:08:11 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:18:24: error: 'FFTSIZE' undeclared here (not in a function)
+ void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+                        ^~~~~~~
+../src/helloworld.c: In function 'FFT':
+../src/helloworld.c:21:16: error: 'FFTSIZE' undeclared (first use in this function)
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/helloworld.c:21:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:23:1: error: unknown type name 'DTYPE'
+ DTYPE temp_R, temp_I; //temporary complex variable
+ ^~~~~
+../src/helloworld.c:34:1: error: unknown type name 'DTYPE'
+ DTYPE Weight_R, Weight_I;
+ ^~~~~
+../src/helloworld.c:37:22: error: 'FFTSTAGES' undeclared (first use in this function)
+ for(stage=1; stage<= FFTSTAGES; stage++)
+                      ^~~~~~~~~
+../src/helloworld.c:47:19: error: 'W_real' undeclared (first use in this function); did you mean 'creal'?
+        Weight_R = W_real[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   creal
+../src/helloworld.c:48:19: error: 'W_imag' undeclared (first use in this function); did you mean 'cimag'?
+        Weight_I = W_imag[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   cimag
+../src/helloworld.c:56:17: warning: variable 'i_lower' set but not used [-Wunused-but-set-variable]
+             int i_lower = i + BFWidth;      //index of lower point in butterfly
+                 ^~~~~~~
+../src/helloworld.c:22:7: warning: unused variable 'OUTPUT_I' [-Wunused-variable]
+ float OUTPUT_I[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c:21:7: warning: unused variable 'OUTPUT_R' [-Wunused-variable]
+ float OUTPUT_R[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c: In function 'PSvsACP':
+../src/helloworld.c:79:17: error: 'FFTSIZE' undeclared (first use in this function)
+   float INPUT_R[FFTSIZE]; // Real part of the input
+                 ^~~~~~~
+../src/helloworld.c:134:13: error: type of formal parameter 1 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+             ^~~~~~~
+../src/helloworld.c:134:22: error: type of formal parameter 2 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                      ^~~~~~~
+../src/helloworld.c:134:31: error: type of formal parameter 3 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                               ^~~~~~~~~~~~~~~
+../src/helloworld.c:134:48: error: type of formal parameter 4 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                                                ^~~~~~~~~~~~~~~
+../src/helloworld.c:94:17: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+   float complex FFT_PL_Output[FFTSIZE];
+                 ^~~~~~~~~~~~~
+../src/helloworld.c:84:9: warning: unused variable 'FFT_ps_output_i' [-Wunused-variable]
+   float FFT_ps_output_i[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:83:9: warning: unused variable 'FFT_ps_output_r' [-Wunused-variable]
+   float FFT_ps_output_r[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:82:17: warning: unused variable 'INPUT_C' [-Wunused-variable]
+   float complex INPUT_C[FFTSIZE];// input to the FFT
+                 ^~~~~~~
+../src/helloworld.c:80:9: warning: unused variable 'INPUT_I' [-Wunused-variable]
+   float INPUT_I[FFTSIZE]; // Imaginary part of the input
+         ^~~~~~~
+../src/helloworld.c:79:9: warning: unused variable 'INPUT_R' [-Wunused-variable]
+   float INPUT_R[FFTSIZE]; // Real part of the input
+         ^~~~~~~
+make: *** [src/subdir.mk:29: src/helloworld.o] Error 1
+14:08:22 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/helloworld.c:8:
+../src/twiddle.h:4:19: error: 'N' undeclared here (not in a function)
+ #define FFTSIZE 2^N
+                   ^
+../src/helloworld.c:19:24: note: in expansion of macro 'FFTSIZE'
+ void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+                        ^~~~~~~
+../src/helloworld.c: In function 'FFT':
+../src/twiddle.h:4:19: error: 'N' undeclared (first use in this function)
+ #define FFTSIZE 2^N
+                   ^
+../src/helloworld.c:22:16: note: in expansion of macro 'FFTSIZE'
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/twiddle.h:4:19: note: each undeclared identifier is reported only once for each function it appears in
+ #define FFTSIZE 2^N
+                   ^
+../src/helloworld.c:22:16: note: in expansion of macro 'FFTSIZE'
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/helloworld.c:48:19: error: 'W_real' undeclared (first use in this function); did you mean 'W_real_8'?
+        Weight_R = W_real[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   W_real_8
+../src/helloworld.c:49:19: error: 'W_imag' undeclared (first use in this function); did you mean 'W_imag_8'?
+        Weight_I = W_imag[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   W_imag_8
+../src/helloworld.c:57:17: warning: variable 'i_lower' set but not used [-Wunused-but-set-variable]
+             int i_lower = i + BFWidth;      //index of lower point in butterfly
+                 ^~~~~~~
+../src/helloworld.c:23:7: warning: unused variable 'OUTPUT_I' [-Wunused-variable]
+ float OUTPUT_I[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c:22:7: warning: unused variable 'OUTPUT_R' [-Wunused-variable]
+ float OUTPUT_R[FFTSIZE];
+       ^~~~~~~~
+In file included from ../src/helloworld.c:8:
+../src/helloworld.c: In function 'PSvsACP':
+../src/twiddle.h:4:19: error: 'N' undeclared (first use in this function)
+ #define FFTSIZE 2^N
+                   ^
+../src/helloworld.c:80:17: note: in expansion of macro 'FFTSIZE'
+   float INPUT_R[FFTSIZE]; // Real part of the input
+                 ^~~~~~~
+../src/helloworld.c:135:13: error: type of formal parameter 1 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+             ^~~~~~~
+../src/helloworld.c:135:22: error: type of formal parameter 2 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                      ^~~~~~~
+../src/helloworld.c:135:31: error: type of formal parameter 3 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                               ^~~~~~~~~~~~~~~
+../src/helloworld.c:135:48: error: type of formal parameter 4 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                                                ^~~~~~~~~~~~~~~
+../src/helloworld.c:95:17: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+   float complex FFT_PL_Output[FFTSIZE];
+                 ^~~~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'FFT_ps_output_i' [-Wunused-variable]
+   float FFT_ps_output_i[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:84:9: warning: unused variable 'FFT_ps_output_r' [-Wunused-variable]
+   float FFT_ps_output_r[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:83:17: warning: unused variable 'INPUT_C' [-Wunused-variable]
+   float complex INPUT_C[FFTSIZE];// input to the FFT
+                 ^~~~~~~
+../src/helloworld.c:81:9: warning: unused variable 'INPUT_I' [-Wunused-variable]
+   float INPUT_I[FFTSIZE]; // Imaginary part of the input
+         ^~~~~~~
+../src/helloworld.c:80:9: warning: unused variable 'INPUT_R' [-Wunused-variable]
+   float INPUT_R[FFTSIZE]; // Real part of the input
+         ^~~~~~~
+make: *** [src/subdir.mk:29: src/helloworld.o] Error 1
+14:08:32 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:8:10: fatal error: fftsw.h: No such file or directory
+ #include "fftsw.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/helloworld.o] Error 1
+14:09:27 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:19:24: error: 'FFTSIZE' undeclared here (not in a function)
+ void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+                        ^~~~~~~
+../src/helloworld.c: In function 'FFT':
+../src/helloworld.c:22:16: error: 'FFTSIZE' undeclared (first use in this function)
+ float OUTPUT_R[FFTSIZE];
+                ^~~~~~~
+../src/helloworld.c:22:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:24:1: error: unknown type name 'DTYPE'
+ DTYPE temp_R, temp_I; //temporary complex variable
+ ^~~~~
+../src/helloworld.c:35:1: error: unknown type name 'DTYPE'
+ DTYPE Weight_R, Weight_I;
+ ^~~~~
+../src/helloworld.c:38:22: error: 'FFTSTAGES' undeclared (first use in this function)
+ for(stage=1; stage<= FFTSTAGES; stage++)
+                      ^~~~~~~~~
+../src/helloworld.c:48:19: error: 'W_real' undeclared (first use in this function); did you mean 'creal'?
+        Weight_R = W_real[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   creal
+../src/helloworld.c:49:19: error: 'W_imag' undeclared (first use in this function); did you mean 'cimag'?
+        Weight_I = W_imag[j * (FFTSIZE>>stage)];
+                   ^~~~~~
+                   cimag
+../src/helloworld.c:57:17: warning: variable 'i_lower' set but not used [-Wunused-but-set-variable]
+             int i_lower = i + BFWidth;      //index of lower point in butterfly
+                 ^~~~~~~
+../src/helloworld.c:23:7: warning: unused variable 'OUTPUT_I' [-Wunused-variable]
+ float OUTPUT_I[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c:22:7: warning: unused variable 'OUTPUT_R' [-Wunused-variable]
+ float OUTPUT_R[FFTSIZE];
+       ^~~~~~~~
+../src/helloworld.c: In function 'PSvsACP':
+../src/helloworld.c:80:17: error: 'FFTSIZE' undeclared (first use in this function)
+   float INPUT_R[FFTSIZE]; // Real part of the input
+                 ^~~~~~~
+../src/helloworld.c:135:13: error: type of formal parameter 1 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+             ^~~~~~~
+../src/helloworld.c:135:22: error: type of formal parameter 2 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                      ^~~~~~~
+../src/helloworld.c:135:31: error: type of formal parameter 3 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                               ^~~~~~~~~~~~~~~
+../src/helloworld.c:135:48: error: type of formal parameter 4 is incomplete
+         FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+                                                ^~~~~~~~~~~~~~~
+../src/helloworld.c:95:17: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+   float complex FFT_PL_Output[FFTSIZE];
+                 ^~~~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'FFT_ps_output_i' [-Wunused-variable]
+   float FFT_ps_output_i[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:84:9: warning: unused variable 'FFT_ps_output_r' [-Wunused-variable]
+   float FFT_ps_output_r[FFTSIZE];
+         ^~~~~~~~~~~~~~~
+../src/helloworld.c:83:17: warning: unused variable 'INPUT_C' [-Wunused-variable]
+   float complex INPUT_C[FFTSIZE];// input to the FFT
+                 ^~~~~~~
+../src/helloworld.c:81:9: warning: unused variable 'INPUT_I' [-Wunused-variable]
+   float INPUT_I[FFTSIZE]; // Imaginary part of the input
+         ^~~~~~~
+../src/helloworld.c:80:9: warning: unused variable 'INPUT_R' [-Wunused-variable]
+   float INPUT_R[FFTSIZE]; // Real part of the input
+         ^~~~~~~
+make: *** [src/subdir.mk:29: src/helloworld.o] Error 1
+14:09:31 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/reverse_function.c:10:
+../src/twiddle.h:4:19: error: 'N' undeclared here (not in a function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:43:27: note: in expansion of macro 'FFTSIZE'
+ void FFT_PS(float FFTIn_I[FFTSIZE], float FFTIn_R[FFTSIZE], float FFTOut_I[FFTSIZE], float FFTOut_R[FFTSIZE])
+                           ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/twiddle.h:4:19: error: 'N' undeclared (first use in this function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:57:19: note: in expansion of macro 'FFTSIZE'
+   for (i = 0; i < FFTSIZE; ++i) {
+                   ^~~~~~~
+../src/twiddle.h:4:19: note: each undeclared identifier is reported only once for each function it appears in
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:57:19: note: in expansion of macro 'FFTSIZE'
+   for (i = 0; i < FFTSIZE; ++i) {
+                   ^~~~~~~
+../src/reverse_function.c:58:14: warning: implicit declaration of function 'reverse' [-Wimplicit-function-declaration]
+     FFTOut_R[reverse(i)] = FFTIn_R[i];
+              ^~~~~~~
+../src/reverse_function.c:83:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:84:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:50:7: warning: variable 'i_lower' set but not used [-Wunused-but-set-variable]
+   int i_lower;    /* Index of lower point in butterfly */
+       ^~~~~~~
+In file included from ../src/reverse_function.c:10:
+../src/reverse_function.c: At top level:
+../src/twiddle.h:4:19: error: 'N' undeclared here (not in a function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:110:37: note: in expansion of macro 'FFTSIZE'
+ int FFT_ACP(float complex FFT_input[FFTSIZE], float complex FFT_output_ACP[FFTSIZE]) {
+                                     ^~~~~~~
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:114:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../src/reverse_function.c:10:
+../src/twiddle.h:4:19: error: 'N' undeclared (first use in this function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:131:81: note: in expansion of macro 'FFTSIZE'
+   status_ACP = XAxiDma_SimpleTransfer(&DMAACP_instance,(UINTPTR)FFT_output_ACP, FFTSIZE*2*sizeof(float), XAXIDMA_DEVICE_TO_DMA);
+                                                                                 ^~~~~~~
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:145:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+In file included from ../src/reverse_function.c:10:
+../src/reverse_function.c: At top level:
+../src/twiddle.h:4:19: error: 'N' undeclared here (not in a function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:168:36: note: in expansion of macro 'FFTSIZE'
+ int FFT_HP(float complex FFT_input[FFTSIZE], float complex FFT_output_HP[FFTSIZE]) {
+                                    ^~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:172:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../src/reverse_function.c:10:
+../src/twiddle.h:4:19: error: 'N' undeclared (first use in this function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:185:66: note: in expansion of macro 'FFTSIZE'
+  Xil_DCacheFlushRange((UINTPTR)FFT_input, (sizeof(float complex)*FFTSIZE));
+                                                                  ^~~~~~~
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:206:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+In file included from ../src/reverse_function.c:10:
+../src/reverse_function.c: In function 'main':
+../src/twiddle.h:4:19: error: 'N' undeclared (first use in this function)
+ #define FFTSIZE 2^N
+                   ^
+../src/reverse_function.c:237:29: note: in expansion of macro 'FFTSIZE'
+     float complex FFT_input[FFTSIZE];
+                             ^~~~~~~
+../src/reverse_function.c:284:10: error: type of formal parameter 1 is incomplete
+   FFT_PS(temp_i, temp_r, FFT_Output_PS_i,FFT_Output_PS_r); //////////////-----function call-----//////////////
+          ^~~~~~
+../src/reverse_function.c:284:18: error: type of formal parameter 2 is incomplete
+   FFT_PS(temp_i, temp_r, FFT_Output_PS_i,FFT_Output_PS_r); //////////////-----function call-----//////////////
+                  ^~~~~~
+../src/reverse_function.c:284:26: error: type of formal parameter 3 is incomplete
+   FFT_PS(temp_i, temp_r, FFT_Output_PS_i,FFT_Output_PS_r); //////////////-----function call-----//////////////
+                          ^~~~~~~~~~~~~~~
+../src/reverse_function.c:284:42: error: type of formal parameter 4 is incomplete
+   FFT_PS(temp_i, temp_r, FFT_Output_PS_i,FFT_Output_PS_r); //////////////-----function call-----//////////////
+                                          ^~~~~~~~~~~~~~~
+../src/reverse_function.c:299:11: error: type of formal parameter 1 is incomplete
+   FFT_ACP(FFT_input,FFT_output_ACP); //////////////-----function call-----//////////////
+           ^~~~~~~~~
+../src/reverse_function.c:299:21: error: type of formal parameter 2 is incomplete
+   FFT_ACP(FFT_input,FFT_output_ACP); //////////////-----function call-----//////////////
+                     ^~~~~~~~~~~~~~
+../src/reverse_function.c:314:10: error: type of formal parameter 1 is incomplete
+   FFT_HP(FFT_input, FFT_output_HP); //////////////-----function call-----//////////////
+          ^~~~~~~~~
+../src/reverse_function.c:314:21: error: type of formal parameter 2 is incomplete
+   FFT_HP(FFT_input, FFT_output_HP); //////////////-----function call-----//////////////
+                     ^~~~~~~~~~~~~
+../src/reverse_function.c:265:26: warning: unused variable 'temp_i' [-Wunused-variable]
+   float temp_r[FFTSIZE], temp_i[FFTSIZE]; // variable to store inputs real and imaginary part
+                          ^~~~~~
+../src/reverse_function.c:265:9: warning: unused variable 'temp_r' [-Wunused-variable]
+   float temp_r[FFTSIZE], temp_i[FFTSIZE]; // variable to store inputs real and imaginary part
+         ^~~~~~
+../src/reverse_function.c:248:19: warning: unused variable 'FFT_output_HP' [-Wunused-variable]
+     float complex FFT_output_HP[FFTSIZE];
+                   ^~~~~~~~~~~~~
+../src/reverse_function.c:245:19: warning: unused variable 'FFT_output_ACP' [-Wunused-variable]
+     float complex FFT_output_ACP[FFTSIZE];
+                   ^~~~~~~~~~~~~~
+../src/reverse_function.c:242:11: warning: unused variable 'FFT_Output_PS_i' [-Wunused-variable]
+     float FFT_Output_PS_i[FFTSIZE];
+           ^~~~~~~~~~~~~~~
+../src/reverse_function.c:241:11: warning: unused variable 'FFT_Output_PS_r' [-Wunused-variable]
+     float FFT_Output_PS_r[FFTSIZE];
+           ^~~~~~~~~~~~~~~
+../src/reverse_function.c:237:19: warning: unused variable 'FFT_input' [-Wunused-variable]
+     float complex FFT_input[FFTSIZE];
+                   ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:11:43 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:57:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:58:14: warning: implicit declaration of function 'reverse' [-Wimplicit-function-declaration]
+     FFTOut_R[reverse(i)] = FFTIn_R[i];
+              ^~~~~~~
+../src/reverse_function.c:83:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:83:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:84:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:91:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:114:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:145:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:172:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:206:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:270:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:335:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:12:01 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:57:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:58:14: warning: implicit declaration of function 'reverse' [-Wimplicit-function-declaration]
+     FFTOut_R[reverse(i)] = FFTIn_R[i];
+              ^~~~~~~
+../src/reverse_function.c:83:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:83:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:84:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:91:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:114:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:145:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:172:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:206:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:270:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:335:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:12:08 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:56:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:57:14: warning: implicit declaration of function 'reverse' [-Wimplicit-function-declaration]
+     FFTOut_R[reverse(i)] = FFTIn_R[i];
+              ^~~~~~~
+../src/reverse_function.c:82:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:82:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:83:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:90:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:113:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:144:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:171:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:205:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:269:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:334:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:12:43 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:56:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:82:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:82:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:83:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:90:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:113:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:144:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:171:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:205:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:269:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:334:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:12:48 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:56:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:82:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:82:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:83:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:90:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:113:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:144:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:171:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:205:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:269:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:334:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:14:25 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:57:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:83:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:83:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:84:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:91:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:114:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:145:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:172:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:206:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:270:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:335:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:15:18 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c: In function 'FFT_PS':
+../src/reverse_function.c:56:17: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for (i = 0; i < FFTSIZE; ++i) {
+../src/reverse_function.c:82:19: error: 'W_real_N' undeclared (first use in this function); did you mean 'W_real_8'?
+      BFWeight_R = W_real_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_real_8
+../src/reverse_function.c:82:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/reverse_function.c:83:19: error: 'W_imag_N' undeclared (first use in this function); did you mean 'W_imag_8'?
+      BFWeight_I = W_imag_N[j * (FFTSIZE>>stage)];
+                   ^~~~~~~~
+                   W_imag_8
+../src/reverse_function.c:90:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(i =j ; i < FFTSIZE; i += subFFTSIZE) // This loop runs for FFTSIZE/SubFFTSIZE iterations
+../src/reverse_function.c: In function 'FFT_ACP':
+../src/reverse_function.c:113:41: error: 'XPAR_AXI_DMA_ACP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+   DMAACP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_ACP_DEVICE_ID);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:144:32: error: 'XPAR_AXI_DMA_ACP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+   status_ACP = XAxiDma_ReadReg(XPAR_AXI_DMA_ACP_BASEADDR, 0x04);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'FFT_HP':
+../src/reverse_function.c:171:39: error: 'XPAR_AXI_DMA_HP_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_DEVICE_ID'?
+  DMAHP_confptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_HP_DEVICE_ID);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXI_DMA_0_DEVICE_ID
+In file included from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/reverse_function.c:9:
+../src/reverse_function.c:205:30: error: 'XPAR_AXI_DMA_HP_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_DMA_0_BASEADDR'?
+  status_HP = XAxiDma_ReadReg(XPAR_AXI_DMA_HP_BASEADDR, 0x04);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/reverse_function.c: In function 'main':
+../src/reverse_function.c:269:20: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(int j = 0; j < FFTSIZE; j++) {
+../src/reverse_function.c:334:16: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   for(j = 0; j < FFTSIZE; j++) {
+make: *** [src/subdir.mk:29: src/reverse_function.o] Error 1
+14:16:20 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c:13: warning: "FFTSIZE" redefined
+ #define FFTSIZE (1 << N)
+ 
+In file included from ../src/reverse_function.c:9:
+../src/fftsw.h:8: note: this is the location of the previous definition
+ #define FFTSIZE 64       // Number of points in the FFT
+ 
+../src/reverse_function.c:14: warning: "FFTSTAGES" redefined
+ #define FFTSTAGES N
+ 
+In file included from ../src/reverse_function.c:9:
+../src/fftsw.h:9: note: this is the location of the previous definition
+ #define FFTSTAGES 6      // Log2(FFTSIZE)
+ 
+../src/reverse_function.c: In function 'PSvsACP':
+../src/reverse_function.c:82:11: warning: unused variable 'time_ACP_PL' [-Wunused-variable]
+     float time_ACP_PL = 0;
+           ^~~~~~~~~~~
+../src/reverse_function.c:79:19: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+     float complex FFT_PL_Output[FFTSIZE];
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/reverse_function.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `FFT':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:28: multiple definition of `FFT'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:20: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `PSvsACP':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:73: multiple definition of `PSvsACP'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:77: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:113: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:212: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/helloworld.o: in function `FFT':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:48: undefined reference to `W_real'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:48: undefined reference to `W_real'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:49: undefined reference to `W_imag'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:49: undefined reference to `W_imag'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1
+14:37:24 **** Clean-only build of configuration Debug for project lab9_64point ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o  ./src/helloworld.d ./src/platform.d ./src/reverse_function.d  lab9_64point.elf.size  lab9_64point.elf
+' '
+14:37:25 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c:13: warning: "FFTSIZE" redefined
+ #define FFTSIZE (1 << N)
+ 
+In file included from ../src/reverse_function.c:9:
+../src/fftsw.h:8: note: this is the location of the previous definition
+ #define FFTSIZE 64       // Number of points in the FFT
+ 
+../src/reverse_function.c:14: warning: "FFTSTAGES" redefined
+ #define FFTSTAGES N
+ 
+In file included from ../src/reverse_function.c:9:
+../src/fftsw.h:9: note: this is the location of the previous definition
+ #define FFTSTAGES 6      // Log2(FFTSIZE)
+ 
+../src/reverse_function.c: In function 'PSvsACP':
+../src/reverse_function.c:82:11: warning: unused variable 'time_ACP_PL' [-Wunused-variable]
+     float time_ACP_PL = 0;
+           ^~~~~~~~~~~
+../src/reverse_function.c:79:19: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+     float complex FFT_PL_Output[FFTSIZE];
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/reverse_function.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `FFT':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:28: multiple definition of `FFT'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:20: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `PSvsACP':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:73: multiple definition of `PSvsACP'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:77: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:113: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:212: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/helloworld.o: in function `FFT':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:48: undefined reference to `W_real'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:48: undefined reference to `W_real'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:49: undefined reference to `W_imag'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:49: undefined reference to `W_imag'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1
+14:37:46 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:8:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/reverse_function.c:13: warning: "FFTSIZE" redefined
+ #define FFTSIZE (1 << N)
+ 
+In file included from ../src/reverse_function.c:9:
+../src/fftsw.h:5: note: this is the location of the previous definition
+ #define FFTSIZE 64
+ 
+../src/reverse_function.c:14: warning: "FFTSTAGES" redefined
+ #define FFTSTAGES N
+ 
+In file included from ../src/reverse_function.c:9:
+../src/fftsw.h:6: note: this is the location of the previous definition
+ #define FFTSTAGES 6  // log2(FFTSIZE)
+ 
+../src/reverse_function.c: In function 'PSvsACP':
+../src/reverse_function.c:82:11: warning: unused variable 'time_ACP_PL' [-Wunused-variable]
+     float time_ACP_PL = 0;
+           ^~~~~~~~~~~
+../src/reverse_function.c:79:19: warning: unused variable 'FFT_PL_Output' [-Wunused-variable]
+     float complex FFT_PL_Output[FFTSIZE];
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/reverse_function.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: multiple definition of `W_real'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: multiple definition of `W_imag'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `FFT':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:28: multiple definition of `FFT'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:20: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `PSvsACP':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:73: multiple definition of `PSvsACP'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:77: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:113: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:212: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1
+14:38:09 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:5:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/reverse_function.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: multiple definition of `W_real'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: multiple definition of `W_imag'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:48: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:212: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1
+14:38:38 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: multiple definition of `W_real'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: multiple definition of `W_imag'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:48: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:52: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1
+14:38:59 **** Auto Build of configuration Debug for project lab9_64point ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/reverse_function.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/reverse_function.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab9_64point_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/reverse_function.d" -MT"src/reverse_function.o" -o "src/reverse_function.o" "../src/reverse_function.c"
+In file included from ../src/reverse_function.c:5:
+../../lab9_64point_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/reverse_function.c'
+' '
+'Building target: lab9_64point.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab9_64point_bsp/ps7_cortexa9_0/lib -o "lab9_64point.elf"  ./src/helloworld.o ./src/platform.o ./src/reverse_function.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: multiple definition of `W_real'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:12: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: multiple definition of `W_imag'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/fftsw.h:19: first defined here
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/reverse_function.o: in function `main':
+C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/reverse_function.c:48: multiple definition of `main'; ./src/helloworld.o:C:\Users\aniru\Desktop\ELD\lab9_64\lab9_64.sdk\lab9_64point\Debug/../src/helloworld.c:52: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: lab9_64point.elf] Error 1

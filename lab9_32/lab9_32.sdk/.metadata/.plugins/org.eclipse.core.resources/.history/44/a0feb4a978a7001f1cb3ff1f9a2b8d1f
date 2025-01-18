@@ -1,0 +1,148 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <xtime_l.h>
+#include <complex.h>  // For complex number support
+
+#define N 32
+#define PI 3.14159265358979323846
+
+// Array to hold precomputed twiddle factors
+float complex W[N / 2];
+
+// Function to initialize twiddle factors
+void initialize_twiddle_factors() {
+    for (int i = 0; i < N / 2; i++) {
+        W[i] = cos(2 * PI * i / N) - I * sin(2 * PI * i / N);
+    }
+}
+
+// Generate bit-reversal array for N = 32
+void generate_bit_reversal(int rev[N]) {
+    int bits = log2(N);
+    for (int i = 0; i < N; i++) {
+        int reversed = 0;
+        for (int j = 0; j < bits; j++) {
+            if (i & (1 << j)) {
+                reversed |= (1 << (bits - 1 - j));
+            }
+        }
+        rev[i] = reversed;
+    }
+}
+
+// Function to perform bit-reversal
+void bitreverse(float complex dataIn[N], float complex dataOut[N], int rev[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev[i]];
+    }
+}
+
+// Function to perform FFT stages
+void FFT_stages(float complex FFT_input[N], float complex FFT_output[N]) {
+    float complex temp[N];
+    float complex temp_stage[N];
+
+    // Stage 1: Initial computation
+    for (int i = 0; i < N; i += 2) {
+        temp[i] = FFT_input[i] + FFT_input[i + 1];
+        temp[i + 1] = FFT_input[i] - FFT_input[i + 1];
+    }
+
+    // Loop over remaining stages
+    int step = 2;
+    for (int stage = 1; stage < 5; stage++) { // log2(32) = 5
+        int half_step = step;
+        step *= 2;
+
+        for (int i = 0; i < N; i += step) {
+            for (int j = 0; j < half_step; j++) {
+                float complex even = temp[i + j];
+                float complex odd = W[j * (N / step)] * temp[i + j + half_step];
+
+                temp_stage[i + j] = even + odd;
+                temp_stage[i + j + half_step] = even - odd;
+            }
+        }
+
+        // Copy results back to temp for next stage
+        for (int k = 0; k < N; k++) {
+            temp[k] = temp_stage[k];
+        }
+    }
+
+    // Copy final results to output
+    for (int i = 0; i < N; i++) {
+        FFT_output[i] = temp[i];
+    }
+}
+
+int main() {
+    // Initialize twiddle factors
+    initialize_twiddle_factors();
+
+    // Generate bit-reversal array
+    int rev[N];
+    generate_bit_reversal(rev);
+
+    // Dynamically allocate memory for FFT input, output, and reversal arrays
+    float complex *FFT_input = (float complex *)malloc(N * sizeof(float complex));
+    float complex *FFT_output = (float complex *)malloc(N * sizeof(float complex));
+    float complex *FFT_rev = (float complex *)malloc(N * sizeof(float complex));
+
+    if (FFT_input == NULL || FFT_output == NULL || FFT_rev == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // New input data as given
+      FFT_input[N] = {
+        11 + 23*I, 32 + 10*I, 91 + 94*I, 15 + 69*I,
+        47 + 96*I, 44 + 12*I, 96 + 17*I, 49 + 58*I,
+        1 + 1*I, 2 + 2*I, 3 + 3*I, 4 + 4*I,
+        5 + 5*I, 6 + 6*I, 7 + 7*I, 8 + 8*I,
+        9 + 9*I, 10 + 10*I, 11 + 11*I, 12 + 12*I,
+        13 + 13*I, 14 + 14*I, 15 + 15*I, 16 + 16*I,
+        17 + 17*I, 18 + 18*I, 19 + 19*I, 20 + 20*I,
+        21 + 21*I, 22 + 22*I, 23 + 23*I, 24 + 24*I
+    };
+
+    // Initialize the XTime timer
+    XTime start_time, end_time;
+    XTime_SetTime(0);  // Set time to 0
+    XTime_GetTime(&start_time); // Get start time
+
+    // Perform bit-reversal and FFT
+    bitreverse(FFT_input, FFT_rev, rev);
+    FFT_stages(FFT_rev, FFT_output);
+
+    XTime_GetTime(&end_time);  // Get end time
+
+    // Calculate execution time
+    u64 execution_time = end_time - start_time;
+    float time_in_seconds = (float)execution_time / COUNTS_PER_SECOND;
+    float time_in_microseconds = (float)execution_time * 1000000 / COUNTS_PER_SECOND;
+
+    // Print FFT input (all values)
+    printf("\nFFT input (all values):\n");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: Real: %f Imag: %f\n", i, creal(FFT_input[i]), cimag(FFT_input[i]));
+    }
+
+    // Print FFT output (all values)
+    printf("\nFFT output (all values):\n");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: Real: %f Imag: %f\n", i, creal(FFT_output[i]), cimag(FFT_output[i]));
+    }
+
+    // Print execution time
+    printf("\nExecution time: %f seconds\n", time_in_seconds);
+    printf("Execution time: %f microseconds\n", time_in_microseconds);
+
+    // Free dynamically allocated memory
+    free(FFT_input);
+    free(FFT_output);
+    free(FFT_rev);
+
+    return 0;
+}

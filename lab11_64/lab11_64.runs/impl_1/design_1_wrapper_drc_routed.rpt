@@ -1,0 +1,300 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Dec  2 01:51:14 2024
+| Host         : DESKTOP-UKD76RS running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 52
++-----------+----------+-------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                       | Violations |
++-----------+----------+-------------------------------------------------------------------+------------+
+| PDCN-1569 | Warning  | LUT equation term check                                           | 46         |
+| RTSTAT-10 | Warning  | No routable loads                                                 | 1          |
+| AVAL-4    | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 1          |
+| REQP-165  | Advisory | writefirst                                                        | 2          |
+| REQP-181  | Advisory | writefirst                                                        | 2          |
++-----------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDCN-1569#1 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[10].gen_lut is not included in the LUT equation: 'O5=(A2*A4*(~A5))+(A2*(~A4)*A3*A5)+(A2*(~A4)*(~A3)*(~A5))+((~A2)*A4*A3*(~A5))+((~A2)*A4*(~A3)*A5)+((~A2)*(~A4)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#2 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[19].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A4))+(A2*(~A3)*A5*A4)+(A2*(~A3)*(~A5)*(~A4))+((~A2)*A3*A5*(~A4))+((~A2)*A3*(~A5)*A4)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#3 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[20].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A4))+(A2*(~A3)*A5*A4)+(A2*(~A3)*(~A5)*(~A4))+((~A2)*A3*A5*(~A4))+((~A2)*A3*(~A5)*A4)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#4 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[21].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#5 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[22].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#6 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[29].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#7 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[30].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#8 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[36].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#9 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[39].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#10 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[40].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#11 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[45].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A4*A5)+(A2*(~A3)*(~A4)*(~A5))+((~A2)*A3*A4*(~A5))+((~A2)*A3*(~A4)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#12 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[2].gen_lut is not included in the LUT equation: 'O5=(A4*A1*(~A5))+(A4*(~A1)*A3*A5)+(A4*(~A1)*(~A3)*(~A5))+((~A4)*A1*A3*(~A5))+((~A4)*A1*(~A3)*A5)+((~A4)*(~A1)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#13 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[6].gen_lut is not included in the LUT equation: 'O5=(A5*A1*(~A4))+(A5*(~A1)*A3*A4)+(A5*(~A1)*(~A3)*(~A4))+((~A5)*A1*A3*(~A4))+((~A5)*A1*(~A3)*A4)+((~A5)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#14 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[9].gen_lut is not included in the LUT equation: 'O5=(A1*A4*(~A5))+(A1*(~A4)*A3*A5)+(A1*(~A4)*(~A3)*(~A5))+((~A1)*A4*A3*(~A5))+((~A1)*A4*(~A3)*A5)+((~A1)*(~A4)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#15 Warning
+LUT equation term check  
+Used physical LUT pin 'A3' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[11].gen_lut is not included in the LUT equation: 'O5=(A2*A4*(~A5))+(A2*(~A4)*A1*A5)+(A2*(~A4)*(~A1)*(~A5))+((~A2)*A4*A1*(~A5))+((~A2)*A4*(~A1)*A5)+((~A2)*(~A4)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#16 Warning
+LUT equation term check  
+Used physical LUT pin 'A3' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[3].gen_lut is not included in the LUT equation: 'O5=(A4*A5*(~A2))+(A4*(~A5)*A1*A2)+(A4*(~A5)*(~A1)*(~A2))+((~A4)*A5*A1*(~A2))+((~A4)*A5*(~A1)*A2)+((~A4)*(~A5)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#17 Warning
+LUT equation term check  
+Used physical LUT pin 'A3' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[7].gen_lut is not included in the LUT equation: 'O5=(A4*A5*(~A1))+(A4*(~A5)*A2*A1)+(A4*(~A5)*(~A2)*(~A1))+((~A4)*A5*A2*(~A1))+((~A4)*A5*(~A2)*A1)+((~A4)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#18 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[12].gen_lut is not included in the LUT equation: 'O5=(A3*A2*(~A5))+(A3*(~A2)*A1*A5)+(A3*(~A2)*(~A1)*(~A5))+((~A3)*A2*A1*(~A5))+((~A3)*A2*(~A1)*A5)+((~A3)*(~A2)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#19 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[17].gen_lut is not included in the LUT equation: 'O5=(A2*A1*(~A3))+(A2*(~A1)*A5*A3)+(A2*(~A1)*(~A5)*(~A3))+((~A2)*A1*A5*(~A3))+((~A2)*A1*(~A5)*A3)+((~A2)*(~A1)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#20 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[23].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A5*A1)+(A2*(~A3)*(~A5)*(~A1))+((~A2)*A3*A5*(~A1))+((~A2)*A3*(~A5)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#21 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[24].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A5*A1)+(A2*(~A3)*(~A5)*(~A1))+((~A2)*A3*A5*(~A1))+((~A2)*A3*(~A5)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#22 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[31].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A1*A5)+(A2*(~A3)*(~A1)*(~A5))+((~A2)*A3*A1*(~A5))+((~A2)*A3*(~A1)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#23 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[32].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A1*A5)+(A2*(~A3)*(~A1)*(~A5))+((~A2)*A3*A1*(~A5))+((~A2)*A3*(~A1)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#24 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[35].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A5))+(A2*(~A3)*A1*A5)+(A2*(~A3)*(~A1)*(~A5))+((~A2)*A3*A1*(~A5))+((~A2)*A3*(~A1)*A5)+((~A2)*(~A3)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#25 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[8].gen_lut is not included in the LUT equation: 'O5=(A3*A5*(~A1))+(A3*(~A5)*A2*A1)+(A3*(~A5)*(~A2)*(~A1))+((~A3)*A5*A2*(~A1))+((~A3)*A5*(~A2)*A1)+((~A3)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#26 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[0].gen_lut is not included in the LUT equation: 'O5=(A2*A4*(~A3))+(A2*(~A4)*A1*A3)+(A2*(~A4)*(~A1)*(~A3))+((~A2)*A4*A1*(~A3))+((~A2)*A4*(~A1)*A3)+((~A2)*(~A4)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#27 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[13].gen_lut is not included in the LUT equation: 'O5=(A1*A2*(~A4))+(A1*(~A2)*A3*A4)+(A1*(~A2)*(~A3)*(~A4))+((~A1)*A2*A3*(~A4))+((~A1)*A2*(~A3)*A4)+((~A1)*(~A2)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#28 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[14].gen_lut is not included in the LUT equation: 'O5=(A2*A1*(~A4))+(A2*(~A1)*A3*A4)+(A2*(~A1)*(~A3)*(~A4))+((~A2)*A1*A3*(~A4))+((~A2)*A1*(~A3)*A4)+((~A2)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#29 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[15].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A4))+(A2*(~A3)*A1*A4)+(A2*(~A3)*(~A1)*(~A4))+((~A2)*A3*A1*(~A4))+((~A2)*A3*(~A1)*A4)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#30 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[16].gen_lut is not included in the LUT equation: 'O5=(A2*A4*(~A3))+(A2*(~A4)*A1*A3)+(A2*(~A4)*(~A1)*(~A3))+((~A2)*A4*A1*(~A3))+((~A2)*A4*(~A1)*A3)+((~A2)*(~A4)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#31 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[18].gen_lut is not included in the LUT equation: 'O5=(A2*A1*(~A4))+(A2*(~A1)*A3*A4)+(A2*(~A1)*(~A3)*(~A4))+((~A2)*A1*A3*(~A4))+((~A2)*A1*(~A3)*A4)+((~A2)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#32 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[1].gen_lut is not included in the LUT equation: 'O5=(A1*A2*(~A4))+(A1*(~A2)*A3*A4)+(A1*(~A2)*(~A3)*(~A4))+((~A1)*A2*A3*(~A4))+((~A1)*A2*(~A3)*A4)+((~A1)*(~A2)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#33 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[25].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A4))+(A2*(~A3)*A1*A4)+(A2*(~A3)*(~A1)*(~A4))+((~A2)*A3*A1*(~A4))+((~A2)*A3*(~A1)*A4)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#34 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[26].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A4))+(A2*(~A3)*A1*A4)+(A2*(~A3)*(~A1)*(~A4))+((~A2)*A3*A1*(~A4))+((~A2)*A3*(~A1)*A4)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#35 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[27].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#36 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[28].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#37 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[33].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#38 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[34].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#39 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[37].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#40 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[38].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#41 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[41].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#42 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[42].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#43 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[43].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#44 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[44].gen_lut is not included in the LUT equation: 'O5=(A2*A3*(~A1))+(A2*(~A3)*A4*A1)+(A2*(~A3)*(~A4)*(~A1))+((~A2)*A3*A4*(~A1))+((~A2)*A3*(~A4)*A1)+((~A2)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#45 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[4].gen_lut is not included in the LUT equation: 'O5=(A4*A3*(~A2))+(A4*(~A3)*A1*A2)+(A4*(~A3)*(~A1)*(~A2))+((~A4)*A3*A1*(~A2))+((~A4)*A3*(~A1)*A2)+((~A4)*(~A3)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#46 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_fabric.sum_addsub/fabric.gen_addsub[5].gen_lut is not included in the LUT equation: 'O5=(A2*A1*(~A4))+(A2*(~A1)*A3*A4)+(A2*(~A1)*(~A3)*(~A4))+((~A2)*A1*A3*(~A4))+((~A2)*A1*(~A3)*A4)+((~A2)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, design_1_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], design_1_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14] (the first 15 of 23 listed).
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/floating_point_0/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_combined_adder.madd/dsp_ls_adder.use_dsp_wrapper.use_dsp48e1.dsp48e1_multadd/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+REQP-165#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-165#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

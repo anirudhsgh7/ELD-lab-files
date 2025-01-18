@@ -1,0 +1,22 @@
+#ifndef FFTSW_H
+#define FFTSW_H
+
+#include <math.h> // For sine and cosine functions
+#include <complex.h> // If complex numbers are used in twiddle factors
+
+// Define FFT parameters
+#define FFTSIZE 64       // Number of points in the FFT
+#define FFTSTAGES 6      // Log2(FFTSIZE)
+
+// Define data type for FFT calculations
+typedef float DTYPE;
+
+// Twiddle factors (precomputed weights for FFT stages)
+extern const DTYPE W_real[FFTSIZE / 2];
+extern const DTYPE W_imag[FFTSIZE / 2];
+
+// Function prototypes
+void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE],
+         float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE]);
+
+#endif // FFTSW_H

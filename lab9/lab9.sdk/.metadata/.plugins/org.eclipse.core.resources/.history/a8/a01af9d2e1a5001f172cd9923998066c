@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <xtime_l.h> // For timing functions like XTime_GetTime
+
+#define N 4
+#define COUNTS_PER_SECOND XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ // Ensure this is set correctly
+
+// Custom Complex Number Struct
+typedef struct {
+    float real;
+    float imag;
+} Complex;
+
+// Helper Functions for Complex Arithmetic
+Complex add(Complex a, Complex b) {
+    return (Complex){a.real + b.real, a.imag + b.imag};
+}
+
+Complex subtract(Complex a, Complex b) {
+    return (Complex){a.real - b.real, a.imag - b.imag};
+}
+
+Complex multiply(Complex a, Complex b) {
+    return (Complex){
+        a.real * b.real - a.imag * b.imag,
+        a.real * b.imag + a.imag * b.real
+    };
+}
+
+// Bit reversal mapping for N = 4
+const int rev4[N] = {0, 2, 1, 3};
+
+// Twiddle factors
+const Complex W[N / 2] = {
+    {1.0, 0.0},  // W[0] = 1 + 0i
+    {0.0, -1.0}  // W[1] = 0 - 1i
+};
+
+void bitreverse(Complex dataIn[N], Complex dataOut[N]) {
+    bit_reversal: for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev4[i]];
+    }
+}
+
+void FFT_stages(Complex FFT_input[N], Complex FFT_output[N]) {
+    Complex temp1[N];
+
+    stage1: for (int i = 0; i < N; i += 2) {
+        temp1[i] = add(FFT_input[i], FFT_input[i + 1]);
+        temp1[i + 1] = subtract(FFT_input[i], FFT_input[i + 1]);
+    }
+
+    stage2: for (int i = 0; i < N / 2; i++) {
+        FFT_output[i] = add(temp1[i], multiply(W[i], temp1[i + 2]));
+        FFT_output[i + 2] = subtract(temp1[i], multiply(W[i], temp1[i + 2]));
+    }
+}
+
+int main() {
+    const Complex FFT_input[N] = {
+        {11, 23},
+        {32, 10},
+        {91, 94},
+        {15, 69}
+    };
+    Complex FFT_output[N];
+    Complex FFT_rev[N];
+    Complex FFT_rev_sw[N]; // For software timing measurements
+    Complex FFT_output_sw[N];
+
+    // Perform FFT
+    bitreverse(FFT_input, FFT_rev);
+    FFT_stages(FFT_rev, FFT_output);
+
+    // Print input
+    printf("\nPrinted FFT input\n");
+    for (int i = 0; i < N; i++) {
+        printf("Real: %f Imag: %f\n", FFT_input[i].real, FFT_input[i].imag);
+    }
+
+    // Print FFT output
+    printf("\nPrinted FFT output\n");
+    for (int i = 0; i < N; i++) {
+        printf("Real: %f Imag: %f\n", FFT_output[i].real, FFT_output[i].imag);
+    }
+
+    // Timing for software implementation
+    XTime PS_start_time, PS_end_time; // Variables for time measurement
+    float time = 0;
+
+    // Reset timer and get start time
+    XTime_SetTime(0);
+    XTime_GetTime(&PS_start_time);
+
+    // Perform FFT stages for timing measurement
+    bitreverse(FFT_input, FFT_rev_sw);
+    FFT_stages(FFT_rev_sw, FFT_output_sw);
+
+    // Get end time
+    XTime_GetTime(&PS_end_time);
+
+    // Calculate execution time in microseconds (Fixing the issue)
+    time = (float)(PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000.0); // Correct conversion
+    printf("\nExecution time for PS in microseconds: %f\n", time);
+
+    return 0;
+}

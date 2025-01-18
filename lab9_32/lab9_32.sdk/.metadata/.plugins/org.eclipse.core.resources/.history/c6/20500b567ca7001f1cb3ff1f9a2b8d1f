@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <math.h>
+
+#define N 32 // 32-point FFT
+#define PI 3.14159265358979323846
+
+// Define a struct for complex numbers
+typedef struct {
+    float real;
+    float imag;
+} Complex;
+
+// Function to multiply two complex numbers
+Complex multiply(Complex a, Complex b) {
+    Complex result;
+    result.real = a.real * b.real - a.imag * b.imag;
+    result.imag = a.real * b.imag + a.imag * b.real;
+    return result;
+}
+
+// Function to perform the FFT
+void fft(Complex *x) {
+    unsigned int i, j, k, m;
+    unsigned int n = N;
+    unsigned int a, b;
+    Complex temp, W;
+    int logN = log2(N); // log2(32) = 5
+
+    // Bit reversal (reordering the input array)
+    for (i = 1, j = 0; i < n; i++) {
+        unsigned int bit = n >> 1;
+        while (j >= bit) {
+            j -= bit;
+            bit >>= 1;
+        }
+        j += bit;
+
+        if (i < j) {
+            // Swap the values (perform the bit-reversal swap)
+            temp = x[i];
+            x[i] = x[j];
+            x[j] = temp;
+        }
+    }
+
+    // FFT computation
+    for (i = 1; i <= logN; i++) {
+        m = 1 << i;  // m = 2, 4, 8, 16, 32 (for 32-point FFT)
+        for (k = 0; k < n; k += m) {
+            for (j = 0; j < m / 2; j++) {
+                // Compute the twiddle factor W = e^(-2πij/m)
+                W.real = cos(-2 * PI * j / m);
+                W.imag = sin(-2 * PI * j / m);
+
+                a = k + j;
+                b = k + j + m / 2;
+
+                // Multiply W with x[b]
+                temp = multiply(W, x[b]);
+
+                // Butterfly operation
+                x[b].real = x[a].real - temp.real;
+                x[b].imag = x[a].imag - temp.imag;
+
+                x[a].real += temp.real;
+                x[a].imag += temp.imag;
+            }
+        }
+    }
+
+    // Optionally, scale the output by dividing by N to normalize the result
+    for (i = 0; i < N; i++) {
+        x[i].real /= N;
+        x[i].imag /= N;
+    }
+}
+
+// Function to print the FFT result
+void printFFT(Complex *x) {
+    for (int i = 0; i < N; i++) {
+        printf("%.5f + %.5fi\n", x[i].real, x[i].imag);
+    }
+}
+
+int main() {
+    // Define the complex input array
+    Complex FFT_input[N] = {
+        {11, 23}, {32, 10}, {91, 94}, {15, 69},
+        {47, 96}, {44, 12}, {96, 17}, {49, 58},
+        {1, 1}, {2, 2}, {3, 3}, {4, 4},
+        {5, 5}, {6, 6}, {7, 7}, {8, 8},
+        {9, 9}, {10, 10}, {11, 11}, {12, 12},
+        {13, 13}, {14, 14}, {15, 15}, {16, 16},
+        {17, 17}, {18, 18}, {19, 19}, {20, 20},
+        {21, 21}, {22, 22}, {23, 23}, {24, 24}
+    };
+
+    // Perform FFT
+    fft(FFT_input);
+
+    // Print the FFT output
+    printFFT(FFT_input);
+
+    return 0;
+}

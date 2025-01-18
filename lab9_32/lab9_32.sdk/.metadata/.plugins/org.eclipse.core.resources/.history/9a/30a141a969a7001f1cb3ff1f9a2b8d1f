@@ -1,0 +1,149 @@
+#include <stdio.h>
+#include <math.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+
+#define N 32
+#define PI 3.14159265358979323846
+
+typedef struct {
+    float real;
+    float imag;
+} Complex;
+
+// Complex addition
+Complex complex_add(Complex a, Complex b) {
+    Complex result;
+    result.real = a.real + b.real;
+    result.imag = a.imag + b.imag;
+    return result;
+}
+
+// Complex subtraction
+Complex complex_sub(Complex a, Complex b) {
+    Complex result;
+    result.real = a.real - b.real;
+    result.imag = a.imag - b.imag;
+    return result;
+}
+
+// Complex multiplication
+Complex complex_mul(Complex a, Complex b) {
+    Complex result;
+    result.real = a.real * b.real - a.imag * b.imag;
+    result.imag = a.real * b.imag + a.imag * b.real;
+    return result;
+}
+
+// Bit-reversal index computation
+void compute_bit_reversal(int *rev, int n) {
+    int log2n = log2(n);
+    for (int i = 0; i < n; i++) {
+        rev[i] = 0;
+        for (int j = 0; j < log2n; j++) {
+            if (i & (1 << j)) {
+                rev[i] |= (1 << (log2n - 1 - j));
+            }
+        }
+    }
+}
+
+// Compute twiddle factors
+void compute_twiddle_factors(Complex *twiddles, int n) {
+    for (int i = 0; i < n / 2; i++) {
+        twiddles[i].real = cos(-2 * PI * i / n);
+        twiddles[i].imag = sin(-2 * PI * i / n);
+    }
+}
+
+// Perform FFT
+void FFT(Complex *input, Complex *output, int *rev, Complex *twiddles, int n) {
+    Complex temp[N];
+    for (int i = 0; i < n; i++) {
+        temp[i] = input[rev[i]];  // Apply bit-reversal
+    }
+
+    for (int stage = 1; stage <= log2(n); stage++) {
+        int step = 1 << stage;      // Stage size
+        int half_step = step >> 1; // Half of the stage size
+
+        for (int group = 0; group < n; group += step) {
+            for (int pair = 0; pair < half_step; pair++) {
+                Complex twiddle = twiddles[pair * (n / step)];
+                Complex t = complex_mul(temp[group + pair + half_step], twiddle);
+                Complex u = temp[group + pair];
+                temp[group + pair] = complex_add(u, t);
+                temp[group + pair + half_step] = complex_sub(u, t);
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        output[i] = temp[i];
+    }
+}
+
+int main() {
+    init_platform();
+
+    // Timer instances for PS and PL
+    XTime PL_start_time, PL_end_time;
+    XTime PS_start_time, PS_end_time;
+
+    // Buffers
+    Complex FFT_input[N] = {
+        {11, 23}, {32, 10}, {91, 94}, {15, 69}, {47, 96}, {44, 12}, {96, 17}, {49, 58},
+        {8, 16}, {20, 13}, {72, 67}, {34, 18}, {99, 44}, {37, 56}, {80, 24}, {60, 70},
+        {10, 30}, {23, 45}, {65, 33}, {19, 74}, {50, 26}, {71, 55}, {89, 41}, {28, 63},
+        {7, 22}, {41, 36}, {93, 62}, {48, 12}, {55, 77}, {37, 11}, {22, 84}, {39, 47}
+    };
+    Complex FFT_output_sw[N], FFT_output_hw[N];
+
+    int rev[N];
+    Complex twiddles[N / 2];
+
+    compute_bit_reversal(rev, N);
+    compute_twiddle_factors(twiddles, N);
+
+    // Software FFT
+    XTime_SetTime(0);
+    XTime_GetTime(&PS_start_time);
+    FFT(FFT_input, FFT_output_sw, rev, twiddles, N);
+    XTime_GetTime(&PS_end_time);
+
+    // Hardware FFT
+    int status;
+    XAxiDma AxiDMA;
+    status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+    if (status) return 1;
+
+    XTime_SetTime(0);
+    XTime_GetTime(&PL_start_time);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, sizeof(Complex) * N, XAXIDMA_DEVICE_TO_DMA);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, sizeof(Complex) * N, XAXIDMA_DMA_TO_DEVICE);
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+    XTime_GetTime(&PL_end_time);
+
+    // Print Results
+    printf("\n\r------- PS and PL Outputs Comparison --------\n\r");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: PS Output = %f + %fI, PL Output = %f + %fI\n\r",
+               i, FFT_output_sw[i].real, FFT_output_sw[i].imag,
+               FFT_output_hw[i].real, FFT_output_hw[i].imag);
+    }
+
+    // Execution time
+    printf("\n\r------- Execution Time Comparison --------\n\r");
+    float time = (float)(PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("Execution time for PS in Micro-seconds: %f\n\r", time);
+
+    time = (float)(PL_end_time - PL_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("Execution time for PL in Micro-seconds: %f\n\r", time);
+
+    return 0;
+}

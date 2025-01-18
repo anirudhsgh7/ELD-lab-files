@@ -1,0 +1,313 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 25 15:12:43 2024
+# Process ID: 11320
+# Current directory: C:/Users/aniru/Desktop/ELD/lab10_64
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11364 C:\Users\aniru\Desktop\ELD\lab10_64\lab10_64.xpr
+# Log file: C:/Users/aniru/Desktop/ELD/lab10_64/vivado.log
+# Journal file: C:/Users/aniru/Desktop/ELD/lab10_64\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aniru/Desktop/ELD/lab10_64/lab10_64.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/aniru/Downloads/ELD_Labs-master/ELD_Labs-master/lab10_64' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:01:24 ; elapsed = 00:01:10 . Memory (MB): peak = 910.949 ; gain = 286.934
+exit
+INFO: [Common 17-206] Exiting Vivadlaunch_sdk -workspace C:/Users/aniru/Desktop/ELD/lab10_64/lab10_64.sdk -hwspec C:/Users/aniru/Desktop/ELD/lab10_64/lab10_64.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/aniru/Desktop/ELD/lab10_64/lab10_64.sdk -hwspec C:/Users/aniru/Desktop/ELD/lab10_64/lab10_64.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+create_project lab10_256 C:/Users/aniru/Desktop/ELD/lab10_256 -part xc7z020clg484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 1046.375 ; gain = 0.000
+set_property board_part digilentinc.com:zedboard:part0:1.1 [current_project]
+create_bd_design "design_1"
+Wrote  : <C:\Users\aniru\Desktop\ELD\lab10_256\lab10_256.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1046.375 ; gain = 0.000
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_ACP {1} CONFIG.PCW_USE_DEFAULT_ACP_USER_VAL {1} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0
+create_bd_cell: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1261.289 ; gain = 0.000
+endgroup
+set_property -dict [list CONFIG.data_format.VALUE_SRC USER] [get_bd_cells xfft_0]
+set_property -dict [list CONFIG.transform_length {256} CONFIG.data_format {floating_point} CONFIG.aresetn {true} CONFIG.output_ordering {natural_order} CONFIG.implementation_options {automatically_select} CONFIG.phase_factor_width {24} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC USER] [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_length_width {23} CONFIG.c_sg_include_stscntrl_strm {0} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_include_mm2s_dre {1} CONFIG.c_mm2s_burst_size {32} CONFIG.c_m_axi_s2mm_data_width {64} CONFIG.c_include_s2mm_dre {1} CONFIG.c_s2mm_burst_size {32}] [get_bd_cells axi_dma_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_ACP} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_ACP]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM> is being mapped into address space </axi_dma_0/Data_MM2S> at <0x0000_0000 [ 512M ]>
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR> is being mapped into address space </axi_dma_0/Data_MM2S> at <0xFC00_0000 [ 16M ]>
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_IOP> is being mapped into address space </axi_dma_0/Data_MM2S> at <0xE000_0000 [ 4M ]>
+INFO: [BD 41-1051] The usage register of slave segment /processing_system7_0/S_AXI_ACP/ACP_IOP does not match the usage memory of address space /axi_dma_0/Data_MM2S and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space.
+Excluding </processing_system7_0/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_MM2S>
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> is being mapped into address space </axi_dma_0/Data_MM2S> at <0x4000_0000 [ 1G ]>
+INFO: [BD 41-1051] The usage register of slave segment /processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0 does not match the usage memory of address space /axi_dma_0/Data_MM2S and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space.
+Excluding </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_MM2S>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+Slave segment </axi_dma_0/S_AXI_LITE/Reg> is being mapped into address space </processing_system7_0/Data> at <0x4040_0000 [ 64K ]>
+endgroup
+regenerate_bd_layout
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_ACP} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM> is being mapped into address space </axi_dma_0/Data_S2MM> at <0x0000_0000 [ 512M ]>
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR> is being mapped into address space </axi_dma_0/Data_S2MM> at <0xFC00_0000 [ 16M ]>
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_IOP> is being mapped into address space </axi_dma_0/Data_S2MM> at <0xE000_0000 [ 4M ]>
+INFO: [BD 41-1051] The usage register of slave segment /processing_system7_0/S_AXI_ACP/ACP_IOP does not match the usage memory of address space /axi_dma_0/Data_S2MM and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space.
+Excluding </processing_system7_0/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_S2MM>
+Slave segment </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> is being mapped into address space </axi_dma_0/Data_S2MM> at <0x4000_0000 [ 1G ]>
+INFO: [BD 41-1051] The usage register of slave segment /processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0 does not match the usage memory of address space /axi_dma_0/Data_S2MM and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space.
+Excluding </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_S2MM>
+set_property location {5 1641 448} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/S_AXIS_DATA] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+connect_bd_net [get_bd_pins xfft_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins xfft_0/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {2 526 409} [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {2 574 559} [get_bd_cells xlconstant_1]
+set_property -dict [list CONFIG.CONST_WIDTH {16}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xfft_0/s_axis_config_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /xfft_0/s_axis_config_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_CONFIG
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins xfft_0/s_axis_config_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin /xfft_0/s_axis_config_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_CONFIG
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {xfft_0_M_AXIS_DATA}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_dma_0_M_AXIS_MM2S}]
+true
+regenerate_bd_layout
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets xfft_0_M_AXIS_DATA] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 2 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rst_ps7_0_100M/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /xfft_0_M_AXIS_DATA, to System ILA slot interface pin /system_ila_0/SLOT_0_AXIS for debug.
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXIS_MM2S, to System ILA slot interface pin /system_ila_0/SLOT_1_AXIS for debug.
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1339.176 ; gain = 29.566
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout
+delete_bd_objs [get_bd_addr_segs axi_dma_0/Data_MM2S/SEG_processing_system7_0_ACP_QSPI_LINEAR]
+delete_bd_objs [get_bd_addr_segs axi_dma_0/Data_S2MM/SEG_processing_system7_0_ACP_QSPI_LINEAR]
+make_wrapper -files [get_files C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+xit::source_ipfile: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1428.582 ; gain = 36.379
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_ACP/ACP_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> is excluded from all addressing paths.
+INFO: [xilinx.com:ip:xfft:9.1-913] /xfft_0 data_format has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:xfft:9.1-913] /xfft_0 data_format has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_ACP(5) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_ACP(5) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\aniru\Desktop\ELD\lab10_256\lab10_256.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:43 ; elapsed = 00:00:41 . Memory (MB): peak = 1660.340 ; gain = 313.363
+add_files -norecurse C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files  C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_ACP/ACP_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> is excluded from all addressing paths.
+VHDL Output written to : C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+Exporting to file c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+Exporting to file C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1860.727 ; gain = 194.684
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xfft_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_dma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 2 {design_1_processing_system7_0_0_synth_1 design_1_xfft_0_0_synth_1 design_1_axi_dma_0_0_synth_1 design_1_axi_smc_0_synth_1 design_1_rst_ps7_0_100M_0_synth_1 design_1_auto_pc_0_synth_1 design_1_system_ila_0_0_synth_1}
+[Mon Nov 25 16:20:12 2024] Launched design_1_processing_system7_0_0_synth_1, design_1_xfft_0_0_synth_1, design_1_axi_dma_0_0_synth_1, design_1_axi_smc_0_synth_1, design_1_rst_ps7_0_100M_0_synth_1, design_1_auto_pc_0_synth_1, design_1_system_ila_0_0_synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_xfft_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_xfft_0_0_synth_1/runme.log
+design_1_axi_dma_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_axi_dma_0_0_synth_1/runme.log
+design_1_axi_smc_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_axi_smc_0_synth_1/runme.log
+design_1_rst_ps7_0_100M_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_rst_ps7_0_100M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_system_ila_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_system_ila_0_0_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:02:10 . Memory (MB): peak = 1860.727 ; gain = 0.000
+export_simulation -of_objects [get_files C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.ip_user_files -ipstatic_source_dir C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.cache/compile_simlib/modelsim} {questa=C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.cache/compile_simlib/questa} {riviera=C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.cache/compile_simlib/riviera} {activehdl=C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Nov 25 16:24:27 2024] Launched design_1_xfft_0_0_synth_1, design_1_axi_dma_0_0_synth_1, design_1_axi_smc_0_synth_1, design_1_rst_ps7_0_100M_0_synth_1, design_1_auto_pc_0_synth_1, design_1_system_ila_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_xfft_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_xfft_0_0_synth_1/runme.log
+design_1_axi_dma_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_axi_dma_0_0_synth_1/runme.log
+design_1_axi_smc_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_axi_smc_0_synth_1/runme.log
+design_1_rst_ps7_0_100M_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_rst_ps7_0_100M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_system_ila_0_0_synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/design_1_system_ila_0_0_synth_1/runme.log
+synth_1: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/synth_1/runme.log
+[Mon Nov 25 16:24:27 2024] Launched impl_1...
+Run output will be captured here: C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1896.285 ; gain = 0.000
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Netlist 29-17] Analyzing 784 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2922.500 ; gain = 2.922
+Restored from archive | CPU: 4.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2922.500 ; gain = 2.922
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2922.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 238 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 124 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 113 instances
+
+open_run: Time (s): cpu = 00:01:17 ; elapsed = 00:01:15 . Memory (MB): peak = 3016.320 ; gain = 1116.723
+open_report: Time (s): cpu = 00:01:16 ; elapsed = 00:00:58 . Memory (MB): peak = 3101.906 ; gain = 59.160
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+file mkdir C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk
+file copy -force C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/impl_1/design_1_wrapper.sysdef C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk/design_1_wrapper.hdf
+
+file copy -force C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.runs/impl_1/design_1_wrapper.sysdef C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk -hwspec C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk -hwspec C:/Users/aniru/Desktop/ELD/lab10_256/lab10_256.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+close_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3225.789 ; gain = 3.992
+create_project lab10_4 C:/Users/aniru/Desktop/ELD/lab10_4 -part xc7z020clg484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3225.789 ; gain = 0.000
+set_property board_part digilentinc.com:zedboard:part0:1.1 [current_project]
+create_bd_design "design_1"
+Wrote  : <C:\Users\aniru\Desktop\ELD\lab10_4\lab10_4.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 3225.789 ; gain = 0.000
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_ACP {1} CONFIG.PCW_USE_DEFAULT_ACP_USER_VAL {1} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.034 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.03 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.082 . PS DDR interfaces might fail when entering negative DQS skew values. 
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0
+create_bd_cell: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3225.789 ; gain = 0.000
+endgroup
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 25 18:31:53 2024...

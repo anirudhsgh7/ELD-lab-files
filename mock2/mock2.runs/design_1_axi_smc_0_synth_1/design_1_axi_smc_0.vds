@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Dec  7 01:53:23 2024
+# Process ID: 956
+# Current directory: C:/Users/aniru/Desktop/ELD/mock2/mock2.runs/design_1_axi_smc_0_synth_1
+# Command line: vivado.exe -log design_1_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
+# Log file: C:/Users/aniru/Desktop/ELD/mock2/mock2.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.vds
+# Journal file: C:/Users/aniru/Desktop/ELD/mock2/mock2.runs/design_1_axi_smc_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_smc_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 382.953 ; gain = 89.082
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = 042dc9baeb595f58.
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 01:54:13 2024...

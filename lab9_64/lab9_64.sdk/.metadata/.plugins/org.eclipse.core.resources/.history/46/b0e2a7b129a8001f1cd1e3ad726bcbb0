@@ -1,0 +1,219 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <complex.h>
+#include <xtime_l.h> // Timer for execution time calculations
+#include "platform.h"
+#include "xaxidma.h" // header file for DMA
+#include "xparameters.h" // contains all the information about hardware blocks
+#include "fftsw.h"
+#include "xil_assert.h"
+#include "xil_types.h"
+
+//#define TX_BUFFER_BASE		0x00003000//(XPAR_PS7_DDR_0_S_AXI_BASEADDR + 0x00000100)
+//#define TX_BUFFER_BASE		(XPAR_PS7_DDR_0_S_AXI_BASEADDR + 0x00000100)
+
+//for 64-point FFT
+#define reverse(n) ((n & 0x1) << 5) | ((n & 0x2) << 3) | ((n & 0x4) << 1) | ((n & 0x8) >> 1) | (n & 0x10) >> 3 | ((n & 0x20) >> 5)
+
+//Function defined to calculate FFT output using 3 for loops.
+void FFT(float INPUT_I[FFTSIZE], float INPUT_R[FFTSIZE], float FFT_inv_output_r[FFTSIZE], float FFT_inv_output_i[FFTSIZE])
+{
+
+float OUTPUT_R[FFTSIZE];
+float OUTPUT_I[FFTSIZE];
+DTYPE temp_R, temp_I; //temporary complex variable
+int stage;
+int subFFTSize; //Size of FFT in each stage
+int BFWidth; //Butterfly Width or No. of Weights in each stage
+
+//Bit Reversal
+for(int i=0; i<FFTSIZE; ++i){
+    OUTPUT_R[reverse(i)] = INPUT_R[i];
+	OUTPUT_I[reverse(i)] = INPUT_I[i];
+}
+
+DTYPE Weight_R, Weight_I;
+
+// For N-point FFT, there are log2(N) stages
+for(stage=1; stage<= FFTSTAGES; stage++)
+{
+   subFFTSize = 1 << stage;    // FFT = 2^stage = points in sub FFT; for stage 1, subFFTSize = 2; for stage 2, subFFTSize = 4; for stage 3, subFFTSize = 8;
+   BFWidth = subFFTSize >> 1;  // Butterfly Widths in sub-FFT (FFTSIZE of sub-FFT/2) no of weights; BF width is 1 in stage 1, 2 in stage 2 and 4 in stage 3 ....
+
+   // This loop runs for the iteration equal to BF width in each(jth) stage
+   for(int j=0; j<BFWidth; j++)
+   {
+       // Note that weights of all butterfly units are same in a given stage
+       // We can reduce the number of memory read by using this for loop
+       Weight_R = W_real[j * (FFTSIZE>>stage)];
+       Weight_I = W_imag[j * (FFTSIZE>>stage)];
+
+       // This loop is for all butterflies in a stage that use same Weight
+       // In 4-point FFT, we have 2 subFFTs in stage 1
+       // In 8-point FFT, we have 4 subFFTs in stage 1 and 2 subFFTs in stage 2
+       // Each BF weight affects 2 outputs and hence we have 2 outputs for each iteration
+       for(int i =j ; i < FFTSIZE; i += subFFTSize) // This loop runs for FFTSIZE/SubFFTSize iterations
+       {
+            int i_lower = i + BFWidth;      //index of lower point in butterfly
+            temp_R = OUTPUT_R[i_lower] * Weight_R - OUTPUT_I[i_lower] * Weight_I;
+            temp_I = OUTPUT_I[i_lower] * Weight_R + OUTPUT_R[i_lower] * Weight_I;
+
+            OUTPUT_R[i_lower] = OUTPUT_R[i] - temp_R;
+            OUTPUT_I[i_lower] = OUTPUT_I[i] - temp_I;
+            OUTPUT_R[i] = OUTPUT_R[i] + temp_R;
+            OUTPUT_I[i] = OUTPUT_I[i] + temp_I;
+          }
+    }
+  }
+    for(int i =0 ; i < FFTSIZE; i ++) // This loop runs for FFTSIZE/SubFFTSize iterations
+       {
+       FFT_inv_output_r[i] = 1/(OUTPUT_R[i]);
+       FFT_inv_output_i[i] = 1/(OUTPUT_I[i]);
+       }
+
+}
+
+int PSvsACP()
+{
+
+	// Generating 10-bit Input for FFT
+		float INPUT_R[FFTSIZE]; // Real part of the input
+		float INPUT_I[FFTSIZE]; // Imaginary part of the input
+
+		float complex INPUT_C[FFTSIZE];// input to the FFT
+		float FFT_ps_output_r[FFTSIZE];
+		float FFT_ps_output_i[FFTSIZE];
+
+
+		float time_PS = 0;
+		float time_ACP_PL = 0;
+		//float curr_time_PS = 0;
+		//float curr_time_ACP = 0;
+
+		//FFT output
+		//float OUTPUT_R[FFTSIZE], OUTPUT_I[FFTSIZE];
+		float complex FFT_PL_Output[FFTSIZE];
+
+	   // DMA Configuration pointer
+	    int status;
+	    XAxiDma_Config *DMA_Config;
+
+	    // DMA Instance pointer
+	    XAxiDma DMA_instance;
+	    DMA_Config = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
+	    status = XAxiDma_CfgInitialize(&DMA_instance, DMA_Config);
+	    if(status!=XST_SUCCESS)
+	    {
+	    	printf("ACP DMA Configuration failed. \t\n");
+	        return XST_FAILURE;
+	    }
+
+	    // For loop to get average execution time
+//	    			 XTime seed_value;
+//	    			 XTime_GetTime(&seed_value);
+//	    			 srand(seed_value);
+//	    			// Generate random numbers
+//	    			for (int i=0;i<FFTSIZE;i++)
+//	    			{
+//	    				INPUT_C[i]= (rand()%2000) + (rand()%2000)*I;
+//	    				INPUT_R[i] = creal(INPUT_C[i]);
+//	    				INPUT_I[i] = cimag(INPUT_C[i]);
+//	    			}
+	    	for (int k = 0; k<FFTSIZE ;k++)
+	    	{
+	    		INPUT_C[k] = (k/4) + (k/2)*I;
+	    		INPUT_R[k] = creal(INPUT_C[k]);
+	    		INPUT_I[k] = cimag(INPUT_C[k]);
+	    	}
+
+	    			//FFT Output calculation on PS
+	    			// to store the time at which certain processes starts and ends
+	    			XTime PS_Start, PS_End;
+	    			XTime_SetTime(0); // Set the Global Timer Counter Register
+
+	    			XTime_GetTime(&PS_Start); // Capture the timer value at the start
+	    			FFT(INPUT_I, INPUT_R, FFT_ps_output_r, FFT_ps_output_i);
+	    			XTime_GetTime(&PS_End); // Capture the timer value at the start
+
+	    			//printing execution time of each iteration
+	    			time_PS = ((float)1.0 * (PS_End - PS_Start) / (COUNTS_PER_SECOND/1000000));
+
+	    			//printf("Execution Time for PS(us) for %d iteration: %f\n" , k,curr_time_PS);
+
+	    			//FFT Output calculation of HP_PL
+	    			XTime PL_Start, PL_End;
+	    			XTime_SetTime(0);
+	    			XTime_GetTime(&PL_Start);
+
+	    			// HP port can not access the coherent data from cache that's why we need to add a cache flush and cache invalidate function
+	    			// Flush the cache into system memory before DMA transfers the inputs to FFT
+	    			//Xil_DCacheFlushRange((UINTPTR)INPUT_C, (sizeof(float complex )*FFTSIZE));
+
+	    			//FFT is much faster, so there might be case when FFT has already send and output before DMA is even ready to accept the data that's why it is necessary to check if DMA is ready
+	    			//Inform the DMA to receive the data from FFT
+	    			status = XAxiDma_SimpleTransfer(&DMA_instance, (UINTPTR) FFT_PL_Output, FFTSIZE*2*sizeof(float), XAXIDMA_DEVICE_TO_DMA); //length in bytes, float is 32 bits, (2*32) for real and imaginary float values, device is FFT
+	    			//Inform the DMA to send data to FFT
+	    			status = XAxiDma_SimpleTransfer(&DMA_instance, (UINTPTR) INPUT_C, FFTSIZE*2*sizeof(float), XAXIDMA_DMA_TO_DEVICE); //length in bytes, float is 32 bits, device is FFT
+
+	    			// Invalidate the cache for FFT Output so that output data will be read from system memory only
+	    			//Xil_DCacheInvalidateRange((UINTPTR)FFT_PL_Output, (sizeof(float complex)*FFTSIZE));
+
+	    			//DMA will be busy during data transfer can be checked by DMA register if it is IDLE
+	    			//IDLE=0 means data transfer is not complete, IDLE=1 means data transfer is complete; 2nd most LSB is the IDLE-bit of DMA register
+	    			//replacing DMA_busy() function
+	    			status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x04)&0x00000002;  //32-bit value; check second bit: (perform AND operation) , MM2S Status Register Address Space offset = 0x04
+	    			while(status!=0x00000002)
+	    			{
+	    				status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x04)&0x00000002; //If 2nd bit is not 1, repeat checking status (or) repeat reading the 2nd bit of the register
+	    			}
+	    			status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x34)&0x00000002;  //32-bit value; check second bit: (perform AND operation) , S2MM Status Register Address Space offset = 0x34
+	    			while(status!=0x00000002)
+	    			{
+	    				status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x34)&0x00000002; //If 2nd bit is not 1, repeat checking status
+	    			}
+	    			XTime_GetTime(&PL_End);
+
+	    			time_ACP_PL = ((float)1.0 * (PL_End - PL_Start) / (COUNTS_PER_SECOND/1000000));
+
+	    			//////////////////////////////////////////////////////////////////////////////////////////////////////
+	    			// Compare PS and PL Output
+	    			int j;
+	    			int error_flag = 0; // error flag to check for mismatch between transmitted and received data
+	    			for(j=0; j<FFTSIZE; j++)
+	    			{
+	    				// Print the FFT output on the UART
+	    				printf("PS: %f %f , ACP-PL: %f %f\n", FFT_ps_output_r[j], FFT_ps_output_i[j], crealf(FFT_PL_Output[j]), cimagf(FFT_PL_Output[j]));
+	    				float diff1 = abs(FFT_ps_output_r[j]-crealf(FFT_PL_Output[j]));
+	    				float diff2 = abs(FFT_ps_output_i[j]-cimagf(FFT_PL_Output[j]));
+
+	    				if(diff1>=0.0001 && diff2>=0.0001)
+	    				{
+	    					error_flag = 1; //error flag asserted for any mismatch
+	    					break;
+	    				}
+
+	    			}
+
+	    			if(error_flag == 1)
+	    				printf("Data Mismatch Found in ACP port at %d\r\n",j);
+	    			else
+	    				printf("Functionality Verified Successfully!\r\n");
+
+
+	    printf("\n-----------AVERAGE EXECUTION TIME--------------------\n");
+	    printf("Execution Time for PS(us) : %f\n" , time_PS);
+	    printf("Execution Time for ACP-PL(us) : %f\n" , time_ACP_PL);
+	    return 0;
+
+	    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+	init_platform();
+
+    PSvsACP(); // Write a function to compare the performance of FFT on PS and  ACP based PL
+
+    cleanup_platform();
+    return 0; //no break before return statement
+}

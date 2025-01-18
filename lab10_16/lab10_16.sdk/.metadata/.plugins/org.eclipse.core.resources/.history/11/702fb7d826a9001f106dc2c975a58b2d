@@ -1,0 +1,125 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <complex.h>
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+#include <math.h>
+
+#define N 16
+#define TOLERANCE 1e-6  // Set a tolerance for comparing PS and PL results
+#define CLOCK_FREQ 100000000  // Processor clock frequency in Hz (e.g., 100 MHz)
+#define COUNTS_PER_SECOND 100000000  // Assuming 100 MHz processor frequency
+
+// Bit-reversal array for 16-point FFT
+const int rev16[N] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+
+// Real and imaginary parts of the twiddle factors for 16-point FFT
+const float W_real_16[] = { 1.000000,  0.923880,  0.707107,  0.382683,  0.000000,  -0.382683,  -0.707107,  -0.923880 };
+const float W_imag_16[] = { -0.000000,  -0.382683,  -0.707107,  -0.923880,  -1.000000,  -0.923880,  -0.707107,  -0.382683 };
+
+// Software (PS) FFT function
+void FFT_stages(float complex FFT_input[N], float complex FFT_output[N]) {
+    float complex temp1[N], temp2[N], temp3[N];
+
+    // Stage 1
+    for (int i = 0; i < N; i = i + 2) {
+        temp1[i] = FFT_input[i] + (W_real_16[0] + I * W_imag_16[0]) * FFT_input[i + 1];
+        temp1[i + 1] = FFT_input[i] - (W_real_16[0] + I * W_imag_16[0]) * FFT_input[i + 1];
+    }
+
+    // Stage 2
+    for (int i = 0; i < N; i = i + 4) {
+        temp2[i] = temp1[i] + (W_real_16[0] + I * W_imag_16[0]) * temp1[i + 2];
+        temp2[i + 1] = temp1[i + 1] + (W_real_16[4] + I * W_imag_16[4]) * temp1[i + 3];
+        temp2[i + 2] = temp1[i] - (W_real_16[0] + I * W_imag_16[0]) * temp1[i + 2];
+        temp2[i + 3] = temp1[i + 1] - (W_real_16[4] + I * W_imag_16[4]) * temp1[i + 3];
+    }
+
+    // Stage 3
+    for (int i = 0; i < N; i = i + 8) {
+        temp3[i] = temp2[i] + (W_real_16[0] + I * W_imag_16[0]) * temp2[i + 4];
+        temp3[i + 1] = temp2[i + 1] + (W_real_16[2] + I * W_imag_16[2]) * temp2[i + 5];
+        temp3[i + 2] = temp2[i + 2] + (W_real_16[4] + I * W_imag_16[4]) * temp2[i + 6];
+        temp3[i + 3] = temp2[i + 3] + (W_real_16[6] + I * W_imag_16[6]) * temp2[i + 7];
+        temp3[i + 4] = temp2[i] - (W_real_16[0] + I * W_imag_16[0]) * temp2[i + 4];
+        temp3[i + 5] = temp2[i + 1] - (W_real_16[2] + I * W_imag_16[2]) * temp2[i + 5];
+        temp3[i + 6] = temp2[i + 2] - (W_real_16[4] + I * W_imag_16[4]) * temp2[i + 6];
+        temp3[i + 7] = temp2[i + 3] - (W_real_16[6] + I * W_imag_16[6]) * temp2[i + 7];
+    }
+
+    // Stage 4
+    for (int i = 0; i < N; i++) {
+        int twiddle_index = i % 8;
+        FFT_output[i] = temp3[i] + (W_real_16[twiddle_index] + I * W_imag_16[twiddle_index]) * temp3[i + 8];
+    }
+}
+
+// Bit-reversal function
+void bitreverse(float complex dataIn[N], float complex dataOut[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev16[i]];
+    }
+}
+
+// Main function
+int main() {
+    init_platform();
+
+    XTime PS_start_time, PS_end_time;
+    XTime PL_start_time, PL_end_time;
+
+    // Sample input for FFT
+    float complex FFT_input[N] = { 1.0 + 0.0 * I, 2.0 + 1.0 * I, 3.0 + 1.0 * I, 4.0 + 2.0 * I,
+                                    5.0 + 0.0 * I, 6.0 + 2.0 * I, 7.0 + 1.0 * I, 8.0 + 3.0 * I,
+                                    9.0 + 0.0 * I, 10.0 + 2.0 * I, 11.0 + 1.0 * I, 12.0 + 0.0 * I,
+                                    13.0 + 2.0 * I, 14.0 + 3.0 * I, 15.0 + 1.0 * I, 16.0 + 0.0 * I };
+
+    float complex FFT_input_reversed[N], FFT_output_sw[N], FFT_output_hw[N];
+
+    // Software FFT computation
+    XTime_SetTime(0);  // Reset timer
+    XTime_GetTime(&PS_start_time);  // Start timer
+    bitreverse(FFT_input, FFT_input_reversed);  // Bit-reversal
+    FFT_stages(FFT_input_reversed, FFT_output_sw);  // Perform FFT in software
+    XTime_GetTime(&PS_end_time);  // Stop timer
+
+    // Hardware (PL) FFT computation using DMA
+    int status;
+    XAxiDma AxiDMA;
+    status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+    if (status) {
+        printf("DMA Init Failed\n\r");
+        return 1; // DMA Init Failed
+    }
+
+    XTime_SetTime(0);  // Reset timer
+    XTime_GetTime(&PL_start_time);  // Start timer
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, (sizeof(float complex) * N), XAXIDMA_DEVICE_TO_DMA);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, (sizeof(float complex) * N), XAXIDMA_DMA_TO_DEVICE);
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+    XTime_GetTime(&PL_end_time);  // Stop timer
+
+    // Print PS and PL Outputs comparison
+    printf("\n\r------- PS and PL Outputs Comparison --------\n\r");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: PS Output = %f + %fI, PL Output = %f + %fI\n\r",
+               i, crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]),
+               crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+    }
+
+    // Execution time comparison
+    printf("\n\r------- Execution Time Comparison --------\n\r");
+    float time = (float)(PS_end_time - PS_start_time) * 1.0 / (COUNTS_PER_SECOND / 1000000);
+    printf("Execution time for PS in Micro-seconds: %f\n\r", time);
+
+    time = (float)(PL_end_time - PL_start_time) * 1.0 / (COUNTS_PER_SECOND / 1000000);
+    printf("Execution time for PL in Micro-seconds: %f\n\r", time);
+
+    cleanup_platform();
+    return 0;
+}

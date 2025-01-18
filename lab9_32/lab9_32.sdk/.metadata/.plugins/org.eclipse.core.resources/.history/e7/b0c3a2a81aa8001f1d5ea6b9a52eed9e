@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <complex.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+
+#define N 32  // Size of FFT
+
+// Precomputed Bit-Reversal Indices for N = 32
+const int rev32[N] = {
+    0, 16, 8, 24, 4, 20, 12, 28, 2, 18, 10, 26, 6, 22, 14, 30,
+    1, 17, 9, 25, 5, 21, 13, 29, 3, 19, 11, 27, 7, 23, 15, 31
+};
+
+// Precomputed Twiddle Factors for N = 32 (Real and Imaginary parts)
+const float W_real_32[] = {
+    1.000000, 0.980785, 0.923880, 0.831470, 0.707107, 0.555570, 0.382683, 0.195090,
+    0.000000, -0.195090, -0.382683, -0.555570, -0.707107, -0.831470, -0.923880, -0.980785
+};
+
+const float W_imag_32[] = {
+    -0.000000, -0.195090, -0.382683, -0.555570, -0.707107, -0.831470, -0.923880, -0.980785,
+    -1.000000, -0.980785, -0.923880, -0.831470, -0.707107, -0.555570, -0.382683, -0.195090
+};
+
+// Bit-Reversal Reordering
+void bitreverse(float complex dataIn[N], float complex dataOut[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev32[i]];
+    }
+}
+
+// FFT Stages (in-place Cooley-Tukey FFT)
+// FFT Stages (in-place Cooley-Tukey FFT)
+void FFT_stages(float complex FFT_input[N], float complex FFT_output[N]) {
+    float complex temp[N]; // Temporary storage for intermediate results
+    int subFFTSIZE, BFWidth;
+
+    // Initialize temp with input
+    for (int i = 0; i < N; i++) {
+        temp[i] = FFT_input[i];
+    }
+
+    // Perform FFT stages
+    for (int stage = 1; stage <= 5; stage++) { // log2(32) = 5
+        subFFTSIZE = 1 << stage;          // 2^stage
+        BFWidth = subFFTSIZE >> 1;        // Butterfly width = subFFTSIZE / 2
+
+        for (int j = 0; j < BFWidth; j++) { // Loop over each butterfly
+            float complex twiddle = W_real_32[j * (N / subFFTSIZE)] +
+                                    W_imag_32[j * (N / subFFTSIZE)] * I;
+
+            for (int i = j; i < N; i += subFFTSIZE) {
+                int i_lower = i + BFWidth; // Index of lower point
+                float complex tempVal = temp[i_lower] * twiddle;
+
+                // Butterfly operation
+                temp[i_lower] = temp[i] - tempVal;
+                temp[i] = temp[i] + tempVal;
+            }
+        }
+    }
+
+    // Copy final results to FFT_output
+    for (int i = 0; i < N; i++) {
+        FFT_output[i] = temp[i];
+    }
+}
+
+// Print Twiddle Factors
+void print_twiddle_factors() {
+    printf("\n\r------- Twiddle Factor Values (N = 32) --------\n\r");
+    for (int i = 0; i < N / 2; i++) {
+        printf("W[%d] = %f + %fI\n\r", i, W_real_32[i], W_imag_32[i]);
+    }
+}
+
+int main() {
+    init_platform();
+
+    // Timer instances for PS and PL
+    XTime PL_start_time, PL_end_time;
+    XTime PS_start_time, PS_end_time;
+
+    // Input and Output Buffers
+    const float complex FFT_input[N] = {
+        11 + 23*I, 32 + 10*I, 91 + 94*I, 15 + 69*I, 47 + 96*I, 44 + 12*I, 96 + 17*I, 49 + 58*I,
+        23 + 34*I, 64 + 43*I, 83 + 19*I, 10 + 27*I, 59 + 76*I, 61 + 51*I, 33 + 29*I, 21 + 18*I,
+        55 + 62*I, 13 + 34*I, 42 + 19*I, 91 + 44*I, 19 + 37*I, 45 + 28*I, 27 + 92*I, 81 + 73*I,
+        66 + 11*I, 72 + 54*I, 88 + 39*I, 94 + 41*I, 36 + 65*I, 74 + 32*I, 53 + 49*I, 17 + 22*I
+    };
+    float complex FFT_output_sw[N], FFT_output_hw[N];
+    float complex FFT_rev_sw[N];
+
+    // Print Twiddle Factors
+    print_twiddle_factors();
+
+    // Software FFT
+    XTime_SetTime(0); // Reset timer
+    XTime_GetTime(&PS_start_time);
+    bitreverse(FFT_input, FFT_rev_sw);
+    FFT_stages(FFT_rev_sw, FFT_output_sw);
+    XTime_GetTime(&PS_end_time);
+
+    // Hardware FFT
+    int status;
+    XAxiDma AxiDMA;
+    status = DMA_Init(&AxiDMA, XPAR_AXI_DMA_0_DEVICE_ID);
+    if (status) return 1; // DMA Init Failed
+
+    XTime_SetTime(0); // Reset timer
+    XTime_GetTime(&PL_start_time);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_output_hw, (sizeof(float complex) * N), XAXIDMA_DEVICE_TO_DMA);
+    status = XAxiDma_SimpleTransfer(&AxiDMA, (UINTPTR)FFT_input, (sizeof(float complex) * N), XAXIDMA_DMA_TO_DEVICE);
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DMA_TO_DEVICE));
+    while (XAxiDma_Busy(&AxiDMA, XAXIDMA_DEVICE_TO_DMA));
+    XTime_GetTime(&PL_end_time);
+
+    // Print PS and PL Outputs
+    printf("\n\r------- PS and PL Outputs Comparison --------\n\r");
+    for (int i = 0; i < N; i++) {
+        printf("Index %d: PS Output = %f + %fI, PL Output = %f + %fI\n\r",
+               i, crealf(FFT_output_sw[i]), cimagf(FFT_output_sw[i]),
+               crealf(FFT_output_hw[i]), cimagf(FFT_output_hw[i]));
+    }
+
+    // Execution time comparison
+    printf("\n\r------- Execution Time Comparison --------\n\r");
+    float time = (float)1.0 * (PS_end_time - PS_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("Execution time for PS in Microseconds: %f\n\r", time);
+
+    time = (float)1.0 * (PL_end_time - PL_start_time) / (COUNTS_PER_SECOND / 1000000);
+    printf("Execution time for PL in Microseconds: %f\n\r", time);
+
+    cleanup_platform();
+    return 0;
+}

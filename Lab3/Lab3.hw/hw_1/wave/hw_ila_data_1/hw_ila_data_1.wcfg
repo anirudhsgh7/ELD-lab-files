@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/aniru/Desktop/ELD/Lab3/Lab3.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1687491fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="95"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="73" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="Count_OBUF" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Count_OBUF[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_OBUF[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/out[0:0]</obj_property>
+      <obj_property name="ObjectShortName">out[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/Q" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/Q[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/out[0:0]</obj_property>
+      <obj_property name="ObjectShortName">out[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Clk_1Hz" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Clk_1Hz</obj_property>
+      <obj_property name="ObjectShortName">Clk_1Hz</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg[0]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg[0]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Count_reg[0]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[0]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[0]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[0]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[0]_i_1_n_4" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[0]_i_1_n_4</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[0]_i_1_n_4</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[0]_i_1_n_5" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[0]_i_1_n_5</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[0]_i_1_n_5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[0]_i_1_n_6" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[0]_i_1_n_6</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[0]_i_1_n_6</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[0]_i_1_n_7" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[0]_i_1_n_7</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[0]_i_1_n_7</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[4]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[4]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[4]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[4]_i_1_n_4" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[4]_i_1_n_4</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[4]_i_1_n_4</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[4]_i_1_n_5" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[4]_i_1_n_5</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[4]_i_1_n_5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[4]_i_1_n_6" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[4]_i_1_n_6</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[4]_i_1_n_6</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[4]_i_1_n_7" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[4]_i_1_n_7</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[4]_i_1_n_7</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[8]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[8]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[8]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[8]_i_1_n_4" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[8]_i_1_n_4</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[8]_i_1_n_4</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[8]_i_1_n_5" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[8]_i_1_n_5</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[8]_i_1_n_5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[8]_i_1_n_6" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[8]_i_1_n_6</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[8]_i_1_n_6</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[8]_i_1_n_7" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[8]_i_1_n_7</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[8]_i_1_n_7</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[12]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[12]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[12]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[12]_i_1_n_4" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[12]_i_1_n_4</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[12]_i_1_n_4</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[12]_i_1_n_5" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[12]_i_1_n_5</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[12]_i_1_n_5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[12]_i_1_n_6" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[12]_i_1_n_6</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[12]_i_1_n_6</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[12]_i_1_n_7" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[12]_i_1_n_7</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[12]_i_1_n_7</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[16]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[16]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[16]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[16]_i_1_n_4" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[16]_i_1_n_4</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[16]_i_1_n_4</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[16]_i_1_n_5" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[16]_i_1_n_5</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[16]_i_1_n_5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[16]_i_1_n_6" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[16]_i_1_n_6</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[16]_i_1_n_6</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[16]_i_1_n_7" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[16]_i_1_n_7</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[16]_i_1_n_7</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[20]_i_1_n_5" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[20]_i_1_n_5</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[20]_i_1_n_5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[20]_i_1_n_6" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[20]_i_1_n_6</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[20]_i_1_n_6</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg[20]_i_1_n_7" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg[20]_i_1_n_7</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg[20]_i_1_n_7</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="cd1/Count_reg_reg_n_0_" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cd1/Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_reg_reg_n_0_[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[0]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[0]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[0]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[1]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[1]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[1]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[1]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[1]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[1]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[2]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[2]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[2]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[2]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[2]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[2]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[3]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[3]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[3]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[3]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[3]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[3]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[4]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[4]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[4]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[4]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[4]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[4]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[5]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[5]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[5]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[5]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[5]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[5]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[5]_i_3_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[5]_i_3_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[5]_i_3_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[6]_i_1_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[6]_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[6]_i_1_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[6]_i_2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[6]_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[6]_i_2_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[6]_i_3_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[6]_i_3_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[6]_i_3_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[6]_i_4_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[6]_i_4_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[6]_i_4_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="c1/PS[6]_i_5_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c1/PS[6]_i_5_n_0</obj_property>
+      <obj_property name="ObjectShortName">PS[6]_i_5_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/aniru/Desktop/ELD/Lab7/Lab7.srcs/sources_1/new/top_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/aniru/Desktop/ELD/Lab7/Lab7.srcs/sim_1/new/tb_FFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_FFT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/aniru/Desktop/ELD/Lab7/Lab7.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aniru/Desktop/ELD/Lab7/Lab7.srcs/sources_1/ip/FFT/sim/FFT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FFT'

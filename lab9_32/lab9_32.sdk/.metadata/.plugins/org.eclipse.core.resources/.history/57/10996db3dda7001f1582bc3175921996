@@ -1,0 +1,94 @@
+/******************************************************************************
+*
+* 32-Point FFT Implementation on PS
+*
+******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <complex.h>
+
+#define FFTSIZE 32         // Size of the FFT
+#define FFTSTAGES 5        // log2(FFTSIZE)
+
+// Macro for 5-bit bit-reversal for 32-point FFT
+#define reverse(n) ((n & 0x1) << 4) | ((n & 0x2) << 2) | (n & 0x4) | ((n & 0x8) >> 2) | ((n & 0x10) >> 4)
+
+// Precomputed Twiddle Factors (W = e^(-j * 2πk/N))
+const float W_real_N[FFTSIZE / 2] = {
+    1.0, 0.9807852804, 0.9238795325, 0.8314696123, 0.7071067812, 0.5555702330, 0.3826834324, 0.1950903220,
+    0.0, -0.1950903220, -0.3826834324, -0.5555702330, -0.7071067812, -0.8314696123, -0.9238795325, -0.9807852804
+};
+const float W_imag_N[FFTSIZE / 2] = {
+    0.0, -0.1950903220, -0.3826834324, -0.5555702330, -0.7071067812, -0.8314696123, -0.9238795325, -0.9807852804,
+    -1.0, -0.9807852804, -0.9238795325, -0.8314696123, -0.7071067812, -0.5555702330, -0.3826834324, -0.1950903220
+};
+
+/*===================== FFT Calculation on PS ==========================*/
+void FFT_PS(float FFTIn_I[FFTSIZE], float FFTIn_R[FFTSIZE], float FFTOut_I[FFTSIZE], float FFTOut_R[FFTSIZE]) {
+    float temp_R;   /* Temporary storage for the real part */
+    float temp_I;   /* Temporary storage for the imaginary part */
+
+    int i, j;       /* Loop indices */
+    int i_lower;    /* Index of the lower point in butterfly */
+    int stage;      /* Stage of the FFT */
+    int subFFTSIZE; /* Size of FFT in each stage */
+    int BFWidth;    /* Butterfly width */
+
+    /*===================== Bit-Reversal ===========================*/
+    for (i = 0; i < FFTSIZE; ++i) {
+        FFTOut_R[reverse(i)] = FFTIn_R[i];
+        FFTOut_I[reverse(i)] = FFTIn_I[i];
+    }
+
+    /*======================= FFT Computation ==========================*/
+    for (stage = 1; stage <= FFTSTAGES; stage++) {
+        subFFTSIZE = 1 << stage;           // Sub-FFT size (2^stage)
+        BFWidth = subFFTSIZE >> 1;         // Butterfly width (subFFTSIZE / 2)
+
+        // Perform butterflies for the current stage
+        for (j = 0; j < BFWidth; j++) {
+            // Butterfly weights for this stage
+            float BFWeight_R = W_real_N[j * (FFTSIZE >> stage)];
+            float BFWeight_I = W_imag_N[j * (FFTSIZE >> stage)];
+
+            // Process butterflies for all sub-FFT groups
+            for (i = j; i < FFTSIZE; i += subFFTSIZE) {
+                i_lower = i + BFWidth;  // Lower index in butterfly
+
+                // Butterfly computation
+                temp_R = FFTOut_R[i_lower] * BFWeight_R - FFTOut_I[i_lower] * BFWeight_I;
+                temp_I = FFTOut_I[i_lower] * BFWeight_R + FFTOut_R[i_lower] * BFWeight_I;
+
+                FFTOut_R[i_lower] = FFTOut_R[i] - temp_R;
+                FFTOut_I[i_lower] = FFTOut_I[i] - temp_I;
+                FFTOut_R[i] = FFTOut_R[i] + temp_R;
+                FFTOut_I[i] = FFTOut_I[i] + temp_I;
+            }
+        }
+    }
+}
+
+/*=========================== Main Function ===========================*/
+int main() {
+    // Input arrays
+    float FFTIn_R[FFTSIZE] = {11, 32, 91, 15, 47, 44, 96, 49, 23, 64, 83, 10, 59, 61, 33, 21,
+                              55, 13, 42, 91, 19, 45, 27, 81, 66, 72, 88, 94, 36, 74, 53, 17};
+    float FFTIn_I[FFTSIZE] = {0};  // Imaginary parts are zero for real inputs
+
+    // Output arrays
+    float FFTOut_R[FFTSIZE];
+    float FFTOut_I[FFTSIZE];
+
+    // Perform FFT
+    FFT_PS(FFTIn_I, FFTIn_R, FFTOut_I, FFTOut_R);
+
+    // Print FFT results
+    printf("\nFFT Results:\n");
+    for (int i = 0; i < FFTSIZE; i++) {
+        printf("Index %d: %f + %fI\n", i, FFTOut_R[i], FFTOut_I[i]);
+    }
+
+    return 0;
+}

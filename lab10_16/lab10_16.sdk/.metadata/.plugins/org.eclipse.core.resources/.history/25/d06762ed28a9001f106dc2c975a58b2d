@@ -1,0 +1,122 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <complex.h>
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+#include <math.h>
+
+#define N 16
+#define TOLERANCE 1e-6  // Set a tolerance for comparing PS and PL results
+#define CLOCK_FREQ 100000000  // Processor clock frequency in Hz (e.g., 100 MHz)
+
+// Bit-reversal array for 16-point FFT
+const int rev16[N] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+
+// Real and imaginary parts of the twiddle factors for 16-point FFT
+const float W_real_16[] = { 1.000000,  0.923880,  0.707107,  0.382683,  0.000000,  -0.382683,  -0.707107,  -0.923880 };
+const float W_imag_16[] = { -0.000000,  -0.382683,  -0.707107,  -0.923880,  -1.000000,  -0.923880,  -0.707107,  -0.382683 };
+
+// Software (PS) FFT function
+void FFT_stages(float complex FFT_input[N], float complex FFT_output[N]) {
+    float complex temp1[N], temp2[N], temp3[N];
+
+    // Stage 1
+    for (int i = 0; i < N; i = i + 2) {
+        temp1[i] = FFT_input[i] + (W_real_16[0] + I * W_imag_16[0]) * FFT_input[i + 1];
+        temp1[i + 1] = FFT_input[i] - (W_real_16[0] + I * W_imag_16[0]) * FFT_input[i + 1];
+    }
+
+    // Stage 2
+    for (int i = 0; i < N; i = i + 4) {
+        temp2[i] = temp1[i] + (W_real_16[0] + I * W_imag_16[0]) * temp1[i + 2];
+        temp2[i + 1] = temp1[i + 1] + (W_real_16[4] + I * W_imag_16[4]) * temp1[i + 3];
+        temp2[i + 2] = temp1[i] - (W_real_16[0] + I * W_imag_16[0]) * temp1[i + 2];
+        temp2[i + 3] = temp1[i + 1] - (W_real_16[4] + I * W_imag_16[4]) * temp1[i + 3];
+    }
+
+    // Stage 3
+    for (int i = 0; i < N; i = i + 8) {
+        temp3[i] = temp2[i] + (W_real_16[0] + I * W_imag_16[0]) * temp2[i + 4];
+        temp3[i + 1] = temp2[i + 1] + (W_real_16[2] + I * W_imag_16[2]) * temp2[i + 5];
+        temp3[i + 2] = temp2[i + 2] + (W_real_16[4] + I * W_imag_16[4]) * temp2[i + 6];
+        temp3[i + 3] = temp2[i + 3] + (W_real_16[6] + I * W_imag_16[6]) * temp2[i + 7];
+        temp3[i + 4] = temp2[i] - (W_real_16[0] + I * W_imag_16[0]) * temp2[i + 4];
+        temp3[i + 5] = temp2[i + 1] - (W_real_16[2] + I * W_imag_16[2]) * temp2[i + 5];
+        temp3[i + 6] = temp2[i + 2] - (W_real_16[4] + I * W_imag_16[4]) * temp2[i + 6];
+        temp3[i + 7] = temp2[i + 3] - (W_real_16[6] + I * W_imag_16[6]) * temp2[i + 7];
+    }
+
+    // Stage 4
+    for (int i = 0; i < N; i++) {
+        int twiddle_index = i % 8;
+        FFT_output[i] = temp3[i] + (W_real_16[twiddle_index] + I * W_imag_16[twiddle_index]) * temp3[i + 8];
+    }
+}
+
+// Bit-reversal function
+void bitreverse(float complex dataIn[N], float complex dataOut[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev16[i]];
+    }
+}
+
+// Compare and print both PS and PL results at each index
+void compare_and_print_results(float complex PS_output[N], float complex PL_output[N]) {
+    for (int i = 0; i < N; i++) {
+        printf("Index %d:\n", i);
+        printf("PS Output: %.8f + %.8fj\n", creal(PS_output[i]), cimag(PS_output[i]));
+        printf("PL Output: %.8f + %.8fj\n", creal(PL_output[i]), cimag(PL_output[i]));
+
+        // Compare results with tolerance
+        if (fabs(creal(PS_output[i]) - creal(PL_output[i])) <= TOLERANCE &&
+            fabs(cimag(PS_output[i]) - cimag(PL_output[i])) <= TOLERANCE) {
+            printf("Output Match: Yes\n\n");
+        } else {
+            printf("Mismatch at index %d: PS = %.8f + %.8fj, PL = %.8f + %.8fj\n\n",
+                   i, creal(PS_output[i]), cimag(PS_output[i]),
+                   creal(PL_output[i]), cimag(PL_output[i]));
+        }
+    }
+}
+
+int main() {
+    init_platform();
+
+    XTime PS_start_time, PS_end_time;
+    XTime PL_start_time, PL_end_time;
+
+    // Sample input for FFT
+    float complex FFT_input[N] = { 1.0 + 0.0 * I, 2.0 + 1.0 * I, 3.0 + 1.0 * I, 4.0 + 2.0 * I,
+                                    5.0 + 0.0 * I, 6.0 + 2.0 * I, 7.0 + 1.0 * I, 8.0 + 3.0 * I,
+                                    9.0 + 0.0 * I, 10.0 + 2.0 * I, 11.0 + 1.0 * I, 12.0 + 0.0 * I,
+                                    13.0 + 2.0 * I, 14.0 + 3.0 * I, 15.0 + 1.0 * I, 16.0 + 0.0 * I };
+
+    float complex FFT_input_reversed[N], FFT_output_reversed[N];
+    float complex PS_output[N], PL_output[N];
+
+    // Software FFT computation
+    XTime_GetTime(&PS_start_time);
+    printf("Starting 16-point FFT computation in software...\n");
+
+    // Bit-reversal of input
+    bitreverse(FFT_input, FFT_input_reversed);
+
+    // Perform FFT in software
+    FFT_stages(FFT_input_reversed, PS_output);
+
+    // Print FFT output (PS)
+    printf("Software FFT Output:\n");
+    for (int i = 0; i < N; i++) {
+        printf("PS_output[%d] = %.8f + %.8fj\n", i, creal(PS_output[i]), cimag(PS_output[i]));
+    }
+
+    XTime_GetTime(&PS_end_time);
+
+    // Convert clock cycles to microseconds for PS
+    u64 ps_time_in_cycles = PS_end_time - PS_start_time;
+    float ps_time_in_us = (float)ps_time_in_cycles * 1000000.0 / CLOCK_FREQ;
+    printf("Software FFT time: %.2f microseconds

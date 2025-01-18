@@ -1,0 +1,141 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <complex.h>
+#include <xtime_l.h>
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "dma_init.h"
+
+#define N 16
+
+// Bit-reversal array for 16-point FFT
+const int rev16[N] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+
+// Real and imaginary parts of the twiddle factors for 16-point FFT
+const float W_real_16[] = { 1.000000,  0.923880,  0.707107,  0.382683,  0.000000,  -0.382683,  -0.707107,  -0.923880 };
+const float W_imag_16[] = { -0.000000,  -0.382683,  -0.707107,  -0.923880,  -1.000000,  -0.923880,  -0.707107,  -0.382683 };
+
+void bitreverse(float complex dataIn[N], float complex dataOut[N]) {
+    for (int i = 0; i < N; i++) {
+        dataOut[i] = dataIn[rev16[i]];
+    }
+}
+
+void FFT_stages(float complex FFT_input[N], float complex FFT_output[N]) {
+    float complex temp1[N], temp2[N], temp3[N];
+
+    // Stage 1
+    for (int i = 0; i < N; i = i + 2) {
+        temp1[i] = FFT_input[i] + (W_real_16[0] + I * W_imag_16[0]) * FFT_input[i + 1];
+        temp1[i + 1] = FFT_input[i] - (W_real_16[0] + I * W_imag_16[0]) * FFT_input[i + 1];
+    }
+
+    // Stage 2
+    for (int i = 0; i < N; i = i + 4) {
+        temp2[i] = temp1[i] + (W_real_16[0] + I * W_imag_16[0]) * temp1[i + 2];
+        temp2[i + 1] = temp1[i + 1] + (W_real_16[4] + I * W_imag_16[4]) * temp1[i + 3];
+        temp2[i + 2] = temp1[i] - (W_real_16[0] + I * W_imag_16[0]) * temp1[i + 2];
+        temp2[i + 3] = temp1[i + 1] - (W_real_16[4] + I * W_imag_16[4]) * temp1[i + 3];
+    }
+
+    // Stage 3
+    for (int i = 0; i < N; i = i + 8) {
+        temp3[i] = temp2[i] + (W_real_16[0] + I * W_imag_16[0]) * temp2[i + 4];
+        temp3[i + 1] = temp2[i + 1] + (W_real_16[2] + I * W_imag_16[2]) * temp2[i + 5];
+        temp3[i + 2] = temp2[i + 2] + (W_real_16[4] + I * W_imag_16[4]) * temp2[i + 6];
+        temp3[i + 3] = temp2[i + 3] + (W_real_16[6] + I * W_imag_16[6]) * temp2[i + 7];
+        temp3[i + 4] = temp2[i] - (W_real_16[0] + I * W_imag_16[0]) * temp2[i + 4];
+        temp3[i + 5] = temp2[i + 1] - (W_real_16[2] + I * W_imag_16[2]) * temp2[i + 5];
+        temp3[i + 6] = temp2[i + 2] - (W_real_16[4] + I * W_imag_16[4]) * temp2[i + 6];
+        temp3[i + 7] = temp2[i + 3] - (W_real_16[6] + I * W_imag_16[6]) * temp2[i + 7];
+    }
+
+    // Stage 4
+    FFT_output[0] = temp3[0] + (W_real_16[0] + I * W_imag_16[0]) * temp3[8];
+    FFT_output[1] = temp3[1] + (W_real_16[1] + I * W_imag_16[1]) * temp3[9];
+    FFT_output[2] = temp3[2] + (W_real_16[2] + I * W_imag_16[2]) * temp3[10];
+    FFT_output[3] = temp3[3] + (W_real_16[3] + I * W_imag_16[3]) * temp3[11];
+    FFT_output[4] = temp3[4] + (W_real_16[4] + I * W_imag_16[4]) * temp3[12];
+    FFT_output[5] = temp3[5] + (W_real_16[5] + I * W_imag_16[5]) * temp3[13];
+    FFT_output[6] = temp3[6] + (W_real_16[6] + I * W_imag_16[6]) * temp3[14];
+    FFT_output[7] = temp3[7] + (W_real_16[7] + I * W_imag_16[7]) * temp3[15];
+    FFT_output[8] = temp3[0] - (W_real_16[0] + I * W_imag_16[0]) * temp3[8];
+    FFT_output[9] = temp3[1] - (W_real_16[1] + I * W_imag_16[1]) * temp3[9];
+    FFT_output[10] = temp3[2] - (W_real_16[2] + I * W_imag_16[2]) * temp3[10];
+    FFT_output[11] = temp3[3] - (W_real_16[3] + I * W_imag_16[3]) * temp3[11];
+    FFT_output[12] = temp3[4] - (W_real_16[4] + I * W_imag_16[4]) * temp3[12];
+    FFT_output[13] = temp3[5] - (W_real_16[5] + I * W_imag_16[5]) * temp3[13];
+    FFT_output[14] = temp3[6] - (W_real_16[6] + I * W_imag_16[6]) * temp3[14];
+    FFT_output[15] = temp3[7] - (W_real_16[7] + I * W_imag_16[7]) * temp3[15];
+}
+
+int main() {
+    init_platform();
+
+    XTime PS_start_time, PS_end_time;
+    XTime PL_start_time, PL_end_time;
+
+    XTime_GetTime(&PS_start_time);
+    printf("Starting 16-point FFT computation in software...\n");
+
+    // Sample input for FFT
+    float complex FFT_input[N] = { 1.0 + 0.0 * I, 2.0 + 1.0 * I, 3.0 + 1.0 * I, 4.0 + 2.0 * I,
+                                    5.0 + 0.0 * I, 6.0 + 2.0 * I, 7.0 + 1.0 * I, 8.0 + 3.0 * I,
+                                    9.0 + 0.0 * I, 10.0 + 2.0 * I, 11.0 + 1.0 * I, 12.0 + 0.0 * I,
+                                    13.0 + 2.0 * I, 14.0 + 3.0 * I, 15.0 + 1.0 * I, 16.0 + 0.0 * I };
+
+    float complex FFT_output[N];
+
+    // Bit-reverse input
+    float complex FFT_input_reversed[N], FFT_output_reversed[N];
+    bitreverse(FFT_input, FFT_input_reversed);
+
+    // Perform FFT calculation
+    FFT_stages(FFT_input_reversed, FFT_output_reversed);
+
+    // Print FFT output
+    printf("FFT Output:\n");
+    for (int i = 0; i < N; i++) {
+        printf("FFT_output[%d] = %.2f + %.2fj\n", i, creal(FFT_output_reversed[i]), cimag(FFT_output_reversed[i]));
+    }
+
+    XTime_GetTime(&PS_end_time);
+    printf("Software FFT time: %llu clock cycles\n", (PS_end_time - PS_start_time));
+
+    cleanup_platform();
+    return 0;
+}
